@@ -42,7 +42,6 @@
 	
 	[_selectedRequest release];
 	_selectedRequest = [newRequest retain];
-	[_requestsController markAsSeen:_selectedRequest];
 	
 	if (_selectedRequest == nil)
 	{

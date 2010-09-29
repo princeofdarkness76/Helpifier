@@ -30,6 +30,7 @@
 
 - (void) awakeFromNib
 {
+	_attentionRequest = 0;
 	_inboxParentItem = [@"Inbox" retain];
 	_inboxRequests = [NSMutableDictionary new];
 	_myQueueParentItem = [@"My Queue" retain];
@@ -241,6 +242,8 @@
 	}
 	NSAutoreleasePool *pool = [NSAutoreleasePool new];
 	
+	BOOL hasAnyUnreadRequests = NO;
+	
 	[_refreshButton setEnabled:NO];
 	[_refreshButton setImage:nil];
 	[_refreshProgressIndicator setHidden:NO];
@@ -272,11 +275,16 @@
 				{
 					[self updateDictionary:_inboxRequests withRequestsFromFilter:filter];
 					for (HSRequest *req in [_inboxRequests allValues])
+					{	
 						[req setIsUnread:YES];
+						hasAnyUnreadRequests = YES;
+					}
 				}
 				else if ([[filter filterName] isEqual:_myQueueParentItem])
 				{
 					[self updateDictionary:_myQueueRequests withRequestsFromFilter:filter];
+					for (HSRequest *req in [_myQueueRequests allValues])
+						if ([req isUnread]) hasAnyUnreadRequests = YES;
 				}
 			}
 		}
@@ -304,8 +312,14 @@
 			[_oldUnreadRequestIDs addObject:reqID];
 		}
 	}
+	
 	if (needsUserAttention)
-		[NSApp requestUserAttention:NSCriticalRequest];
+		_attentionRequest = [NSApp requestUserAttention:NSCriticalRequest];
+	else if (!hasAnyUnreadRequests && _attentionRequest > 0)	// stop bouncing if, say, the inbox just got cleared
+	{	
+		[NSApp cancelUserAttentionRequest:_attentionRequest];
+		_attentionRequest = 0;
+	}
 	
 	[self performSelectorOnMainThread:@selector(reloadOutlineView) withObject:nil waitUntilDone:NO];
 	

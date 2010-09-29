@@ -332,18 +332,18 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>40BAC54C1253F69A00E4A519</string>
+										<string>40BAC5581254015800E4A519</string>
 										<key>history</key>
 										<array>
 											<string>40BAC3E21253CD1E00E4A519</string>
 											<string>40BAC3EA1253CD8C00E4A519</string>
 											<string>40BAC49A1253EC2A00E4A519</string>
-											<string>40BAC4A51253ECFC00E4A519</string>
 											<string>40BAC4B01253EE0300E4A519</string>
-											<string>40BAC4D01253F0E100E4A519</string>
 											<string>40BAC4F81253F1F600E4A519</string>
-											<string>40BAC5441253F5AE00E4A519</string>
-											<string>40BAC5451253F5AE00E4A519</string>
+											<string>40BAC5541254015800E4A519</string>
+											<string>40BAC5551254015800E4A519</string>
+											<string>40BAC5561254015800E4A519</string>
+											<string>40BAC5571254015800E4A519</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -541,14 +541,14 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>40BAC54D1253F69A00E4A519</string>
+		<string>40BAC5591254015800E4A519</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>40BAC4851253E98200E4A519</string>
 		<string>40BAC4861253E98200E4A519</string>
 		<string>1CD10A99069EF8BA00B06720</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>40BA5026124FA8F60046960E</string>
 		<string>/Users/seandougall/Work/Figure53/Repos/helpificator/Helpifier.xcodeproj</string>
-		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>37 55 1403 823 0 0 1440 878 </string>
@@ -785,8 +785,6 @@
 							<key>Dock</key>
 							<array>
 								<dict>
-									<key>BecomeActive</key>
-									<true/>
 									<key>ContentConfiguration</key>
 									<dict>
 										<key>PBXProjectModuleGUID</key>
@@ -813,6 +811,8 @@
 							<string>212pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -924,7 +924,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

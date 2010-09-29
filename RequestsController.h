@@ -21,6 +21,7 @@
 	NSTimer                *_refreshTimer;
 	NSButton               *_refreshButton;
 	NSProgressIndicator    *_refreshProgressIndicator;
+	NSInteger               _attentionRequest;
 	
 	id                      _refreshMutex;
 	
