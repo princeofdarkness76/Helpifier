@@ -223,7 +223,7 @@
 	if (requests == nil)
 	{
 		NSAlert *alert = [NSAlert alertWithError:error];
-		[alert runModal];
+		[alert performSelectorOnMainThread:@selector(runModal) withObject:nil waitUntilDone:YES];
 	}
 	else
 	{
@@ -271,7 +271,7 @@
 			else
 			{
 				NSAlert *alert = [NSAlert alertWithError:error];
-				[alert runModal];
+				[alert performSelectorOnMainThread:@selector(runModal) withObject:nil waitUntilDone:NO];
 			}
 		}
 		else
