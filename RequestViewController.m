@@ -65,13 +65,13 @@
 
 - (IBAction) takeIt: (id) sender
 {
-	NSAppleScript *script = [[[NSAppleScript alloc] initWithSource:[NSString stringWithFormat:@"open location \"http://figure53.com/support/admin.php?pg=HSRequest&reqid=%d&frominbox=1&rand=%d\"", [_selectedRequest requestID], random()]] autorelease];
+	NSAppleScript *script = [[[NSAppleScript alloc] initWithSource:[NSString stringWithFormat:@"open location \"http://figure53.com/support/admin.php?pg=request&reqid=%d&frominbox=1&rand=%d\"", [_selectedRequest requestID], random()]] autorelease];
 	[script executeAndReturnError:nil];
 }
 
 - (IBAction) viewRequest: (id) sender
 {
-	NSAppleScript *script = [[[NSAppleScript alloc] initWithSource:[NSString stringWithFormat:@"open location \"http://figure53.com/support/admin.php?pg=HSRequest&reqid=%d\"", [_selectedRequest requestID]]] autorelease];
+	NSAppleScript *script = [[[NSAppleScript alloc] initWithSource:[NSString stringWithFormat:@"open location \"http://figure53.com/support/admin.php?pg=request&reqid=%d\"", [_selectedRequest requestID]]] autorelease];
 	[script executeAndReturnError:nil];
 }
 
