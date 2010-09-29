@@ -63,6 +63,8 @@
 - (void)setIsOpen:(BOOL)o;
 - (void)setStatus:(unsigned int)x;
 - (void)setUrgent:(BOOL)u;
+- (BOOL)isUnread;
+- (void)setIsUnread:(BOOL)u;
 - (NSString *)openedVia;
 - (void)setOpenedVia:(NSString *)o;
 - (unsigned int)openedViaID;

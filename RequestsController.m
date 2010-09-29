@@ -8,9 +8,7 @@
 
 #import "RequestsController.h"
 #import "RequestViewController.h"
-#import "HSRequestAdditions.h"
 #import "ApplicationDelegate.h"
-#import <HelpSpot/HelpSpot.h>
 
 #define kRefreshIntervalInSeconds 20
 
@@ -36,8 +34,7 @@
 	_inboxRequests = [NSMutableDictionary new];
 	_myQueueParentItem = [@"My Queue" retain];
 	_myQueueRequests = [NSMutableDictionary new];
-	_newRequests = [NSMutableArray new];
-	_numberOfHistoryItemsByRequestID = [NSMutableDictionary new];
+	_oldUnreadRequestIDs = [NSMutableArray new];
 	_refreshMutex = [NSObject new];
 	_refreshTimer = [NSTimer scheduledTimerWithTimeInterval:kRefreshIntervalInSeconds target:self selector:@selector(refreshRequests:) userInfo:nil repeats:YES];
 	[_requestsOutlineView expandItem:nil expandChildren:YES];
@@ -55,8 +52,8 @@
 	[_myQueueRequests release];
 	_myQueueRequests = nil;
 	
-	[_newRequests release];
-	_newRequests = nil;
+	[_oldUnreadRequestIDs release];
+	_oldUnreadRequestIDs = nil;
 	
 	[_refreshMutex release];
 	_refreshMutex = nil;
@@ -66,9 +63,6 @@
 	
 	[_myQueueParentItem release];
 	_myQueueParentItem = nil;
-	
-	[_numberOfHistoryItemsByRequestID release];
-	_numberOfHistoryItemsByRequestID = nil;
 	
 	[super dealloc];
 }
@@ -153,7 +147,7 @@
 		else if ([item isKindOfClass:[HSRequest class]])
 		{
 			if ([[tableColumn identifier] isEqual:@"requestShortSummary"])
-				return [NSString stringWithFormat:@"%@%d%@ - %@", ([(HSRequest *)item hasUnseenHistory] ? @"* " : @""), [(HSRequest *)item requestID], ([(HSRequest *)item urgent] ? @"(!!)" : @""), [(HSRequest *)item title]];
+				return [NSString stringWithFormat:@"%@%d%@ - %@", ([(HSRequest *)item isUnread] ? @"* " : @""), [(HSRequest *)item requestID], ([(HSRequest *)item urgent] ? @"(!!)" : @""), [(HSRequest *)item title]];
 			else if ([[tableColumn identifier] isEqual:@"requestNumber"])
 				return [NSString stringWithFormat:@"%d", [(HSRequest *)item requestID]];
 			else if ([[tableColumn identifier] isEqual:@"subject"])
@@ -198,7 +192,7 @@
 {
 	NSCell *cell = [tableColumn dataCellForRow:[outlineView rowForItem:item]];
 	if (![item isKindOfClass:[HSRequest class]]) return cell;
-	if ([(HSRequest *)item hasUnseenHistory])
+	if ([(HSRequest *)item isUnread])
 		[cell setFont:[NSFont boldSystemFontOfSize:[NSFont smallSystemFontSize]]];
 	else
 		[cell setFont:[NSFont systemFontOfSize:[NSFont smallSystemFontSize]]];
@@ -227,21 +221,17 @@
 	}
 	else
 	{
-		for (HSRequest *HSRequest in requests)
+		for (HSRequest *request in requests)
 		{
-			if ([HSRequest requestID] == 0) continue;
-			NSNumber *reqID = [NSNumber numberWithUnsignedInt:[HSRequest requestID]];
-			[dict setObject:HSRequest forKey:reqID];
-			if ([dictCopy objectForKey:reqID] == nil || [HSRequest numberOfHistoryItems] != [[_numberOfHistoryItemsByRequestID objectForKey:[NSNumber numberWithUnsignedInteger:reqID]] unsignedIntegerValue])
-			{	
-				[_newRequests addObject:HSRequest];
-				[_numberOfHistoryItemsByRequestID setObject:[NSNumber numberWithUnsignedInteger:[HSRequest numberOfHistoryItems]] forKey:[NSNumber numberWithUnsignedInteger:reqID]];
-				HSRequest.hasUnseenHistory = YES;
-			}
-			
+			if ([request requestID] == 0) continue;
+			NSNumber *reqID = [NSNumber numberWithUnsignedInt:[request requestID]];
+			[dict setObject:request forKey:reqID];
+			if (![request isUnread])
+				[_oldUnreadRequestIDs removeObject:reqID];
 		}
 	}
 }
+
 - (void) performRefreshRequests: (NSDictionary *) userInfo
 {
 	if (![(ApplicationDelegate *)[NSApp delegate] workspaceInitialized]) 
@@ -258,7 +248,7 @@
 	
 	@synchronized ([userInfo objectForKey:@"mutex"])
 	{
-		[_newRequests removeAllObjects];
+//		[_newRequests removeAllObjects];
 		
 		NSError *error = nil;
 		NSArray *filters = [HSFilter filters:&error];
@@ -281,6 +271,8 @@
 				if ([[filter filterName] isEqual:_inboxParentItem])
 				{
 					[self updateDictionary:_inboxRequests withRequestsFromFilter:filter];
+					for (HSRequest *req in [_inboxRequests allValues])
+						[req setIsUnread:YES];
 				}
 				else if ([[filter filterName] isEqual:_myQueueParentItem])
 				{
@@ -295,7 +287,24 @@
 	[_refreshButton setImage:[NSImage imageNamed:@"NSRefreshTemplate"]];
 	[_refreshProgressIndicator setHidden:YES];
 	
-	if ([_newRequests count] > 0)
+	BOOL needsUserAttention = NO;
+	for (NSNumber *reqID in [_inboxRequests allKeys])
+	{
+		if (![_oldUnreadRequestIDs containsObject:reqID])
+		{	
+			needsUserAttention = YES;
+			[_oldUnreadRequestIDs addObject:reqID];
+		}
+	}
+	for (NSNumber *reqID in [_myQueueRequests allKeys])
+	{
+		if ([[_myQueueRequests objectForKey:reqID] isUnread] && ![_oldUnreadRequestIDs containsObject:reqID])
+		{	
+			needsUserAttention = YES;
+			[_oldUnreadRequestIDs addObject:reqID];
+		}
+	}
+	if (needsUserAttention)
 		[NSApp requestUserAttention:NSCriticalRequest];
 	
 	[self performSelectorOnMainThread:@selector(reloadOutlineView) withObject:nil waitUntilDone:NO];

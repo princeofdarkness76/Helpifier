@@ -10,9 +10,8 @@
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		40BABF7612513B7B00E4A519 /* RequestsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BABF7512513B7B00E4A519 /* RequestsController.m */; };
 		40BAC2251252947000E4A519 /* RequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BAC2241252947000E4A519 /* RequestViewController.m */; };
-		40BAC3221253A2CC00E4A519 /* HelpSpot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BAC3211253A2CC00E4A519 /* HelpSpot.framework */; };
-		40BAC32A1253A30B00E4A519 /* HelpSpot.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 40BAC3211253A2CC00E4A519 /* HelpSpot.framework */; };
-		40BAC37B1253C6A400E4A519 /* HSRequestAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BAC37A1253C6A400E4A519 /* HSRequestAdditions.m */; };
+		40BAC5141253F2DC00E4A519 /* HelpSpot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BAC5131253F2DC00E4A519 /* HelpSpot.framework */; };
+		40BAC5201253F2E300E4A519 /* HelpSpot.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 40BAC5131253F2DC00E4A519 /* HelpSpot.framework */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		EAD297DC0E6EDF4200E89D97 /* ApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD297DB0E6EDF4200E89D97 /* ApplicationDelegate.m */; };
@@ -25,7 +24,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				40BAC32A1253A30B00E4A519 /* HelpSpot.framework in Copy Frameworks */,
+				40BAC5201253F2E300E4A519 /* HelpSpot.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,10 +41,8 @@
 		40BABF7512513B7B00E4A519 /* RequestsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestsController.m; sourceTree = "<group>"; };
 		40BAC2231252947000E4A519 /* RequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestViewController.h; sourceTree = "<group>"; };
 		40BAC2241252947000E4A519 /* RequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestViewController.m; sourceTree = "<group>"; };
-		40BAC3211253A2CC00E4A519 /* HelpSpot.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HelpSpot.framework; sourceTree = "<group>"; };
 		40BAC3241253A2DA00E4A519 /* Helpifier_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpifier_Prefix.pch; sourceTree = "<group>"; };
-		40BAC3791253C6A400E4A519 /* HSRequestAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSRequestAdditions.h; sourceTree = "<group>"; };
-		40BAC37A1253C6A400E4A519 /* HSRequestAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSRequestAdditions.m; sourceTree = "<group>"; };
+		40BAC5131253F2DC00E4A519 /* HelpSpot.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HelpSpot.framework; path = HelpSpot/build/Release/HelpSpot.framework; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Helpifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Helpifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAD297DA0E6EDF4200E89D97 /* ApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationDelegate.h; sourceTree = "<group>"; };
@@ -58,7 +55,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				40BAC3221253A2CC00E4A519 /* HelpSpot.framework in Frameworks */,
+				40BAC5141253F2DC00E4A519 /* HelpSpot.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,8 +71,6 @@
 				40BABF7512513B7B00E4A519 /* RequestsController.m */,
 				40BAC2231252947000E4A519 /* RequestViewController.h */,
 				40BAC2241252947000E4A519 /* RequestViewController.m */,
-				40BAC3791253C6A400E4A519 /* HSRequestAdditions.h */,
-				40BAC37A1253C6A400E4A519 /* HSRequestAdditions.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -138,7 +133,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				40BAC3211253A2CC00E4A519 /* HelpSpot.framework */,
+				40BAC5131253F2DC00E4A519 /* HelpSpot.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
@@ -204,7 +199,6 @@
 				EAD297DC0E6EDF4200E89D97 /* ApplicationDelegate.m in Sources */,
 				40BABF7612513B7B00E4A519 /* RequestsController.m in Sources */,
 				40BAC2251252947000E4A519 /* RequestViewController.m in Sources */,
-				40BAC37B1253C6A400E4A519 /* HSRequestAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +226,7 @@
 					"\"$(SRCROOT)/../build/Release\"",
 					"\"$(SRCROOT)/../HelpSpot/build/Release\"",
 					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/HelpSpot/build/Release\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -255,6 +250,7 @@
 					"\"$(SRCROOT)/../build/Release\"",
 					"\"$(SRCROOT)/../HelpSpot/build/Release\"",
 					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/HelpSpot/build/Release\"",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

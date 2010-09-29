@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <HelpSpot/HelpSpot.h>
 
 @class RequestViewController;
 
@@ -14,8 +15,7 @@
 {
 	NSMutableDictionary    *_inboxRequests;
 	NSMutableDictionary    *_myQueueRequests;
-	NSMutableDictionary    *_numberOfHistoryItemsByRequestID;
-	NSMutableArray         *_newRequests;
+	NSMutableArray         *_oldUnreadRequestIDs;
 	NSOutlineView          *_requestsOutlineView;
 	RequestViewController  *_requestViewController;
 	NSTimer                *_refreshTimer;

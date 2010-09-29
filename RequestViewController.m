@@ -7,6 +7,7 @@
 //
 
 #import "RequestViewController.h"
+#import "RequestsController.h"
 
 @implementation RequestViewController
 
@@ -21,6 +22,7 @@
 	[super dealloc];
 }
 
+@synthesize requestsController = _requestsController;
 @synthesize fromTextField = _fromTextField;
 @synthesize subjectTextField = _subjectTextField;
 @synthesize bodyTextView = _bodyTextView;
@@ -40,7 +42,7 @@
 	
 	[_selectedRequest release];
 	_selectedRequest = [newRequest retain];
-	_selectedRequest.hasUnseenHistory = NO;
+	[_requestsController markAsSeen:_selectedRequest];
 	
 	if (_selectedRequest == nil)
 	{

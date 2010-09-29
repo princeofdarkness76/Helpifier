@@ -32,8 +32,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
-	[self refreshCredentials];
-	_workspaceInitialized = YES;
+	[NSThread detachNewThreadSelector:@selector(refreshCredentials) toTarget:self withObject:nil];
 	
 	[[NSUserDefaultsController sharedUserDefaultsController] addObserver:self forKeyPath:@"values.username" options:NSKeyValueObservingOptionNew context:@selector(refreshCredentials)];
 	[[NSUserDefaultsController sharedUserDefaultsController] addObserver:self forKeyPath:@"values.password" options:NSKeyValueObservingOptionNew context:@selector(refreshCredentials)];
@@ -74,8 +73,13 @@
 
 - (void) refreshCredentials
 {
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	HSWorkspace *workspace = [HSWorkspace sharedWorkspace];
 	[workspace setAuthenticationUsername:[[[NSUserDefaultsController sharedUserDefaultsController] defaults] valueForKey:@"username"] password:[[[NSUserDefaultsController sharedUserDefaultsController] defaults] valueForKey:@"password"] method:HSAuthenticationMethodURL];
+	[self willChangeValueForKey:@"workspaceInitialized"];
+	_workspaceInitialized = YES;
+	[self didChangeValueForKey:@"workspaceInitialized"];
+	[pool release];
 }
 
 @end
