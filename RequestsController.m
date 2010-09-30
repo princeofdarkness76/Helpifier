@@ -35,7 +35,7 @@
 	_inboxRequests = [NSMutableDictionary new];
 	_myQueueParentItem = [@"My Queue" retain];
 	_myQueueRequests = [NSMutableDictionary new];
-	_oldUnreadRequestIDs = [NSMutableArray new];
+	_numberOfHistoryItemsByRequestID = [NSMutableDictionary new];
 	_refreshMutex = [NSObject new];
 	_refreshTimer = [NSTimer scheduledTimerWithTimeInterval:kRefreshIntervalInSeconds target:self selector:@selector(refreshRequests:) userInfo:nil repeats:YES];
 	[_requestsOutlineView expandItem:nil expandChildren:YES];
@@ -53,8 +53,8 @@
 	[_myQueueRequests release];
 	_myQueueRequests = nil;
 	
-	[_oldUnreadRequestIDs release];
-	_oldUnreadRequestIDs = nil;
+	[_numberOfHistoryItemsByRequestID release];
+	_numberOfHistoryItemsByRequestID = nil;
 	
 	[_refreshMutex release];
 	_refreshMutex = nil;
@@ -225,10 +225,20 @@
 		for (HSRequest *request in requests)
 		{
 			if ([request requestID] == 0) continue;
-			NSNumber *reqID = [NSNumber numberWithUnsignedInt:[request requestID]];
-			[dict setObject:request forKey:reqID];
-			if (![request isUnread])
-				[_oldUnreadRequestIDs removeObject:reqID];
+			HSRequest *fullRequest = [HSRequest requestWithID:[request requestID] error:&error];
+			if (fullRequest == nil)
+			{
+				NSAlert *alert = [NSAlert alertWithError:error];
+				[alert setMessageText:[NSString stringWithFormat:@"Unable to get request #%d.", [request requestID]]];
+				[alert performSelectorOnMainThread:@selector(runModal) withObject:nil waitUntilDone:YES];
+			}
+			else
+			{
+				NSNumber *reqID = [NSNumber numberWithUnsignedInt:[request requestID]];
+				[dict setObject:fullRequest forKey:reqID];
+//				if (![fullRequest isUnread])
+//					[_numberOfHistoryItemsByRequestID removeObjectForKey:reqID];
+			}
 		}
 	}
 }
@@ -298,19 +308,19 @@
 	BOOL needsUserAttention = NO;
 	for (NSNumber *reqID in [_inboxRequests allKeys])
 	{
-		if (![_oldUnreadRequestIDs containsObject:reqID])
+		if ([_numberOfHistoryItemsByRequestID objectForKey:reqID] == nil)
 		{	
 			needsUserAttention = YES;
-			[_oldUnreadRequestIDs addObject:reqID];
 		}
+		[_numberOfHistoryItemsByRequestID setObject:[NSNumber numberWithInteger:[[_inboxRequests objectForKey:reqID] numberOfHistoryItems]] forKey:reqID];
 	}
 	for (NSNumber *reqID in [_myQueueRequests allKeys])
 	{
-		if ([[_myQueueRequests objectForKey:reqID] isUnread] && ![_oldUnreadRequestIDs containsObject:reqID])
+		if ([[_myQueueRequests objectForKey:reqID] isUnread] && [_numberOfHistoryItemsByRequestID objectForKey:reqID] == nil)
 		{	
 			needsUserAttention = YES;
-			[_oldUnreadRequestIDs addObject:reqID];
 		}
+		[_numberOfHistoryItemsByRequestID setObject:[NSNumber numberWithInteger:[[_myQueueRequests objectForKey:reqID] numberOfHistoryItems]] forKey:reqID];
 	}
 	
 	if (needsUserAttention)

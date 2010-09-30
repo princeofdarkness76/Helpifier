@@ -15,7 +15,7 @@
 {
 	NSMutableDictionary    *_inboxRequests;
 	NSMutableDictionary    *_myQueueRequests;
-	NSMutableArray         *_oldUnreadRequestIDs;
+	NSMutableDictionary    *_numberOfHistoryItemsByRequestID;
 	NSOutlineView          *_requestsOutlineView;
 	RequestViewController  *_requestViewController;
 	NSTimer                *_refreshTimer;

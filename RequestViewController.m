@@ -42,7 +42,8 @@
 	[self willChangeValueForKey:@"selectedRequest"];
 	
 	[_selectedRequest release];
-	_selectedRequest = [[HSRequest requestWithID:[newRequest requestID] error:&err] retain];
+//	_selectedRequest = [[HSRequest requestWithID:[newRequest requestID] error:&err] retain];
+	_selectedRequest = [newRequest retain];
 	
 	[_fromTextField setStringValue:@""];
 	[_subjectTextField setStringValue:(_selectedRequest == nil ? @"" : @"Loading request...")];
@@ -53,7 +54,8 @@
 	if (_selectedRequest != nil)
 	{
 		[_fromTextField setStringValue:[NSString stringWithFormat:@"From: %@ (%@)", [_selectedRequest fullName], [_selectedRequest email]]];
-		[_subjectTextField setStringValue:[_selectedRequest title]];
+		NSString *subject = [_selectedRequest title];
+		[_subjectTextField setStringValue:(subject == nil ? @"(no subject)" : subject)];
 //		[_bodyTextView setString:[_selectedRequest body]];
 //		[self willChangeValueForKey:@"requestBody"];
 //		[self didChangeValueForKey:@"requestBody"];
