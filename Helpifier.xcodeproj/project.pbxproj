@@ -12,6 +12,8 @@
 		40BAC2251252947000E4A519 /* RequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BAC2241252947000E4A519 /* RequestViewController.m */; };
 		40BAC5141253F2DC00E4A519 /* HelpSpot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BAC5131253F2DC00E4A519 /* HelpSpot.framework */; };
 		40BAC5201253F2E300E4A519 /* HelpSpot.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 40BAC5131253F2DC00E4A519 /* HelpSpot.framework */; };
+		40BAC5E212540C2000E4A519 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BAC5E112540C2000E4A519 /* WebKit.framework */; };
+		40BAC6A012540D6300E4A519 /* RequestTemplate.html in Resources */ = {isa = PBXBuildFile; fileRef = 40BAC69F12540D6300E4A519 /* RequestTemplate.html */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		EAD297DC0E6EDF4200E89D97 /* ApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD297DB0E6EDF4200E89D97 /* ApplicationDelegate.m */; };
@@ -43,6 +45,8 @@
 		40BAC2241252947000E4A519 /* RequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestViewController.m; sourceTree = "<group>"; };
 		40BAC3241253A2DA00E4A519 /* Helpifier_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpifier_Prefix.pch; sourceTree = "<group>"; };
 		40BAC5131253F2DC00E4A519 /* HelpSpot.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HelpSpot.framework; path = HelpSpot/build/Release/HelpSpot.framework; sourceTree = "<group>"; };
+		40BAC5E112540C2000E4A519 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
+		40BAC69F12540D6300E4A519 /* RequestTemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = RequestTemplate.html; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Helpifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Helpifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAD297DA0E6EDF4200E89D97 /* ApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationDelegate.h; sourceTree = "<group>"; };
@@ -56,6 +60,7 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				40BAC5141253F2DC00E4A519 /* HelpSpot.framework in Frameworks */,
+				40BAC5E212540C2000E4A519 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +129,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				40BAC69F12540D6300E4A519 /* RequestTemplate.html */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 			);
@@ -133,6 +139,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				40BAC5E112540C2000E4A519 /* WebKit.framework */,
 				40BAC5131253F2DC00E4A519 /* HelpSpot.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
@@ -185,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				40BAC6A012540D6300E4A519 /* RequestTemplate.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

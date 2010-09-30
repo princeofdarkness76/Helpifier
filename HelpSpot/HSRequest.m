@@ -695,7 +695,7 @@ _error:
 
 - (NSDate *)date
 {
-	NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
+	NSDateFormatter *formatter = [[[NSDateFormatter alloc] initWithDateFormat:@"%B %d %Y, %I:%M %p" allowNaturalLanguage:YES] autorelease];
 	return [formatter dateFromString:[content objectForKey:@"dtGMTChange"]];
 }
 
