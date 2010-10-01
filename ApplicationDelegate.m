@@ -17,7 +17,7 @@
 {
 	if (self = [super init])
 	{
-		_workspaceInitialized = NO;
+		self.workspaceInitialized = NO;
 	}
 	return self;
 }
@@ -38,10 +38,7 @@
 	[[NSUserDefaultsController sharedUserDefaultsController] addObserver:self forKeyPath:@"values.password" options:NSKeyValueObservingOptionNew context:@selector(refreshCredentials)];
 }
 
-- (BOOL) workspaceInitialized
-{
-	return _workspaceInitialized;
-}
+@synthesize workspaceInitialized = _workspaceInitialized;
 
 #pragma mark -
 #pragma mark actions
@@ -77,7 +74,7 @@
 	HSWorkspace *workspace = [HSWorkspace sharedWorkspace];
 	[workspace setAuthenticationUsername:[[[NSUserDefaultsController sharedUserDefaultsController] defaults] valueForKey:@"username"] password:[[[NSUserDefaultsController sharedUserDefaultsController] defaults] valueForKey:@"password"] method:HSAuthenticationMethodURL];
 	[self willChangeValueForKey:@"workspaceInitialized"];
-	_workspaceInitialized = YES;
+	self.workspaceInitialized = YES;
 	[self didChangeValueForKey:@"workspaceInitialized"];
 	[pool release];
 }

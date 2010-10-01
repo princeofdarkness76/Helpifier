@@ -11,7 +11,7 @@
 
 @property (assign) IBOutlet RequestsController *requestsController;
 @property (assign) IBOutlet NSWindow *prefsWindow;
-@property (readonly) BOOL workspaceInitialized;
+@property (assign) BOOL workspaceInitialized;
 
 - (IBAction) help: (id) sender;
 - (IBAction) showPreferences: (id) sender;
