@@ -334,6 +334,25 @@ _error:
 	return ([[HSWorkspace sharedWorkspace] _dataForMethod:@"private.request.addTimeEvent" arguments:args post:YES error:error] != nil);
 }
 
+- (void) get
+{
+    NSError *error = nil;
+    BOOL isUnread = [self isUnread];
+    int previousHistoryItems = [self numberOfHistoryItems];
+    HSRequest *fullRequest = [HSRequest requestWithID:[self requestID] error:&error];
+    if (fullRequest != nil)
+    {
+        @synchronized (self)
+        {
+            [content release];
+            content = [[fullRequest content] retain];
+            [self setIsUnread:isUnread];
+            if ([self numberOfHistoryItems] != previousHistoryItems)
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"HSRequestDidUpdateNotification" object:nil userInfo:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInteger:[self requestID]], @"requestID", nil]];
+        }
+    }
+}
+
 //
 #pragma mark ACCESS
 //

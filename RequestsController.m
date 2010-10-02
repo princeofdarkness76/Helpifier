@@ -20,6 +20,7 @@
 - (void) updateDictionary: (NSMutableDictionary *) dict withRequestsFromFilter: (HSFilter *) filter;
 - (void) performRefreshRequests: (NSDictionary *) userInfo;
 - (void) reloadOutlineView;
+- (void) reloadSelectedRequest;
 - (void) updateSelection;
 - (void) updateOutlineViewSelection;
 - (HSRequest *) requestForKey: (id) key;
@@ -41,6 +42,9 @@
     _myQueueRequests = [NSMutableDictionary new];
     _numberOfHistoryItemsByRequestID = [NSMutableDictionary new];
     _refreshMutex = [NSObject new];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadSelectedRequest) name:@"HSRequestDidUpdateNotification" object:nil];
+    
     _refreshTimer = [NSTimer scheduledTimerWithTimeInterval:kRefreshIntervalInSeconds target:self selector:@selector(refreshRequests:) userInfo:nil repeats:YES];
     [self performSelector:@selector(refreshRequests:) withObject:self afterDelay:2];
 }
@@ -75,8 +79,23 @@
 @synthesize requestViewController = _requestViewController;
 @synthesize refreshButton = _refreshButton;
 @synthesize refreshProgressIndicator = _refreshProgressIndicator;
-@synthesize selection = _selectedRequest;
+
 @synthesize offlineError = _offlineError;
+
+- (HSRequest *) selection
+{
+    return [self requestForKey:[NSNumber numberWithInteger:_selectedRequestID]];
+}
+
+- (void) setSelection: (HSRequest *) newSelection
+{
+    if (newSelection == nil)
+        _selectedRequestID = 0;
+    else
+        _selectedRequestID = [newSelection requestID];
+    
+    [self updateOutlineViewSelection];
+}
 
 - (IBAction) refreshRequests: (id) sender
 {
@@ -150,16 +169,19 @@
             HSRequest *req = [self requestForKey:item];
             if (req == nil) return @"...";
             
-            if ([[tableColumn identifier] isEqual:@"requestShortSummary"])
-                return [NSString stringWithFormat:@"%@%d%@ - %@", ([req isUnread] ? @"* " : @""), [req requestID], ([req urgent] ? @"(!!)" : @""), [req title]];
-            else if ([[tableColumn identifier] isEqual:@"requestNumber"])
-                return [NSString stringWithFormat:@"%d", [req requestID]];
-            else if ([[tableColumn identifier] isEqual:@"subject"])
-                return [req title];
-            else if ([[tableColumn identifier] isEqual:@"body"])
-                return [req body];
-            else
-                return nil;
+            @synchronized (req)
+            {
+                if ([[tableColumn identifier] isEqual:@"requestShortSummary"])
+                    return [NSString stringWithFormat:@"%@%d%@ - %@", ([req isUnread] ? @"* " : @""), [req requestID], ([req urgent] ? @"(!!)" : @""), [req title]];
+                else if ([[tableColumn identifier] isEqual:@"requestNumber"])
+                    return [NSString stringWithFormat:@"%d", [req requestID]];
+                else if ([[tableColumn identifier] isEqual:@"subject"])
+                    return [req title];
+                else if ([[tableColumn identifier] isEqual:@"body"])
+                    return [req body];
+                else
+                    return nil;
+            }
         }
     }
     return nil;
@@ -210,10 +232,13 @@
         cell = [tableColumn dataCellForRow:[outlineView rowForItem:item]];
         if (![item isKindOfClass:[NSNumber class]]) return cell;
         HSRequest *req = [self requestForKey:item];
-        if ([req isUnread])
-            [cell setFont:[NSFont boldSystemFontOfSize:[NSFont smallSystemFontSize]]];
-        else
-            [cell setFont:[NSFont systemFontOfSize:[NSFont smallSystemFontSize]]];
+        @synchronized (req)
+        {
+            if ([req isUnread])
+                [cell setFont:[NSFont boldSystemFontOfSize:[NSFont smallSystemFontSize]]];
+            else
+                [cell setFont:[NSFont systemFontOfSize:[NSFont smallSystemFontSize]]];
+        }
     }
     return cell;
 }
@@ -228,8 +253,9 @@
 
 - (void) updateDictionary: (NSMutableDictionary *) dict withRequestsFromFilter: (HSFilter *) filter
 {
-    [dict removeAllObjects];
-
+    NSMutableDictionary *fullRequestsToAdd = [NSMutableDictionary dictionary];
+    NSMutableArray *requestIDsFound = [NSMutableArray array];
+    
     NSError *error = nil;
     NSArray *requests = [filter requests:&error];
     if (requests == nil)
@@ -241,20 +267,25 @@
         for (HSRequest *request in requests)
         {
             if ([request requestID] == 0) continue;
-            BOOL requestIsUnread = [request isUnread];
-            HSRequest *fullRequest = [HSRequest requestWithID:[request requestID] error:&error];
-            [fullRequest setIsUnread:requestIsUnread]; // For some reason, this is only returned properly on the initial listing, not on the "get" request.
-            if (fullRequest == nil)
-            {
-                NSAlert *alert = [NSAlert alertWithError:error];
-                [alert setMessageText:[NSString stringWithFormat:@"Unable to get request #%d.", [request requestID]]];
-                [alert performSelectorOnMainThread:@selector(runModal) withObject:nil waitUntilDone:YES];
-            }
-            else
-            {
-                NSNumber *reqID = [NSNumber numberWithUnsignedInt:[request requestID]];
-                [dict setObject:fullRequest forKey:reqID];
-            }
+            
+            NSNumber *reqID = [NSNumber numberWithInteger:[request requestID]];
+            [requestIDsFound addObject:reqID];
+            
+            if ([[dict allKeys] containsObject:reqID])
+                [[dict objectForKey:reqID] setIsUnread:[request isUnread]];
+            else 
+                [dict setObject:request forKey:reqID];
+            
+            [[dict objectForKey:reqID] get];
+        }
+    }
+    
+    @synchronized (_refreshMutex)
+    {
+        for (NSNumber *reqID in [NSArray arrayWithArray:[dict allKeys]])
+        {
+            if (![requestIDsFound containsObject:reqID])
+                [dict removeObjectForKey:reqID];
         }
     }
 }
@@ -314,6 +345,7 @@
                 }
             }
         }
+        [self reloadSelectedRequest];
     }
 
     [_refreshProgressIndicator stopAnimation:self];
@@ -358,8 +390,8 @@
 - (void) reloadOutlineView
 {
     [_requestsOutlineView reloadItem:nil reloadChildren:YES];
-    if (![[_inboxRequests allKeys] containsObject:[NSNumber numberWithInteger:[_selectedRequest requestID]]]
-        && ![[_myQueueRequests allKeys] containsObject:[NSNumber numberWithInteger:[_selectedRequest requestID]]])
+    if (![[_inboxRequests allKeys] containsObject:[NSNumber numberWithInteger:_selectedRequestID]]
+        && ![[_myQueueRequests allKeys] containsObject:[NSNumber numberWithInteger:_selectedRequestID]])
         self.selection = nil;
     [self updateOutlineViewSelection];
     if (!_hasLoadedOutlineView)
@@ -367,27 +399,23 @@
     _hasLoadedOutlineView = YES;
 }
 
+- (void) reloadSelectedRequest
+{
+    [_requestViewController performSelectorOnMainThread:@selector(setSelectedRequest:) withObject:[self selection] waitUntilDone:NO];
+}
+
 - (void) updateSelection
 {
- /*   NSInteger selectedRow = [_requestsOutlineView selectedRow];
-    selectedRow--;
-    if (selectedRow < [_inboxRequests count])
-    {
-        [self setSelection:[self requestForKey:[[_inboxRequests allKeys] objectAtIndex:selectedRow]]];
-    }
-    else
-    {
-        selectedRow -= [_inboxRequests count];
-        selectedRow--;
-        [self setSelection:[self requestForKey:[[_myQueueRequests allKeys] objectAtIndex:selectedRow]]];
-    }*/
     [self setSelection:[self requestForKey:[_requestsOutlineView itemAtRow:[_requestsOutlineView selectedRow]]]];
     [self reloadOutlineView];
 }
 
 - (void) updateOutlineViewSelection
 {
-    [_requestsOutlineView selectRowIndexes:[NSIndexSet indexSetWithIndex:[_requestsOutlineView rowForItem:_selectedRequest]] byExtendingSelection:NO];
+    if (_selectedRequestID == 0)
+        [_requestsOutlineView selectRowIndexes:[NSIndexSet indexSet] byExtendingSelection:NO];
+    else
+        [_requestsOutlineView selectRowIndexes:[NSIndexSet indexSetWithIndex:[_requestsOutlineView rowForItem:self.selection]] byExtendingSelection:NO];
 }
 
 - (HSRequest *) requestForKey: (id) key

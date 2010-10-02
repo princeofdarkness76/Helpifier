@@ -5,6 +5,8 @@
 	NSMutableDictionary *content;
 }
 
+- (NSMutableDictionary *) content;
+
 - (id)initWithContent:(NSDictionary *)c;
 
 @end

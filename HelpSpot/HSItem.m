@@ -36,4 +36,9 @@
 	return content;
 }
 
+- (NSMutableDictionary *) content
+{
+    return content;
+}
+
 @end

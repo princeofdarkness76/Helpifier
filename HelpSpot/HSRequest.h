@@ -34,6 +34,8 @@
 - (BOOL)update:(NSError **)error;
 - (BOOL)addTimeTrackerEvent:(NSString *)description date:(NSDate *)date personID:(unsigned int)personID length:(double)seconds error:(NSError **)error;
 
+- (void) get;
+
 - (void)setRequestID:(unsigned int)r;
 - (void)setAccessKey:(NSString *)k;
 - (unsigned int)userID;

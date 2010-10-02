@@ -13,7 +13,7 @@
 
 @interface RequestsController : NSObject 
 {
-    HSRequest              *_selectedRequest;
+    NSInteger               _selectedRequestID;
     NSMutableDictionary    *_inboxRequests;
     NSMutableDictionary    *_myQueueRequests;
     NSMutableDictionary    *_numberOfHistoryItemsByRequestID;
@@ -37,7 +37,7 @@
 @property (assign) IBOutlet RequestViewController *requestViewController;
 @property (assign) IBOutlet NSButton *refreshButton;
 @property (assign) IBOutlet NSProgressIndicator *refreshProgressIndicator;
-@property (retain) HSRequest *selection;
+@property (assign) HSRequest *selection;
 @property (retain) NSError *offlineError;
 
 - (IBAction) refreshRequests: (id) sender;
