@@ -32,7 +32,7 @@
 @property (assign) IBOutlet WebView *bodyHTMLView;
 @property (assign) IBOutlet NSButton *takeItButton;
 @property (assign) IBOutlet NSButton *viewItButton;
-@property (readonly) NSAttributedString *requestBodyHTML;
+@property (readonly) NSString *requestBodyHTML;
 @property (readonly) NSAttributedString *requestBody;
 
 - (IBAction) takeIt: (id) sender;

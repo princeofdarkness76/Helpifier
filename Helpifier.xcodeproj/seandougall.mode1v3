@@ -332,7 +332,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>40FCFCA71256A93200783CF8</string>
+										<string>40FCFD2C1256BFB500783CF8</string>
 										<key>history</key>
 										<array>
 											<string>40BAC3E21253CD1E00E4A519</string>
@@ -344,9 +344,9 @@
 											<string>40FCFC4512569AA500783CF8</string>
 											<string>40FCFC4612569AA500783CF8</string>
 											<string>40FCFC4712569AA500783CF8</string>
-											<string>40FCFC4812569AA500783CF8</string>
-											<string>40FCFC4912569AA500783CF8</string>
-											<string>40FCFC991256A79600783CF8</string>
+											<string>40FCFD1D1256BEC800783CF8</string>
+											<string>40FCFD221256BF9500783CF8</string>
+											<string>40FCFD231256BF9500783CF8</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -544,13 +544,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>40FCFCA81256A93200783CF8</string>
 		<string>40FCFC4F12569AA500783CF8</string>
 		<string>40FCFC5012569AA500783CF8</string>
 		<string>1CD10A99069EF8BA00B06720</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>40BA5026124FA8F60046960E</string>
 		<string>/Users/seandougall/Work/Figure53/Repos/helpificator/Helpifier.xcodeproj</string>
-		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>37 55 1403 823 0 0 1440 878 </string>
@@ -574,7 +573,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>RequestViewController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -591,6 +590,8 @@
 							<string>436pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -924,7 +925,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

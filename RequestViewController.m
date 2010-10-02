@@ -37,8 +37,6 @@
 
 - (void) setSelectedRequest: (HSRequest *) newRequest
 {
-	NSError *err = nil;
-	
 	[self willChangeValueForKey:@"selectedRequest"];
 	
 	[_selectedRequest release];

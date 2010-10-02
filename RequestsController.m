@@ -33,6 +33,7 @@
 
 - (void) awakeFromNib
 {
+    _hasLoadedOutlineView = NO;
     _attentionRequest = 0;
     _inboxParentItem = [@"Inbox" retain];
     _inboxRequests = [NSMutableDictionary new];
@@ -41,8 +42,6 @@
     _numberOfHistoryItemsByRequestID = [NSMutableDictionary new];
     _refreshMutex = [NSObject new];
     _refreshTimer = [NSTimer scheduledTimerWithTimeInterval:kRefreshIntervalInSeconds target:self selector:@selector(refreshRequests:) userInfo:nil repeats:YES];
-    [self reloadOutlineView];
-    [_requestsOutlineView expandItem:nil expandChildren:YES];
     [self performSelector:@selector(refreshRequests:) withObject:self afterDelay:2];
 }
 
@@ -363,6 +362,9 @@
         && ![[_myQueueRequests allKeys] containsObject:[NSNumber numberWithInteger:[_selectedRequest requestID]]])
         self.selection = nil;
     [self updateOutlineViewSelection];
+    if (!_hasLoadedOutlineView)
+        [_requestsOutlineView expandItem:nil expandChildren:YES];
+    _hasLoadedOutlineView = YES;
 }
 
 - (void) updateSelection

@@ -13,23 +13,24 @@
 
 @interface RequestsController : NSObject 
 {
-	HSRequest              *_selectedRequest;
-	NSMutableDictionary    *_inboxRequests;
-	NSMutableDictionary    *_myQueueRequests;
-	NSMutableDictionary    *_numberOfHistoryItemsByRequestID;
-	NSOutlineView          *_requestsOutlineView;
-	RequestViewController  *_requestViewController;
-	NSTimer                *_refreshTimer;
-	NSButton               *_refreshButton;
-	NSProgressIndicator    *_refreshProgressIndicator;
-	NSInteger               _attentionRequest;
-	
-	NSError                *_offlineError;
-	
-	id                      _refreshMutex;
-	
-	NSString               *_inboxParentItem;
-	NSString               *_myQueueParentItem;
+    HSRequest              *_selectedRequest;
+    NSMutableDictionary    *_inboxRequests;
+    NSMutableDictionary    *_myQueueRequests;
+    NSMutableDictionary    *_numberOfHistoryItemsByRequestID;
+    NSOutlineView          *_requestsOutlineView;
+    RequestViewController  *_requestViewController;
+    NSTimer                *_refreshTimer;
+    NSButton               *_refreshButton;
+    NSProgressIndicator    *_refreshProgressIndicator;
+    NSInteger               _attentionRequest;
+    
+    NSError                *_offlineError;
+    
+    id                      _refreshMutex;
+    BOOL                    _hasLoadedOutlineView;
+    
+    NSString               *_inboxParentItem;
+    NSString               *_myQueueParentItem;
 }
 
 @property (assign) IBOutlet NSOutlineView *requestsOutlineView;
