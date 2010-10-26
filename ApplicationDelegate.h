@@ -15,5 +15,6 @@
 
 - (IBAction) help: (id) sender;
 - (IBAction) showPreferences: (id) sender;
+- (IBAction) chooseSystemSound: (id) sender;
 
 @end

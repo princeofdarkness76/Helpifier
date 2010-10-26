@@ -53,6 +53,12 @@
 	[_prefsWindow makeKeyAndOrderFront:sender];
 }
 
+- (IBAction) chooseSystemSound: (id) sender
+{
+    [[[NSUserDefaultsController sharedUserDefaultsController] defaults] setValue:[sender title] forKey:@"notificationSound"];
+    [[NSSound soundNamed:[sender title]] play];
+}
+
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if ([self respondsToSelector:(SEL)context])

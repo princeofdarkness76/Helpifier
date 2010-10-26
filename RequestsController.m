@@ -253,7 +253,6 @@
 
 - (void) updateDictionary: (NSMutableDictionary *) dict withRequestsFromFilter: (HSFilter *) filter
 {
-    NSMutableDictionary *fullRequestsToAdd = [NSMutableDictionary dictionary];
     NSMutableArray *requestIDsFound = [NSMutableArray array];
     
     NSError *error = nil;
@@ -306,7 +305,7 @@
     [_refreshProgressIndicator setHidden:NO];
     [_refreshProgressIndicator startAnimation:self];
 
-    @synchronized ([userInfo objectForKey:@"mutex"])
+    @synchronized (_refreshMutex)
     {
     //		[_newRequests removeAllObjects];
         
@@ -354,10 +353,12 @@
     [_refreshProgressIndicator setHidden:YES];
     
     BOOL needsUserAttention = NO;
-    @synchronized ([userInfo objectForKey:@"mutex"])
+    int numberOfUnreadRequests = 0;
+    @synchronized (_refreshMutex)
     {
         for (NSNumber *reqID in [_inboxRequests allKeys])
         {
+            numberOfUnreadRequests++;
             if ([_numberOfHistoryItemsByRequestID objectForKey:reqID] == nil)
             {	
                 needsUserAttention = YES;
@@ -366,22 +367,35 @@
         }
         for (NSNumber *reqID in [_myQueueRequests allKeys])
         {
-            if ([[_myQueueRequests objectForKey:reqID] isUnread] && [_numberOfHistoryItemsByRequestID objectForKey:reqID] == nil)
-            {	
-                needsUserAttention = YES;
+            if ([[_myQueueRequests objectForKey:reqID] isUnread])
+            {
+                numberOfUnreadRequests++;
+                if ([_numberOfHistoryItemsByRequestID objectForKey:reqID] == nil)
+                {	
+                    needsUserAttention = YES;
+                }
             }
             [_numberOfHistoryItemsByRequestID setObject:[NSNumber numberWithInteger:[[_myQueueRequests objectForKey:reqID] numberOfHistoryItems]] forKey:reqID];
         }
     }
     
     if (needsUserAttention)
+    {
         _attentionRequest = [NSApp requestUserAttention:NSCriticalRequest];
+        if ([[[NSUserDefaultsController sharedUserDefaultsController] defaults] valueForKey:@"notificationSound"])
+            [[NSSound soundNamed:[[[NSUserDefaultsController sharedUserDefaultsController] defaults] valueForKey:@"notificationSound"]] play];
+    }
     else if (!hasAnyUnreadRequests && _attentionRequest > 0)	// stop bouncing if, say, the inbox just got cleared
     {	
         [NSApp cancelUserAttentionRequest:_attentionRequest];
         _attentionRequest = 0;
     }
 
+    if (numberOfUnreadRequests > 0)
+        [[NSApp dockTile] setBadgeLabel:[NSString stringWithFormat:@"%d", numberOfUnreadRequests]];
+    else
+        [[NSApp dockTile] setBadgeLabel:@""];
+    
     [self performSelectorOnMainThread:@selector(reloadOutlineView) withObject:nil waitUntilDone:NO];
 
     [pool release];
