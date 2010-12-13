@@ -288,7 +288,7 @@ finished_searching_for_request_id:
         if ([item isKindOfClass:[NSString class]])
         {
             if ([[tableColumn identifier] isEqual:@"requestShortSummary"])
-                return [item uppercaseString];
+                return [[[_filters filterForID:item].properties objectForKey:@"sFilterName"] uppercaseString];
             else
                 return nil;
         }
