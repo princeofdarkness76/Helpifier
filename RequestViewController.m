@@ -1,3 +1,4 @@
+
 //
 //  RequestViewController.m
 //  Helpifier
@@ -7,7 +8,8 @@
 //
 
 #import "RequestViewController.h"
-#import "RequestsController.h"
+#import "RequestController.h"
+#import "Request.h"
 
 @implementation RequestViewController
 
@@ -30,12 +32,12 @@
 @synthesize takeItButton = _takeItButton;
 @synthesize viewItButton = _viewItButton;
 
-- (HSRequest *) selectedRequest
+- (Request *) selectedRequest
 {
     return _selectedRequest;
 }
 
-- (void) setSelectedRequest: (HSRequest *) newRequest
+- (void) setSelectedRequest: (Request *) newRequest
 {
     [self willChangeValueForKey:@"selectedRequest"];
     
@@ -54,7 +56,7 @@
         NSString *subject = [_selectedRequest title];
         [_subjectTextField setStringValue:(subject == nil ? @"(no subject)" : subject)];
         [[_bodyHTMLView mainFrame] loadHTMLString:[self requestBodyHTML] baseURL:nil];
-        [_takeItButton setEnabled:([_selectedRequest valueForKey:@"xPersonAssignedTo"] == nil)];
+        [_takeItButton setEnabled:([_selectedRequest.properties objectForKey:@"xPersonAssignedTo"] == nil)];
         [_viewItButton setEnabled:YES];
     }
     
@@ -83,11 +85,10 @@
     NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
     [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
-    for (int i = 0; i < [_selectedRequest numberOfHistoryItems]; i++)
+    for (HistoryItem *item in _selectedRequest.historyItems)
     {
-        HSRequestHistoryItem *item = [_selectedRequest historyItemAtIndex:i];
         [bodyHTML appendFormat:@"<div class=\"item%@%@\"><p class=\"name\">%@%@</p><p class=\"date\">%@</p>%@</div>", 
-         [item body] == nil ? @" logitem" : @" requestitem",
+         [[item body] isEqual:@""] ? @" logitem" : @" requestitem",
          (![item public] && [item body] != nil) ? @" private" : @"",
          [item fullName], 
          (![item public] && [item body] != nil) ? @" (private)" : @"",

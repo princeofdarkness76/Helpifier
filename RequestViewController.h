@@ -7,15 +7,15 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <HelpSpot/HelpSpot.h>
 #import <WebKit/WebKit.h>
 
-@class RequestsController;
+@class RequestController;
+@class Request;
 
 @interface RequestViewController : NSObject 
 {
-	RequestsController  *_requestsController;
-	HSRequest           *_selectedRequest;
+	RequestController   *_requestsController;
+	Request             *_selectedRequest;
 	NSTextField         *_fromTextField;
 	NSTextField         *_subjectTextField;
 //	NSTextView          *_bodyTextView;
@@ -24,8 +24,8 @@
 	NSButton            *_viewItButton;
 }
 
-@property (nonatomic, retain) HSRequest *selectedRequest;
-@property (assign) IBOutlet RequestsController *requestsController;
+@property (nonatomic, retain) Request *selectedRequest;
+@property (assign) IBOutlet RequestController *requestsController;
 @property (assign) IBOutlet NSTextField *fromTextField;
 @property (assign) IBOutlet NSTextField *subjectTextField;
 //@property (assign) IBOutlet NSTextView *bodyTextView;

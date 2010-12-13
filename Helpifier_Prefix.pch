@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'Helpifier' target in the 'Helpifier' project
+// Prefix header for all source files of the 'HelpifierData' target in the 'HelpifierData' project
 //
 
 #ifdef __OBJC__

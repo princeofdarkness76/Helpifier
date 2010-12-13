@@ -1,916 +1,0 @@
-THelpSpot
-v7
-r0
-t307727128.182869
-cCheck dependencies
-cSymLink /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/Current A
-cSymLink /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Resources Versions/Current/Resources
-cSymLink /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Headers Versions/Current/Headers
-cSymLink /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/HelpSpot Versions/Current/HelpSpot
-cProcessInfoPlistFile /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/Resources/Info.plist Info.plist
-cCpHeader build/Release/HelpSpot.framework/Versions/A/Headers/HSRequest.h HSRequest.h
-cCpHeader build/Release/HelpSpot.framework/Versions/A/Headers/HSWorkspace.h HSWorkspace.h
-cCpHeader build/Release/HelpSpot.framework/Versions/A/Headers/HelpSpot.h HelpSpot.h
-cCpHeader build/Release/HelpSpot.framework/Versions/A/Headers/HSKnowledgeBook.h HSKnowledgeBook.h
-cCpHeader build/Release/HelpSpot.framework/Versions/A/Headers/HSItem.h HSItem.h
-cCpHeader build/Release/HelpSpot.framework/Versions/A/Headers/HSForum.h HSForum.h
-cCpHeader build/Release/HelpSpot.framework/Versions/A/Headers/HSFilter.h HSFilter.h
-cCpHeader build/Release/HelpSpot.framework/Versions/A/Headers/HSTimeEvent.h HSTimeEvent.h
-cProcessPCH /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-fjyaekhkyhimvdfxwtwikouutyef/HelpSpot_Prefix.pch.gch HelpSpot_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-cProcessPCH /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-gwtcotknqajdaxbfgjwetewqqryc/HelpSpot_Prefix.pch.gch HelpSpot_Prefix.pch normal ppc objective-c com.apple.compilers.gcc.4_2
-cCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSRequest.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSWorkspace.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSWorkspace.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSXMLParser.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSXMLParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC "build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/NSURLRequest (AFExtension).o" "/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSURLRequest (AFExtension).m" normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC "build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/NSData (AFExtension).o" "/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSData (AFExtension).m" normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSKnowledgeBook.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSKnowledgeBook.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSItem.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSItem.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSForum.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSForum.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSPerson.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSPerson.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSFilter.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSFilter.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSTimeEvent.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSTimeEvent.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSRequest.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSRequest.m normal ppc objective-c com.apple.compilers.gcc.4_2
-cCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSWorkspace.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSWorkspace.m normal ppc objective-c com.apple.compilers.gcc.4_2
-cCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSXMLParser.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSXMLParser.m normal ppc objective-c com.apple.compilers.gcc.4_2
-cCompileC "build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/NSURLRequest (AFExtension).o" "/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSURLRequest (AFExtension).m" normal ppc objective-c com.apple.compilers.gcc.4_2
-cCompileC "build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/NSData (AFExtension).o" "/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSData (AFExtension).m" normal ppc objective-c com.apple.compilers.gcc.4_2
-cCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSKnowledgeBook.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSKnowledgeBook.m normal ppc objective-c com.apple.compilers.gcc.4_2
-cCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSItem.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSItem.m normal ppc objective-c com.apple.compilers.gcc.4_2
-cCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSForum.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSForum.m normal ppc objective-c com.apple.compilers.gcc.4_2
-cCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSPerson.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSPerson.m normal ppc objective-c com.apple.compilers.gcc.4_2
-cCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSFilter.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSFilter.m normal ppc objective-c com.apple.compilers.gcc.4_2
-cCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSTimeEvent.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSTimeEvent.m normal ppc objective-c com.apple.compilers.gcc.4_2
-cLd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HelpSpot normal ppc
-cLd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HelpSpot normal i386
-cCreateUniversalBinary /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/HelpSpot normal "i386 ppc"
-cGenerateDSYMFile /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework.dSYM /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/HelpSpot
-cTouch /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework
-
-N/Developer/SDKs/MacOSX10.5.sdk
-c000000004B7E366000000000000000EE
-t1266562656
-s238
-
-N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
-c0000000040C4AA6800000000000001E5
-t1086630504
-s485
-
-N/Developer/SDKs/MacOSX10.5.sdk/usr/include/openssl/bio.h
-c0000000048649BAF0000000000006BBC
-t1214553007
-s27580
-
-N/Developer/SDKs/MacOSX10.5.sdk/usr/include/openssl/err.h
-c0000000048649BAF0000000000002EC9
-t1214553007
-s11977
-
-N/Developer/SDKs/MacOSX10.5.sdk/usr/include/openssl/evp.h
-c0000000048649BAF00000000000082CE
-t1214553007
-s33486
-
-N/Developer/SDKs/MacOSX10.5.sdk/usr/include/unistd.h
-c0000000047BA993200000000000053FF
-t1203411250
-s21503
-
-N/System/Library/Frameworks/Cocoa.framework/Cocoa
-c000000004A1F2D63000000000000A5E0
-t1243557219
-s42464
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSFilter.h
-c000000004CA1BB4B000000000000018E
-t1285667659
-s398
-i"HSItem.h"
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSFilter.m
-c000000004CA1BEFE0000000000000C29
-t1285668606
-s3113
-i"HSFilter.h"
-i"HSWorkspace.h"
-i"HSRequest.h"
-i"HSXMLParser.h"
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSForum.h
-c0000000048C1396D00000000000004CA
-t1220622701
-s1226
-i"HSItem.h"
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSForum.m
-c000000004970BE790000000000001F41
-t1232125561
-s8001
-i"HSForum.h"
-i"HSWorkspace.h"
-i"HSXMLParser.h"
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSItem.h
-c000000004CA74EFA00000000000000AD
-t1286033146
-s173
-i<Cocoa/Cocoa.h>
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSItem.m
-c000000004CA74F0D00000000000001F8
-t1286033165
-s504
-i"HSItem.h"
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSKnowledgeBook.h
-c0000000048BF0EB900000000000004C9
-t1220480697
-s1225
-i"HSItem.h"
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSKnowledgeBook.m
-c0000000048FA49F60000000000001CFA
-t1224362486
-s7418
-i"HSKnowledgeBook.h"
-i"HSWorkspace.h"
-i"HSXMLParser.h"
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSPerson.h
-c0000000048C143D40000000000000351
-t1220625364
-s849
-i"HSItem.h"
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSPerson.m
-c0000000048FA49F60000000000000A51
-t1224362486
-s2641
-i"HSPerson.h"
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSRequest.h
-c000000004CA74E7A0000000000000DD7
-t1286033018
-s3543
-i"HSItem.h"
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSRequest.m
-c000000004CA753960000000000004F03
-t1286034326
-s20227
-i"HSRequest.h"
-i"HSWorkspace.h"
-i"HSPerson.h"
-i"HSTimeEvent.h"
-i"NSURLRequest (AFExtension).h"
-i"NSData (AFExtension).h"
-i"HSXMLParser.h"
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSTimeEvent.h
-c000000004970BDD200000000000003D1
-t1232125394
-s977
-i"HSItem.h"
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSTimeEvent.m
-c000000004970BE780000000000000F99
-t1232125560
-s3993
-i"HSTimeEvent.h"
-i"HSWorkspace.h"
-i"HSXMLParser.h"
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSWorkspace.h
-c0000000048C170F8000000000000065D
-t1220636920
-s1629
-i"HSItem.h"
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSWorkspace.m
-c0000000048FA49F60000000000004228
-t1224362486
-s16936
-i"HSWorkspace.h"
-i"HSRequest.h"
-i"HSPerson.h"
-i"HSXMLParser.h"
-i"NSURLRequest (AFExtension).h"
-i"NSData (AFExtension).h"
-i<unistd.h>
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSXMLParser.h
-c0000000048E42E1100000000000003B1
-t1222913553
-s945
-i<Cocoa/Cocoa.h>
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSXMLParser.m
-c0000000048E42E11000000000000122D
-t1222913553
-s4653
-i"HSXMLParser.h"
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HelpSpot.h
-c000000004970B5C3000000000000011C
-t1232123331
-s284
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HelpSpot_Prefix.pch
-c0000000048BEA0750000000000000094
-t1220452469
-s148
-i<Cocoa/Cocoa.h>
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSData (AFExtension).h
-c0000000048BEA2580000000000000084
-t1220452952
-s132
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSData (AFExtension).m
-c0000000048BEA258000000000000036A
-t1220452952
-s874
-i"NSData (AFExtension).h"
-i<openssl/bio.h>
-i<openssl/evp.h>
-i<openssl/err.h>
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSURLRequest (AFExtension).h
-c0000000047BF04020000000000000073
-t1203700738
-s115
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSURLRequest (AFExtension).m
-c0000000048AB025B000000000000087D
-t1219166811
-s2173
-i"NSURLRequest (AFExtension).h"
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSFilter.o
-t1286033214
-s16724
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSForum.o
-t1286033213
-s32416
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSItem.o
-t1286033213
-s8972
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSKnowledgeBook.o
-t1286033213
-s31376
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSPerson.o
-t1286033213
-s19624
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSRequest.o
-t1286034328
-s74844
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSTimeEvent.o
-t1286033214
-s23516
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSWorkspace.o
-t1286033213
-s56164
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSXMLParser.o
-t1285798720
-s23292
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HelpSpot
-t1286034328
-s132816
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HelpSpot.LinkFileList
-c000000004CA3BB3B0000000000000604
-t1285798715
-s1540
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/NSData (AFExtension).o
-t1285798721
-s9328
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/NSURLRequest (AFExtension).o
-t1285798720
-s12184
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSFilter.o
-t1286033218
-s17624
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSForum.o
-t1286033218
-s35392
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSItem.o
-t1286033218
-s9192
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSKnowledgeBook.o
-t1286033218
-s33900
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSPerson.o
-t1286033218
-s20692
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSRequest.o
-t1286034328
-s82516
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSTimeEvent.o
-t1286033218
-s25280
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSWorkspace.o
-t1286033217
-s61412
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSXMLParser.o
-t1285798723
-s23052
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HelpSpot
-t1286034328
-s131136
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HelpSpot.LinkFileList
-c000000004CA3BB3B00000000000005F9
-t1285798715
-s1529
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/NSData (AFExtension).o
-t1285798723
-s9392
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/NSURLRequest (AFExtension).o
-t1285798722
-s11680
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework
-t1286034328
-s204
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework.dSYM
-t1286034328
-s102
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Headers
-t3
-s24
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/HelpSpot
-t3
-s25
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Resources
-t3
-s26
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/Headers/HSFilter.h
-t1285798715
-s398
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/Headers/HSForum.h
-t1285798715
-s1226
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/Headers/HSItem.h
-t1286033210
-s173
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/Headers/HSKnowledgeBook.h
-t1285798715
-s1225
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/Headers/HSRequest.h
-t1286033210
-s3543
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/Headers/HSTimeEvent.h
-t1285798715
-s977
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/Headers/HSWorkspace.h
-t1285798715
-s1629
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/Headers/HelpSpot.h
-t1285798715
-s284
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/HelpSpot
-t1286034328
-s270400
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/Resources/Info.plist
-t1285798715
-s658
-
-N/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/Current
-t3
-s1
-
-N/usr/lib/libcrypto.dylib
-c000000004C1172B50000000000430B60
-t1276211893
-s4393824
-
-N/var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-fjyaekhkyhimvdfxwtwikouutyef/HelpSpot_Prefix.pch.gch
-t1285798719
-s52781488
-
-N/var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-gwtcotknqajdaxbfgjwetewqqryc/HelpSpot_Prefix.pch.gch
-t1285798719
-s50008304
-
-NInfo.plist
-c0000000048C180C60000000000000315
-t1220640966
-s789
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies307727127#307727127#0(0"0(0#1#0"4300725088#0"0#
-
-CCompileC "build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/NSData (AFExtension).o" "/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSData (AFExtension).m" normal i386 objective-c com.apple.compilers.gcc.4_2
-s307491520.923856
-e307491521.150367
-r1
-xCompileC
-xbuild/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/NSData (AFExtension).o
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSData (AFExtension).m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@91"Compile /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSData (AFExtension).m307491520#307491521#0(0"0(0#0#83"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSData (AFExtension).m4300725088#1739"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-generated-files.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-own-target-headers.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-all-target-headers.hmap -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-project-headers.hmap -F/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/include -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources/i386 -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources -include /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-fjyaekhkyhimvdfxwtwikouutyef/HelpSpot_Prefix.pch -c "/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSData (AFExtension).m" -o "/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/NSData (AFExtension).o"0#
-
-CCompileC "build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/NSURLRequest (AFExtension).o" "/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSURLRequest (AFExtension).m" normal i386 objective-c com.apple.compilers.gcc.4_2
-s307491520.739284
-e307491520.945779
-r1
-xCompileC
-xbuild/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/NSURLRequest (AFExtension).o
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSURLRequest (AFExtension).m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@97"Compile /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSURLRequest (AFExtension).m307491520#307491520#0(0"0(0#0#89"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSURLRequest (AFExtension).m4300725088#1751"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-generated-files.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-own-target-headers.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-all-target-headers.hmap -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-project-headers.hmap -F/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/include -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources/i386 -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources -include /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-fjyaekhkyhimvdfxwtwikouutyef/HelpSpot_Prefix.pch -c "/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSURLRequest (AFExtension).m" -o "/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/NSURLRequest (AFExtension).o"0#
-
-CCompileC "build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/NSData (AFExtension).o" "/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSData (AFExtension).m" normal ppc objective-c com.apple.compilers.gcc.4_2
-s307491522.920639
-e307491523.138029
-r1
-xCompileC
-xbuild/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/NSData (AFExtension).o
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSData (AFExtension).m
-xnormal
-xppc
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@91"Compile /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSData (AFExtension).m307491522#307491523#0(0"0(0#0#83"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSData (AFExtension).m4300725088#1746"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch ppc -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mtune=G5 -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-generated-files.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-own-target-headers.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-all-target-headers.hmap -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-project-headers.hmap -F/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/include -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources/ppc -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources -include /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-gwtcotknqajdaxbfgjwetewqqryc/HelpSpot_Prefix.pch -c "/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSData (AFExtension).m" -o "/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/NSData (AFExtension).o"0#
-
-CCompileC "build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/NSURLRequest (AFExtension).o" "/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSURLRequest (AFExtension).m" normal ppc objective-c com.apple.compilers.gcc.4_2
-s307491522.736335
-e307491522.920373
-r1
-xCompileC
-xbuild/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/NSURLRequest (AFExtension).o
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSURLRequest (AFExtension).m
-xnormal
-xppc
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@97"Compile /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSURLRequest (AFExtension).m307491522#307491522#0(0"0(0#0#89"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSURLRequest (AFExtension).m4300725088#1758"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch ppc -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mtune=G5 -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-generated-files.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-own-target-headers.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-all-target-headers.hmap -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-project-headers.hmap -F/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/include -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources/ppc -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources -include /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-gwtcotknqajdaxbfgjwetewqqryc/HelpSpot_Prefix.pch -c "/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/NSURLRequest (AFExtension).m" -o "/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/NSURLRequest (AFExtension).o"0#
-
-CCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSFilter.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSFilter.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s307726013.685450
-e307726014.002082
-r1
-xCompileC
-xbuild/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSFilter.o
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSFilter.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@79"Compile /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSFilter.m307726013#307726014#0(0"0(0#0#71"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSFilter.m4300725088#1711"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-generated-files.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-own-target-headers.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-all-target-headers.hmap -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-project-headers.hmap -F/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/include -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources/i386 -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources -include /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-fjyaekhkyhimvdfxwtwikouutyef/HelpSpot_Prefix.pch -c /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSFilter.m -o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSFilter.o0#
-
-CCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSForum.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSForum.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s307726013.250858
-e307726013.685352
-r1
-xCompileC
-xbuild/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSForum.o
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSForum.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@78"Compile /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSForum.m307726013#307726013#0(0"0(0#0#70"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSForum.m4300725088#1709"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-generated-files.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-own-target-headers.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-all-target-headers.hmap -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-project-headers.hmap -F/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/include -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources/i386 -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources -include /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-fjyaekhkyhimvdfxwtwikouutyef/HelpSpot_Prefix.pch -c /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSForum.m -o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSForum.o0#
-
-CCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSItem.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSItem.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s307726013.072069
-e307726013.250758
-r1
-xCompileC
-xbuild/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSItem.o
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSItem.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@77"Compile /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSItem.m307726013#307726013#0(0"0(0#0#69"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSItem.m4300725088#1707"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-generated-files.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-own-target-headers.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-all-target-headers.hmap -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-project-headers.hmap -F/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/include -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources/i386 -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources -include /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-fjyaekhkyhimvdfxwtwikouutyef/HelpSpot_Prefix.pch -c /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSItem.m -o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSItem.o0#
-
-CCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSKnowledgeBook.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSKnowledgeBook.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s307726013.062576
-e307726013.463633
-r1
-xCompileC
-xbuild/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSKnowledgeBook.o
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSKnowledgeBook.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@86"Compile /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSKnowledgeBook.m307726013#307726013#0(0"0(0#0#78"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSKnowledgeBook.m4300725088#1725"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-generated-files.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-own-target-headers.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-all-target-headers.hmap -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-project-headers.hmap -F/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/include -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources/i386 -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources -include /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-fjyaekhkyhimvdfxwtwikouutyef/HelpSpot_Prefix.pch -c /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSKnowledgeBook.m -o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSKnowledgeBook.o0#
-
-CCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSPerson.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSPerson.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s307726013.463728
-e307726013.809915
-r1
-xCompileC
-xbuild/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSPerson.o
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSPerson.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@79"Compile /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSPerson.m307726013#307726013#0(0"0(0#0#71"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSPerson.m4300725088#1711"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-generated-files.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-own-target-headers.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-all-target-headers.hmap -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-project-headers.hmap -F/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/include -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources/i386 -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources -include /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-fjyaekhkyhimvdfxwtwikouutyef/HelpSpot_Prefix.pch -c /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSPerson.m -o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSPerson.o0#
-
-CCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSRequest.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s307727127.292486
-e307727128.070494
-r1
-xCompileC
-xbuild/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSRequest.o
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSRequest.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@80"Compile /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSRequest.m307727127#307727128#0(0"0(0#0#72"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSRequest.m4300725088#1713"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-generated-files.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-own-target-headers.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-all-target-headers.hmap -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-project-headers.hmap -F/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/include -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources/i386 -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources -include /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-fjyaekhkyhimvdfxwtwikouutyef/HelpSpot_Prefix.pch -c /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSRequest.m -o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSRequest.o0#
-
-CCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSTimeEvent.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSTimeEvent.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s307726013.810008
-e307726014.079278
-r1
-xCompileC
-xbuild/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSTimeEvent.o
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSTimeEvent.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@82"Compile /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSTimeEvent.m307726013#307726014#0(0"0(0#0#74"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSTimeEvent.m4300725088#1717"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-generated-files.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-own-target-headers.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-all-target-headers.hmap -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-project-headers.hmap -F/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/include -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources/i386 -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources -include /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-fjyaekhkyhimvdfxwtwikouutyef/HelpSpot_Prefix.pch -c /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSTimeEvent.m -o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSTimeEvent.o0#
-
-CCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSWorkspace.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSWorkspace.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s307726010.096539
-e307726013.071975
-r1
-xCompileC
-xbuild/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSWorkspace.o
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSWorkspace.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@82"Compile /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSWorkspace.m307726010#307726013#0(0"0(0#0#74"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSWorkspace.m4300725088#1717"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-generated-files.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-own-target-headers.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-all-target-headers.hmap -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-project-headers.hmap -F/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/include -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources/i386 -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources -include /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-fjyaekhkyhimvdfxwtwikouutyef/HelpSpot_Prefix.pch -c /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSWorkspace.m -o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSWorkspace.o0#
-
-CCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSXMLParser.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSXMLParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s307491520.613805
-e307491520.923491
-r1
-xCompileC
-xbuild/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSXMLParser.o
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSXMLParser.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@82"Compile /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSXMLParser.m307491520#307491520#0(0"0(0#0#74"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSXMLParser.m4300725088#1717"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-generated-files.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-own-target-headers.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-all-target-headers.hmap -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-project-headers.hmap -F/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/include -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources/i386 -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources -include /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-fjyaekhkyhimvdfxwtwikouutyef/HelpSpot_Prefix.pch -c /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSXMLParser.m -o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HSXMLParser.o0#
-
-CCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSFilter.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSFilter.m normal ppc objective-c com.apple.compilers.gcc.4_2
-s307726018.475247
-e307726018.705069
-r1
-xCompileC
-xbuild/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSFilter.o
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSFilter.m
-xnormal
-xppc
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@79"Compile /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSFilter.m307726018#307726018#0(0"0(0#0#71"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSFilter.m4300725088#1718"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch ppc -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mtune=G5 -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-generated-files.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-own-target-headers.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-all-target-headers.hmap -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-project-headers.hmap -F/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/include -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources/ppc -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources -include /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-gwtcotknqajdaxbfgjwetewqqryc/HelpSpot_Prefix.pch -c /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSFilter.m -o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSFilter.o0#
-
-CCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSForum.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSForum.m normal ppc objective-c com.apple.compilers.gcc.4_2
-s307726018.115186
-e307726018.475145
-r1
-xCompileC
-xbuild/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSForum.o
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSForum.m
-xnormal
-xppc
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@78"Compile /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSForum.m307726018#307726018#0(0"0(0#0#70"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSForum.m4300725088#1716"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch ppc -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mtune=G5 -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-generated-files.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-own-target-headers.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-all-target-headers.hmap -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-project-headers.hmap -F/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/include -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources/ppc -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources -include /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-gwtcotknqajdaxbfgjwetewqqryc/HelpSpot_Prefix.pch -c /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSForum.m -o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSForum.o0#
-
-CCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSItem.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSItem.m normal ppc objective-c com.apple.compilers.gcc.4_2
-s307726017.929892
-e307726018.115084
-r1
-xCompileC
-xbuild/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSItem.o
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSItem.m
-xnormal
-xppc
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@77"Compile /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSItem.m307726017#307726018#0(0"0(0#0#69"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSItem.m4300725088#1714"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch ppc -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mtune=G5 -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-generated-files.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-own-target-headers.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-all-target-headers.hmap -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-project-headers.hmap -F/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/include -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources/ppc -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources -include /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-gwtcotknqajdaxbfgjwetewqqryc/HelpSpot_Prefix.pch -c /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSItem.m -o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSItem.o0#
-
-CCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSKnowledgeBook.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSKnowledgeBook.m normal ppc objective-c com.apple.compilers.gcc.4_2
-s307726017.918078
-e307726018.361675
-r1
-xCompileC
-xbuild/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSKnowledgeBook.o
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSKnowledgeBook.m
-xnormal
-xppc
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@86"Compile /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSKnowledgeBook.m307726017#307726018#0(0"0(0#0#78"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSKnowledgeBook.m4300725088#1732"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch ppc -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mtune=G5 -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-generated-files.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-own-target-headers.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-all-target-headers.hmap -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-project-headers.hmap -F/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/include -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources/ppc -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources -include /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-gwtcotknqajdaxbfgjwetewqqryc/HelpSpot_Prefix.pch -c /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSKnowledgeBook.m -o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSKnowledgeBook.o0#
-
-CCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSPerson.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSPerson.m normal ppc objective-c com.apple.compilers.gcc.4_2
-s307726018.361770
-e307726018.631588
-r1
-xCompileC
-xbuild/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSPerson.o
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSPerson.m
-xnormal
-xppc
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@79"Compile /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSPerson.m307726018#307726018#0(0"0(0#0#71"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSPerson.m4300725088#1718"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch ppc -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mtune=G5 -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-generated-files.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-own-target-headers.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-all-target-headers.hmap -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-project-headers.hmap -F/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/include -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources/ppc -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources -include /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-gwtcotknqajdaxbfgjwetewqqryc/HelpSpot_Prefix.pch -c /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSPerson.m -o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSPerson.o0#
-
-CCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSRequest.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSRequest.m normal ppc objective-c com.apple.compilers.gcc.4_2
-s307727127.294768
-e307727128.032662
-r1
-xCompileC
-xbuild/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSRequest.o
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSRequest.m
-xnormal
-xppc
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@80"Compile /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSRequest.m307727127#307727128#0(0"0(0#0#72"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSRequest.m4300725088#1720"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch ppc -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mtune=G5 -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-generated-files.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-own-target-headers.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-all-target-headers.hmap -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-project-headers.hmap -F/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/include -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources/ppc -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources -include /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-gwtcotknqajdaxbfgjwetewqqryc/HelpSpot_Prefix.pch -c /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSRequest.m -o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSRequest.o0#
-
-CCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSTimeEvent.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSTimeEvent.m normal ppc objective-c com.apple.compilers.gcc.4_2
-s307726018.631678
-e307726018.887529
-r1
-xCompileC
-xbuild/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSTimeEvent.o
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSTimeEvent.m
-xnormal
-xppc
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@82"Compile /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSTimeEvent.m307726018#307726018#0(0"0(0#0#74"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSTimeEvent.m4300725088#1724"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch ppc -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mtune=G5 -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-generated-files.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-own-target-headers.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-all-target-headers.hmap -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-project-headers.hmap -F/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/include -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources/ppc -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources -include /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-gwtcotknqajdaxbfgjwetewqqryc/HelpSpot_Prefix.pch -c /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSTimeEvent.m -o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSTimeEvent.o0#
-
-CCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSWorkspace.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSWorkspace.m normal ppc objective-c com.apple.compilers.gcc.4_2
-s307726014.368838
-e307726017.929779
-r1
-xCompileC
-xbuild/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSWorkspace.o
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSWorkspace.m
-xnormal
-xppc
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@82"Compile /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSWorkspace.m307726014#307726017#0(0"0(0#0#74"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSWorkspace.m4300725088#1724"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch ppc -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mtune=G5 -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-generated-files.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-own-target-headers.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-all-target-headers.hmap -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-project-headers.hmap -F/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/include -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources/ppc -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources -include /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-gwtcotknqajdaxbfgjwetewqqryc/HelpSpot_Prefix.pch -c /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSWorkspace.m -o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSWorkspace.o0#
-
-CCompileC build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSXMLParser.o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSXMLParser.m normal ppc objective-c com.apple.compilers.gcc.4_2
-s307491522.714472
-e307491523.040667
-r1
-xCompileC
-xbuild/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSXMLParser.o
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSXMLParser.m
-xnormal
-xppc
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@82"Compile /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSXMLParser.m307491522#307491523#0(0"0(0#0#74"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSXMLParser.m4300725088#1724"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch ppc -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mtune=G5 -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-generated-files.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-own-target-headers.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-all-target-headers.hmap -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-project-headers.hmap -F/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/include -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources/ppc -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources -include /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-gwtcotknqajdaxbfgjwetewqqryc/HelpSpot_Prefix.pch -c /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSXMLParser.m -o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HSXMLParser.o0#
-
-CCpHeader build/Release/HelpSpot.framework/Versions/A/Headers/HSFilter.h HSFilter.h
-s307491515.248506
-e307491515.261443
-r1
-xCpHeader
-xbuild/Release/HelpSpot.framework/Versions/A/Headers/HSFilter.h
-xHSFilter.h
-lSLF07#2@15"Copy HSFilter.h307491515#307491515#0(0"0(0#0#71"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSFilter.h4300725088#422"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSFilter.h /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/Headers0#
-
-CCpHeader build/Release/HelpSpot.framework/Versions/A/Headers/HSForum.h HSForum.h
-s307491515.243927
-e307491515.261320
-r1
-xCpHeader
-xbuild/Release/HelpSpot.framework/Versions/A/Headers/HSForum.h
-xHSForum.h
-lSLF07#2@14"Copy HSForum.h307491515#307491515#0(0"0(0#0#70"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSForum.h4300725088#421"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSForum.h /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/Headers0#
-
-CCpHeader build/Release/HelpSpot.framework/Versions/A/Headers/HSItem.h HSItem.h
-s307726010.089864
-e307726010.095217
-r1
-xCpHeader
-xbuild/Release/HelpSpot.framework/Versions/A/Headers/HSItem.h
-xHSItem.h
-lSLF07#2@13"Copy HSItem.h307726010#307726010#0(0"0(0#0#69"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSItem.h4300725088#420"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSItem.h /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/Headers0#
-
-CCpHeader build/Release/HelpSpot.framework/Versions/A/Headers/HSKnowledgeBook.h HSKnowledgeBook.h
-s307491515.232648
-e307491515.261073
-r1
-xCpHeader
-xbuild/Release/HelpSpot.framework/Versions/A/Headers/HSKnowledgeBook.h
-xHSKnowledgeBook.h
-lSLF07#2@22"Copy HSKnowledgeBook.h307491515#307491515#0(0"0(0#0#78"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSKnowledgeBook.h4300725088#429"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSKnowledgeBook.h /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/Headers0#
-
-CCpHeader build/Release/HelpSpot.framework/Versions/A/Headers/HSRequest.h HSRequest.h
-s307726010.088787
-e307726010.094975
-r1
-xCpHeader
-xbuild/Release/HelpSpot.framework/Versions/A/Headers/HSRequest.h
-xHSRequest.h
-lSLF07#2@16"Copy HSRequest.h307726010#307726010#0(0"0(0#0#72"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSRequest.h4300725088#423"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSRequest.h /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/Headers0#
-
-CCpHeader build/Release/HelpSpot.framework/Versions/A/Headers/HSTimeEvent.h HSTimeEvent.h
-s307491515.254218
-e307491515.261562
-r1
-xCpHeader
-xbuild/Release/HelpSpot.framework/Versions/A/Headers/HSTimeEvent.h
-xHSTimeEvent.h
-lSLF07#2@18"Copy HSTimeEvent.h307491515#307491515#0(0"0(0#0#74"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSTimeEvent.h4300725088#425"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSTimeEvent.h /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/Headers0#
-
-CCpHeader build/Release/HelpSpot.framework/Versions/A/Headers/HSWorkspace.h HSWorkspace.h
-s307491515.217868
-e307491515.260821
-r1
-xCpHeader
-xbuild/Release/HelpSpot.framework/Versions/A/Headers/HSWorkspace.h
-xHSWorkspace.h
-lSLF07#2@18"Copy HSWorkspace.h307491515#307491515#0(0"0(0#0#74"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSWorkspace.h4300725088#425"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HSWorkspace.h /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/Headers0#
-
-CCpHeader build/Release/HelpSpot.framework/Versions/A/Headers/HelpSpot.h HelpSpot.h
-s307491515.226628
-e307491515.260948
-r1
-xCpHeader
-xbuild/Release/HelpSpot.framework/Versions/A/Headers/HelpSpot.h
-xHelpSpot.h
-lSLF07#2@15"Copy HelpSpot.h307491515#307491515#0(0"0(0#0#71"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HelpSpot.h4300725088#422"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HelpSpot.h /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/Headers0#
-
-CCreateUniversalBinary /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/HelpSpot normal "i386 ppc"
-s307727128.122791
-e307727128.137510
-r1
-xCreateUniversalBinary
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/HelpSpot
-xnormal
-xi386 ppc
-lSLF07#2@92"CreateUniversalBinary build/Release/HelpSpot.framework/Versions/A/HelpSpot normal "i386 ppc"307727128#307727128#0(0"0(0#0#69"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/i386 ppc4300725088#483"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    /usr/bin/lipo -create /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HelpSpot /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HelpSpot -output /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/HelpSpot0#
-
-CGenerateDSYMFile /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework.dSYM /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/HelpSpot
-s307727128.137596
-e307727128.180377
-r1
-xGenerateDSYMFile
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework.dSYM
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/HelpSpot
-lSLF07#2@107"GenerateDSYMFile build/Release/HelpSpot.framework.dSYM build/Release/HelpSpot.framework/Versions/A/HelpSpot307727128#307727128#0(0"0(0#0#113"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/HelpSpot4300725088#316"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    /Developer/usr/bin/dsymutil /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/HelpSpot -o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework.dSYM0#
-
-CLd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HelpSpot normal i386
-s307727128.070586
-e307727128.122691
-r1
-xLd
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HelpSpot
-xnormal
-xi386
-lSLF07#2@138"Link /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HelpSpot307727128#307727128#0(0"0(0#0#0"4300725088#847"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Developer/usr/bin/gcc-4.2 -arch i386 -dynamiclib -isysroot /Developer/SDKs/MacOSX10.5.sdk -L/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -F/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -filelist /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HelpSpot.LinkFileList -install_name @executable_path/../Frameworks/HelpSpot.framework/Versions/A/HelpSpot -mmacosx-version-min=10.5 -framework Cocoa -lcrypto -single_module -compatibility_version 1 -current_version 1 -o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/i386/HelpSpot0#
-
-CLd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HelpSpot normal ppc
-s307727128.033523
-e307727128.093170
-r1
-xLd
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HelpSpot
-xnormal
-xppc
-lSLF07#2@137"Link /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HelpSpot307727128#307727128#0(0"0(0#0#0"4300725088#844"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Developer/usr/bin/gcc-4.2 -arch ppc -dynamiclib -isysroot /Developer/SDKs/MacOSX10.5.sdk -L/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -F/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -filelist /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HelpSpot.LinkFileList -install_name @executable_path/../Frameworks/HelpSpot.framework/Versions/A/HelpSpot -mmacosx-version-min=10.5 -framework Cocoa -lcrypto -single_module -compatibility_version 1 -current_version 1 -o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/Objects-normal/ppc/HelpSpot0#
-
-CProcessInfoPlistFile /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/Resources/Info.plist Info.plist
-s307491515.193734
-e307491515.215517
-r1
-xProcessInfoPlistFile
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/Resources/Info.plist
-xInfo.plist
-lSLF07#2@18"Process Info.plist307491515#307491515#0(0"0(0#0#71"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/Info.plist4300725088#275"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    builtin-infoPlistUtility Info.plist -expandbuildsettings -platform macosx -o /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/A/Resources/Info.plist0#
-
-CProcessPCH /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-fjyaekhkyhimvdfxwtwikouutyef/HelpSpot_Prefix.pch.gch HelpSpot_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-s307491515.261657
-e307491520.020194
-r1
-xProcessPCH
-x/var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-fjyaekhkyhimvdfxwtwikouutyef/HelpSpot_Prefix.pch.gch
-xHelpSpot_Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@30"Precompile HelpSpot_Prefix.pch307491515#307491520#0(0"0(0#0#80"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HelpSpot_Prefix.pch4300725088#1586"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-generated-files.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-own-target-headers.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-all-target-headers.hmap -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-project-headers.hmap -F/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/include -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources/i386 -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources -c /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HelpSpot_Prefix.pch -o /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-fjyaekhkyhimvdfxwtwikouutyef/HelpSpot_Prefix.pch.gch0#
-
-CProcessPCH /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-gwtcotknqajdaxbfgjwetewqqryc/HelpSpot_Prefix.pch.gch HelpSpot_Prefix.pch normal ppc objective-c com.apple.compilers.gcc.4_2
-s307491515.266135
-e307491519.819776
-r1
-xProcessPCH
-x/var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-gwtcotknqajdaxbfgjwetewqqryc/HelpSpot_Prefix.pch.gch
-xHelpSpot_Prefix.pch
-xnormal
-xppc
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@30"Precompile HelpSpot_Prefix.pch307491515#307491519#0(0"0(0#0#80"/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HelpSpot_Prefix.pch4300725088#1594"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch ppc -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mtune=G5 -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-generated-files.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-own-target-headers.hmap -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-all-target-headers.hmap -iquote /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/HelpSpot-project-headers.hmap -F/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/include -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources/ppc -I/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/HelpSpot.build/Release/HelpSpot.build/DerivedSources -c /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/HelpSpot_Prefix.pch -o /var/folders/6Z/6ZmBa0h8EnuLReQ439pLzE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/HelpSpot_Prefix-gwtcotknqajdaxbfgjwetewqqryc/HelpSpot_Prefix.pch.gch0#
-
-CSymLink /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Headers Versions/Current/Headers
-s307491515.184271
-e307491515.191203
-r1
-xSymLink
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Headers
-xVersions/Current/Headers
-lSLF07#2@109"Process /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Headers307491515#307491515#0(0"0(0#0#0"4300725088#211"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    /bin/ln -sf Versions/Current/Headers /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Headers0#
-
-CSymLink /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/HelpSpot Versions/Current/HelpSpot
-s307491515.187674
-e307491515.193640
-r1
-xSymLink
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/HelpSpot
-xVersions/Current/HelpSpot
-lSLF07#2@110"Process /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/HelpSpot307491515#307491515#0(0"0(0#0#0"4300725088#213"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    /bin/ln -sf Versions/Current/HelpSpot /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/HelpSpot0#
-
-CSymLink /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Resources Versions/Current/Resources
-s307491515.181018
-e307491515.187588
-r1
-xSymLink
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Resources
-xVersions/Current/Resources
-lSLF07#2@111"Process /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Resources307491515#307491515#0(0"0(0#0#0"4300725088#215"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    /bin/ln -sf Versions/Current/Resources /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Resources0#
-
-CSymLink /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/Current A
-s307491515.179289
-e307491515.184183
-r1
-xSymLink
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/Current
-xA
-lSLF07#2@118"Process /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/Current307491515#307491515#0(0"0(0#0#0"4300725088#197"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    /bin/ln -sf A /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework/Versions/Current0#
-
-CTouch /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework
-s307727128.180467
-e307727128.182832
-r1
-xTouch
-x/Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework
-lSLF07#2@99"Touch /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework307727128#307727128#0(0"0(0#0#0"4300725088#184"    cd /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot    /usr/bin/touch -c /Users/seandougall/Work/Figure53/Repos/helpificator/HelpSpot/build/Release/HelpSpot.framework0#
-

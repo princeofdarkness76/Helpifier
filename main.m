@@ -1,9 +1,9 @@
 //
 //  main.m
-//  Helpifier
+//  HelpifierData
 //
-//  Created by Evan Olcott on 9/3/08.
-//  Copyright Audiofile Engineering 2008. All rights reserved.
+//  Created by Sean Dougall on 11/14/10.
+//  Copyright 2010 Figure 53. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>

@@ -2,9 +2,9 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1050</int>
-		<string key="IBDocument.SystemVersion">10F569</string>
+		<string key="IBDocument.SystemVersion">10H574</string>
 		<string key="IBDocument.InterfaceBuilderVersion">804</string>
-		<string key="IBDocument.AppKitVersion">1038.29</string>
+		<string key="IBDocument.AppKitVersion">1038.35</string>
 		<string key="IBDocument.HIToolboxVersion">461.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -21,9 +21,9 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="562"/>
 			<integer value="106"/>
-			<integer value="371"/>
+			<integer value="563"/>
+			<integer value="483"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -738,10 +738,10 @@
 				<string key="NSFrameAutosaveName">mainWindow</string>
 			</object>
 			<object class="NSCustomObject" id="117253668">
-				<string key="NSClassName">ApplicationDelegate</string>
+				<string key="NSClassName">HelpifierAppDelegate</string>
 			</object>
 			<object class="NSCustomObject" id="209842782">
-				<string key="NSClassName">RequestsController</string>
+				<string key="NSClassName">RequestController</string>
 			</object>
 			<object class="NSCustomObject" id="42004844">
 				<string key="NSClassName">RequestViewController</string>
@@ -769,7 +769,7 @@
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="890430581">
 								<int key="NSCellFlags">68288064</int>
-								<int key="NSCellFlags2">71435264</int>
+								<int key="NSCellFlags2">4326400</int>
 								<string key="NSContents">Username:</string>
 								<reference key="NSSupport" ref="26"/>
 								<reference key="NSControlView" ref="756291086"/>
@@ -780,12 +780,12 @@
 						<object class="NSTextField" id="564718944">
 							<reference key="NSNextResponder" ref="354884659"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{20, 101}, {58, 14}}</string>
+							<string key="NSFrame">{{17, 101}, {58, 14}}</string>
 							<reference key="NSSuperview" ref="354884659"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="281225588">
 								<int key="NSCellFlags">68288064</int>
-								<int key="NSCellFlags2">71435264</int>
+								<int key="NSCellFlags2">4326400</int>
 								<string key="NSContents">Password:</string>
 								<reference key="NSSupport" ref="26"/>
 								<reference key="NSControlView" ref="564718944"/>
@@ -1029,7 +1029,6 @@
 									</object>
 									<reference key="NSMenuFont" ref="18648070"/>
 								</object>
-								<int key="NSSelectedIndex">14</int>
 								<bool key="NSPullDown">YES</bool>
 								<int key="NSPreferredEdge">1</int>
 								<bool key="NSUsesItemFromMenu">YES</bool>
@@ -1072,7 +1071,7 @@
 						<object class="NSTextField" id="133445197">
 							<reference key="NSNextResponder" ref="354884659"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{15, 26}, {66, 14}}</string>
+							<string key="NSFrame">{{17, 26}, {66, 14}}</string>
 							<reference key="NSSuperview" ref="354884659"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="320456103">
@@ -1133,10 +1132,6 @@
 				<string key="NSMaxSize">{302, 209}</string>
 			</object>
 			<object class="NSUserDefaultsController" id="389778001">
-				<object class="NSMutableArray" key="NSDeclaredKeys">
-					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>notificationSound</string>
-				</object>
 				<bool key="NSSharedInstance">YES</bool>
 			</object>
 		</object>
@@ -1376,22 +1371,6 @@
 					<int key="connectionID">586</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">enabled: workspaceInitialized</string>
-						<reference key="source" ref="979372629"/>
-						<reference key="destination" ref="117253668"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="979372629"/>
-							<reference key="NSDestination" ref="117253668"/>
-							<string key="NSLabel">enabled: workspaceInitialized</string>
-							<string key="NSBinding">enabled</string>
-							<string key="NSKeyPath">workspaceInitialized</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">587</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">requestsController</string>
 						<reference key="source" ref="42004844"/>
@@ -1426,22 +1405,6 @@
 						</object>
 					</object>
 					<int key="connectionID">607</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">toolTip: offlineError.localizedDescription</string>
-						<reference key="source" ref="308857693"/>
-						<reference key="destination" ref="209842782"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="308857693"/>
-							<reference key="NSDestination" ref="209842782"/>
-							<string key="NSLabel">toolTip: offlineError.localizedDescription</string>
-							<string key="NSBinding">toolTip</string>
-							<string key="NSKeyPath">offlineError.localizedDescription</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">609</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
@@ -1570,6 +1533,30 @@
 						<reference key="destination" ref="570021187"/>
 					</object>
 					<int key="connectionID">669</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">requestController</string>
+						<reference key="source" ref="117253668"/>
+						<reference key="destination" ref="209842782"/>
+					</object>
+					<int key="connectionID">670</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">toolTip: offlineError</string>
+						<reference key="source" ref="308857693"/>
+						<reference key="destination" ref="209842782"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="308857693"/>
+							<reference key="NSDestination" ref="209842782"/>
+							<string key="NSLabel">toolTip: offlineError</string>
+							<string key="NSBinding">toolTip</string>
+							<string key="NSKeyPath">offlineError</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">671</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -2461,9 +2448,9 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
-					<string>{{366, 377}, {302, 193}}</string>
+					<string>{{161, 36}, {302, 193}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{366, 377}, {302, 193}}</string>
+					<string>{{161, 36}, {302, 193}}</string>
 					<boolean value="NO"/>
 					<boolean value="YES"/>
 					<boolean value="YES"/>
@@ -2562,13 +2549,13 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">669</int>
+			<int key="maxID">671</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<object class="IBPartialClassDescription">
-					<string key="className">ApplicationDelegate</string>
+					<string key="className">HelpifierAppDelegate</string>
 					<string key="superclassName">NSObject</string>
 					<object class="NSMutableDictionary" key="actions">
 						<bool key="EncodedWithXMLCoder">YES</bool>
@@ -2614,12 +2601,14 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>prefsWindow</string>
-							<string>requestsController</string>
+							<string>requestController</string>
+							<string>window</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>NSWindow</string>
-							<string>RequestsController</string>
+							<string>RequestController</string>
+							<string>NSWindow</string>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -2627,7 +2616,8 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>prefsWindow</string>
-							<string>requestsController</string>
+							<string>requestController</string>
+							<string>window</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -2636,118 +2626,22 @@
 								<string key="candidateClassName">NSWindow</string>
 							</object>
 							<object class="IBToOneOutletInfo">
-								<string key="name">requestsController</string>
-								<string key="candidateClassName">RequestsController</string>
+								<string key="name">requestController</string>
+								<string key="candidateClassName">RequestController</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">window</string>
+								<string key="candidateClassName">NSWindow</string>
 							</object>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">ApplicationDelegate.h</string>
+						<string key="minorKey">HelpifierAppDelegate.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
-					<string key="className">RequestViewController</string>
-					<string key="superclassName">NSObject</string>
-					<object class="NSMutableDictionary" key="actions">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>takeIt:</string>
-							<string>viewRequest:</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>id</string>
-							<string>id</string>
-						</object>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>takeIt:</string>
-							<string>viewRequest:</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBActionInfo">
-								<string key="name">takeIt:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">viewRequest:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-						</object>
-					</object>
-					<object class="NSMutableDictionary" key="outlets">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>bodyHTMLView</string>
-							<string>fromTextField</string>
-							<string>requestsController</string>
-							<string>subjectTextField</string>
-							<string>takeItButton</string>
-							<string>viewItButton</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>WebView</string>
-							<string>NSTextField</string>
-							<string>RequestsController</string>
-							<string>NSTextField</string>
-							<string>NSButton</string>
-							<string>NSButton</string>
-						</object>
-					</object>
-					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>bodyHTMLView</string>
-							<string>fromTextField</string>
-							<string>requestsController</string>
-							<string>subjectTextField</string>
-							<string>takeItButton</string>
-							<string>viewItButton</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBToOneOutletInfo">
-								<string key="name">bodyHTMLView</string>
-								<string key="candidateClassName">WebView</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">fromTextField</string>
-								<string key="candidateClassName">NSTextField</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">requestsController</string>
-								<string key="candidateClassName">RequestsController</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">subjectTextField</string>
-								<string key="candidateClassName">NSTextField</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">takeItButton</string>
-								<string key="candidateClassName">NSButton</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">viewItButton</string>
-								<string key="candidateClassName">NSButton</string>
-							</object>
-						</object>
-					</object>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">RequestViewController.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">RequestsController</string>
+					<string key="className">RequestController</string>
 					<string key="superclassName">NSObject</string>
 					<object class="NSMutableDictionary" key="actions">
 						<string key="NS.key.0">refreshRequests:</string>
@@ -2808,7 +2702,107 @@
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">RequestsController.h</string>
+						<string key="minorKey">RequestController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">RequestViewController</string>
+					<string key="superclassName">NSObject</string>
+					<object class="NSMutableDictionary" key="actions">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>takeIt:</string>
+							<string>viewRequest:</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>takeIt:</string>
+							<string>viewRequest:</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBActionInfo">
+								<string key="name">takeIt:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">viewRequest:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="outlets">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>bodyHTMLView</string>
+							<string>fromTextField</string>
+							<string>requestsController</string>
+							<string>subjectTextField</string>
+							<string>takeItButton</string>
+							<string>viewItButton</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>WebView</string>
+							<string>NSTextField</string>
+							<string>RequestController</string>
+							<string>NSTextField</string>
+							<string>NSButton</string>
+							<string>NSButton</string>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>bodyHTMLView</string>
+							<string>fromTextField</string>
+							<string>requestsController</string>
+							<string>subjectTextField</string>
+							<string>takeItButton</string>
+							<string>viewItButton</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">bodyHTMLView</string>
+								<string key="candidateClassName">WebView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">fromTextField</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">requestsController</string>
+								<string key="candidateClassName">RequestController</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">subjectTextField</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">takeItButton</string>
+								<string key="candidateClassName">NSButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">viewItButton</string>
+								<string key="candidateClassName">NSButton</string>
+							</object>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">RequestViewController.h</string>
 					</object>
 				</object>
 			</object>
@@ -3559,7 +3553,7 @@
 		</object>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin.macosx</string>
-			<integer value="1050" key="NS.object.0"/>
+			<integer value="1060" key="NS.object.0"/>
 		</object>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin.InterfaceBuilder3</string>

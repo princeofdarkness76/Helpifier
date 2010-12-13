@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'HelpSpot' target in the 'HelpSpot' project.
-//
-
-#ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
-#endif
