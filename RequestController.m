@@ -17,6 +17,7 @@
 
 @interface RequestController (Private)
 
+- (void) setupRootObject;
 - (void) updateSelection;
 - (void) updateOutlineViewSelection;
 - (void) reloadOutlineView;
@@ -27,6 +28,13 @@
 
 
 @implementation RequestController (Private)
+
+- (void) setupRootObject
+{
+    self.filters = [[[FilterCollection alloc] initWithPath:[NSString stringWithFormat:@"%@index.php?method=private.user.getFilters", AppDelegate.apiURL]] autorelease];
+    self.filters.delegate = self;
+    [self refreshRequests:self];
+}
 
 - (void) updateSelection
 {
@@ -115,10 +123,10 @@ finished_searching_for_request_id:
     self.enabledFilterNames = [NSMutableArray arrayWithObjects:@"inbox", @"myq", nil];
     _requestsWithPendingFetches = [[NSMutableArray array] retain];
     _isRefreshingByUserCommand = NO;
-    self.filters = [[[FilterCollection alloc] initWithPath:@"http://figure53.com/support/api/index.php?method=private.user.getFilters"] autorelease];
-    self.filters.delegate = self;
-    [self refreshRequests:self];
+    [self setupRootObject];
     _refreshTimer = [NSTimer scheduledTimerWithTimeInterval:kRefreshInterval target:self selector:@selector(performRefreshFromTimer) userInfo:nil repeats:YES];
+    
+    [[NSUserDefaultsController sharedUserDefaultsController] addObserver:self forKeyPath:@"values.apiURL" options:NSKeyValueObservingOptionNew context:@selector(setupRootObject)];
 }
 
 - (void) dealloc
@@ -176,7 +184,7 @@ finished_searching_for_request_id:
                         [unread setObject:request.lastReplyDate forKey:[NSNumber numberWithInteger:request.requestID]];
                 }
             }
-            [(HelpifierAppDelegate *)[NSApp delegate] setUnreadRequests:unread notify:!_isRefreshingByUserCommand];
+            [AppDelegate setUnreadRequests:unread notify:!_isRefreshingByUserCommand];
             _isRefreshingByUserCommand = NO;
         }
     }
@@ -364,6 +372,17 @@ finished_searching_for_request_id:
         }
     }
     return cell;
+}
+
+#pragma mark -
+#pragma mark KVO
+
+- (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if ([self respondsToSelector:(SEL)context])
+        [self performSelector:(SEL)context];
+    else
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
 }
 
 @end

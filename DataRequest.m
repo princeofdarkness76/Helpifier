@@ -25,7 +25,7 @@
 		NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:_url] cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:kTimeoutInterval];
 		NSString *authPair;
 
-        authPair = [NSString stringWithFormat:@"%@:%@", [[NSApp delegate] username], [[NSApp delegate] password]];
+        authPair = [NSString stringWithFormat:@"%@:%@", AppDelegate.username, AppDelegate.password];
         authToken = [[authPair encodeBase64] retain];
 
 		[request setHTTPShouldHandleCookies:NO];
@@ -71,8 +71,8 @@
 - (void) connection: (NSURLConnection *) connection didReceiveAuthenticationChallenge: (NSURLAuthenticationChallenge *) challenge
 {
 	if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodHTTPBasic]) {
-		[challenge.sender useCredential:[NSURLCredential credentialWithUser:[[NSApp delegate] username] 
-																   password:[[NSApp delegate] password] 
+		[challenge.sender useCredential:[NSURLCredential credentialWithUser:AppDelegate.username 
+																   password:AppDelegate.password 
 																persistence:NSURLCredentialPersistenceForSession]
                                                  forAuthenticationChallenge:challenge];
 	}

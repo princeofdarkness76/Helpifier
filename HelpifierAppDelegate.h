@@ -9,6 +9,8 @@
 #import <Cocoa/Cocoa.h>
 #import "DataObjectDelegateProtocol.h"
 
+#define AppDelegate ((HelpifierAppDelegate *)[NSApp delegate])
+
 @class RequestController;
 
 @interface HelpifierAppDelegate : NSObject <NSApplicationDelegate> 
@@ -27,6 +29,8 @@
 @property (assign) IBOutlet NSWindow *prefsWindow;
 @property (retain) NSString *username;
 @property (retain) NSString *password;
+@property (retain) NSString *apiURL;
+@property (retain) NSString *supportURL;
 @property (readonly) BOOL workspaceInitialized;
 
 - (IBAction) help: (id) sender;

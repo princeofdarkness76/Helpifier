@@ -10,6 +10,7 @@
 #import "RequestViewController.h"
 #import "RequestController.h"
 #import "Request.h"
+#import "HelpifierAppDelegate.h"
 
 @implementation RequestViewController
 
@@ -65,13 +66,13 @@
 
 - (IBAction) takeIt: (id) sender
 {
-    NSAppleScript *script = [[[NSAppleScript alloc] initWithSource:[NSString stringWithFormat:@"open location \"http://figure53.com/support/admin.php?pg=request&reqid=%d&frominbox=1&rand=%d\"", [_selectedRequest requestID], random()]] autorelease];
+    NSAppleScript *script = [[[NSAppleScript alloc] initWithSource:[NSString stringWithFormat:@"open location \"%@/admin.php?pg=request&reqid=%d&frominbox=1&rand=%d\"", AppDelegate.supportURL, [_selectedRequest requestID], random()]] autorelease];
     [script executeAndReturnError:nil];
 }
 
 - (IBAction) viewRequest: (id) sender
 {
-    NSAppleScript *script = [[[NSAppleScript alloc] initWithSource:[NSString stringWithFormat:@"open location \"http://figure53.com/support/admin.php?pg=request&reqid=%d\"", [_selectedRequest requestID]]] autorelease];
+    NSAppleScript *script = [[[NSAppleScript alloc] initWithSource:[NSString stringWithFormat:@"open location \"%@/admin.php?pg=request&reqid=%d\"", AppDelegate.supportURL, [_selectedRequest requestID]]] autorelease];
     [script executeAndReturnError:nil];
 }
 

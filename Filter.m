@@ -7,7 +7,7 @@
 //
 
 #import "Filter.h"
-
+#import "HelpifierAppDelegate.h"
 
 @implementation Filter
 
@@ -60,7 +60,7 @@ didStartElement: (NSString *) elementName
     }
     else if ([elementName isEqualToString:@"request"])
     {
-        Request *thisRequest = [[[Request alloc] initWithPath:[NSString stringWithFormat:@"http://figure53.com/support/api/index.php?method=private.request.get&xRequest=%@", [_thisRequestProperties objectForKey:@"xRequest"]]] autorelease];
+        Request *thisRequest = [[[Request alloc] initWithPath:[NSString stringWithFormat:@"%@index.php?method=private.request.get&xRequest=%@", AppDelegate.apiURL, [_thisRequestProperties objectForKey:@"xRequest"]]] autorelease];
         thisRequest.properties = self.thisRequestProperties;
         if ([_thisRequestProperties objectForKey:@"xRequest"] != nil)
             [self.requests setObject:thisRequest forKey:[self.thisRequestProperties objectForKey:@"xRequest"]];

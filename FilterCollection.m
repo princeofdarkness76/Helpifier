@@ -7,6 +7,7 @@
 //
 
 #import "FilterCollection.h"
+#import "HelpifierAppDelegate.h"
 
 @implementation FilterCollection
 
@@ -65,7 +66,7 @@ didStartElement: (NSString *) elementName
     }
     else if ([elementName isEqualToString:@"filter"])
     {
-        Filter *thisFilter = [[[Filter alloc] initWithPath:[NSString stringWithFormat:@"http://figure53.com/support/api/index.php?method=private.filter.get&xFilter=%@", [_thisFilterProperties objectForKey:@"xFilter"]]] autorelease];
+        Filter *thisFilter = [[[Filter alloc] initWithPath:[NSString stringWithFormat:@"%@index.php?method=private.filter.get&xFilter=%@", AppDelegate.apiURL, [_thisFilterProperties objectForKey:@"xFilter"]]] autorelease];
         thisFilter.properties = self.thisFilterProperties;
         [self.filters setObject:thisFilter forKey:[self.thisFilterProperties objectForKey:@"xFilter"]];
         self.thisFilterProperties = nil;
