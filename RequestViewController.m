@@ -60,7 +60,8 @@
         NSString *subject = [_selectedRequest title];
         [_subjectTextField setStringValue:(subject == nil ? @"(no subject)" : subject)];
         [[_bodyHTMLView mainFrame] loadHTMLString:[self requestBodyHTML] baseURL:nil];
-        [_takeItButton setEnabled:([_selectedRequest.properties objectForKey:@"xPersonAssignedTo"] == nil)];
+        NSString *personAssigned = [_selectedRequest.properties objectForKey:@"xPersonAssignedTo"];
+        [_takeItButton setEnabled:(personAssigned == nil || [personAssigned isEqual:@""] || [personAssigned isEqual:@"INBOX"])];
         [_viewItButton setEnabled:YES];
     }
     
