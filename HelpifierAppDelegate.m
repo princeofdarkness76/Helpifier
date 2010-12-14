@@ -1,6 +1,6 @@
 //
 //  HelpifierAppDelegate.m
-//  HelpifierData
+//  Helpifier
 //
 //  Created by Sean Dougall on 11/14/10.
 //  Copyright 2010 Figure 53. All rights reserved.
@@ -17,7 +17,6 @@
 @synthesize window = _window;
 @synthesize prefsWindow = _prefsWindow;
 @synthesize requestController = _requestController;
-@synthesize workspaceInitialized = _workspaceInitialized;
 
 - (void) applicationDidFinishLaunching: (NSNotification *) aNotification 
 {

@@ -1,6 +1,6 @@
 //
 //  DataObject.m
-//  HelpifierData
+//  Helpifier
 //
 //  Created by Sean Dougall on 11/14/10.
 //  Copyright 2010 Figure 53. All rights reserved.
@@ -63,7 +63,7 @@
 - (void) finishedReceivingData: (NSData *) data
 {
     /*
-     HelpSpot sometimes has stray data before the start of the XML data, which will make
+     HelpSpot sometimes sends stray data before the start of the XML data, which will make
      NSXMLParser barf. This trims everything up to the first '<'.
      */
     NSInteger index = 0;

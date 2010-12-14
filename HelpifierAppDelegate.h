@@ -1,6 +1,6 @@
 //
 //  HelpifierAppDelegate.h
-//  HelpifierData
+//  Helpifier
 //
 //  Created by Sean Dougall on 11/14/10.
 //  Copyright 2010 Figure 53. All rights reserved.
@@ -18,7 +18,6 @@
     NSWindow            *_window;
     RequestController   *_requestController;
     NSWindow            *_prefsWindow;
-    BOOL                 _workspaceInitialized;
     
     NSMutableDictionary *_notifiedUnreadRequests;
     NSInteger            _attentionRequest;
@@ -31,7 +30,6 @@
 @property (retain) NSString *password;
 @property (retain) NSString *apiURL;
 @property (retain) NSString *supportURL;
-@property (readonly) BOOL workspaceInitialized;
 
 - (IBAction) help: (id) sender;
 - (IBAction) showPreferences: (id) sender;

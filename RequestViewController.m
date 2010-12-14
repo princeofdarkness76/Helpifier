@@ -40,6 +40,9 @@
 
 - (void) setSelectedRequest: (Request *) newRequest
 {
+    if (newRequest == _selectedRequest)
+        return;
+    
     [self willChangeValueForKey:@"selectedRequest"];
     
     [_selectedRequest release];

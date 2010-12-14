@@ -1,6 +1,6 @@
 //
 //  RequestController.m
-//  HelpifierData
+//  Helpifier
 //
 //  Created by Sean Dougall on 11/14/10.
 //  Copyright 2010 Figure 53. All rights reserved.
@@ -160,6 +160,7 @@ finished_searching_for_request_id:
         for (Request *request in [(Filter *)obj sortedRequests])
         {
             [_requestsWithPendingFetches addObject:[NSNumber numberWithInteger:request.requestID]];
+            [request.properties setObject:[((Filter *)obj).properties objectForKey:@"xFilter"] forKey:@"filterID"];
             request.delegate = self;
             [request beginFetch];
         }
@@ -180,7 +181,7 @@ finished_searching_for_request_id:
             {
                 for (Request *request in [filter.requests allValues])
                 {
-                    if (request.isUnread)
+                    if (request.isUnread || [[filter.properties objectForKey:@"xFilter"] isEqual:@"inbox"])
                         [unread setObject:request.lastReplyDate forKey:[NSNumber numberWithInteger:request.requestID]];
                 }
             }
