@@ -7,9 +7,22 @@
 //
 
 #import "Request.h"
-
+#import "RequestController.h"
+#import "RequestViewController.h"
+#import "HelpifierAppDelegate.h"
 
 @implementation Request
+
+- (Request *) initOtherRequestWithRequestID: (NSInteger) reqID
+{
+    if (self = [super initWithPath:[NSString stringWithFormat:@"%@index.php?method=private.request.get&xRequest=%d", AppDelegate.apiURL, reqID]])
+    {
+        self.properties = [NSMutableDictionary dictionary];
+        self.historyItems = [NSMutableArray array];
+        [self.properties setObject:[NSNumber numberWithInteger:reqID] forKey:@"xRequest"];
+    }
+    return self;
+}
 
 @synthesize properties = _properties;
 @synthesize historyItems = _historyItems;
@@ -91,6 +104,13 @@ didStartElement: (NSString *) elementName
 {
     if ([elementName isEqualToString:@"request_history"])
     {
+        RequestController *del = (RequestController *)self.delegate;
+        if (del.isLoadingOtherRequest)
+        {
+            del.selection = nil;
+            del.requestViewController.selectedRequest = self;
+            [del.requestViewController.takeItButton setEnabled:NO];
+        }
     }
     else if ([elementName isEqualToString:@"item"])
     {
@@ -103,6 +123,13 @@ didStartElement: (NSString *) elementName
         {
             self.lastReplyDate = thisItem.date;
         }
+    }
+    else if ([elementName isEqualToString:@"sTitle"] ||
+             [elementName isEqualToString:@"sFirstName"] ||
+             [elementName isEqualToString:@"sLastName"] ||
+             [elementName isEqualToString:@"sEmail"])
+    {
+        [self.properties setObject:[self.thisElementString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forKey:elementName];
     }
     else
     {

@@ -27,6 +27,7 @@
     NSButton                *_refreshButton;
     NSProgressIndicator     *_refreshProgressIndicator;
     BOOL                     _isRefreshingByUserCommand;
+    BOOL                     _isLoadingOtherRequest;
     RequestViewController   *_requestViewController;
 }
 
@@ -34,6 +35,7 @@
 @property (retain) NSMutableArray *enabledFilterNames;
 @property (retain) NSString *offlineError;
 @property (assign) Request *selection;
+@property (assign) BOOL isLoadingOtherRequest;
 
 @property (assign) IBOutlet NSOutlineView *requestsOutlineView;
 @property (assign) IBOutlet NSButton *refreshButton;
@@ -41,6 +43,7 @@
 @property (assign) IBOutlet RequestViewController *requestViewController;
 
 - (IBAction) refreshRequests: (id) sender;
+- (IBAction) selectOtherRequest: (id) sender;
 
 - (Request *) requestForID: (id) inID;
 

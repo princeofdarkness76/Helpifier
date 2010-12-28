@@ -18,6 +18,8 @@
     NSDate                  *_lastReplyDate;
 }
 
+- (Request *) initOtherRequestWithRequestID: (NSInteger) reqID;
+
 @property (retain) NSMutableDictionary *properties;
 @property (retain) NSMutableArray *historyItems;
 @property (retain) NSMutableDictionary *thisHistoryItemProperties;

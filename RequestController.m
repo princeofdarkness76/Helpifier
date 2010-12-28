@@ -116,6 +116,7 @@ finished_searching_for_request_id:
 @synthesize refreshButton = _refreshButton;
 @synthesize refreshProgressIndicator = _refreshProgressIndicator;
 @synthesize requestViewController = _requestViewController;
+@synthesize isLoadingOtherRequest = _isLoadingOtherRequest;
 
 - (void) awakeFromNib
 {
@@ -242,8 +243,18 @@ finished_searching_for_request_id:
         _isRefreshingByUserCommand = YES;
     
     [self setIsBusyRefreshing:YES];
+    self.isLoadingOtherRequest = NO;
     
     [self.filters beginFetch];
+}
+
+- (IBAction) selectOtherRequest: (id) sender
+{
+    Request *request = [[[Request alloc] initOtherRequestWithRequestID:[sender integerValue]] autorelease];
+    [_requestsWithPendingFetches addObject:[NSNumber numberWithInteger:request.requestID]];
+    request.delegate = self;
+    self.isLoadingOtherRequest = YES;
+    [request beginFetch];
 }
 
 #pragma mark -
