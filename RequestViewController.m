@@ -28,6 +28,7 @@
 @synthesize requestsController = _requestsController;
 @synthesize fromTextField = _fromTextField;
 @synthesize subjectTextField = _subjectTextField;
+@synthesize otherRequestTextField = _otherRequestTextField;
 //@synthesize bodyTextView = _bodyTextView;
 @synthesize bodyHTMLView = _bodyHTMLView;
 @synthesize takeItButton = _takeItButton;
@@ -78,6 +79,11 @@
 {
     NSAppleScript *script = [[[NSAppleScript alloc] initWithSource:[NSString stringWithFormat:@"open location \"%@/admin.php?pg=request&reqid=%d\"", AppDelegate.supportURL, [_selectedRequest requestID]]] autorelease];
     [script executeAndReturnError:nil];
+}
+
+- (IBAction) selectOtherRequestTextField: (id) sender
+{
+    [_otherRequestTextField becomeFirstResponder];
 }
 
 - (NSString *) requestBodyHTML

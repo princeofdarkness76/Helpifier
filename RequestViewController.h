@@ -18,6 +18,7 @@
 	Request             *_selectedRequest;
 	NSTextField         *_fromTextField;
 	NSTextField         *_subjectTextField;
+    NSTextField         *_otherRequestTextField;
 //	NSTextView          *_bodyTextView;
 	WebView             *_bodyHTMLView;
 	NSButton            *_takeItButton;
@@ -28,6 +29,7 @@
 @property (assign) IBOutlet RequestController *requestsController;
 @property (assign) IBOutlet NSTextField *fromTextField;
 @property (assign) IBOutlet NSTextField *subjectTextField;
+@property (assign) IBOutlet NSTextField *otherRequestTextField;
 //@property (assign) IBOutlet NSTextView *bodyTextView;
 @property (assign) IBOutlet WebView *bodyHTMLView;
 @property (assign) IBOutlet NSButton *takeItButton;
@@ -37,5 +39,6 @@
 
 - (IBAction) takeIt: (id) sender;
 - (IBAction) viewRequest: (id) sender;
+- (IBAction) selectOtherRequestTextField: (id) sender;
 
 @end

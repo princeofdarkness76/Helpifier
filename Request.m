@@ -20,6 +20,7 @@
         self.properties = [NSMutableDictionary dictionary];
         self.historyItems = [NSMutableArray array];
         [self.properties setObject:[NSNumber numberWithInteger:reqID] forKey:@"xRequest"];
+        [self.properties setObject:[NSNumber numberWithBool:YES] forKey:@"isLoadedAsOtherRequest"];
     }
     return self;
 }
@@ -36,6 +37,8 @@
 
 - (NSString *) title
 {
+    if ([[_properties objectForKey:@"isLoadedAsOtherRequest"] boolValue])
+        return [NSString stringWithFormat:@"[%@] %@", [_properties objectForKey:@"xRequest"], [_properties objectForKey:@"sTitle"]];
     return [_properties objectForKey:@"sTitle"];
 }
 
