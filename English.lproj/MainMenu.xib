@@ -489,7 +489,7 @@
 														</object>
 														<object class="NSImageView" id="308857693">
 															<reference key="NSNextResponder" ref="682290787"/>
-															<int key="NSvFlags">257</int>
+															<int key="NSvFlags">260</int>
 															<object class="NSMutableSet" key="NSDragTypes">
 																<bool key="EncodedWithXMLCoder">YES</bool>
 																<object class="NSArray" key="set.sortedObjects">

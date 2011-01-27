@@ -20,16 +20,14 @@
 		_url = [url retain];
 		_delegate = [newDelegate retain];
 		
-		NSString *authToken;
-		
-		NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:_url] cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:kTimeoutInterval];
-		NSString *authPair;
+		NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@&username=%@&password=%@", _url, AppDelegate.username, AppDelegate.password]] cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:kTimeoutInterval];
 
-        authPair = [NSString stringWithFormat:@"%@:%@", AppDelegate.username, AppDelegate.password];
-        authToken = [[authPair encodeBase64] retain];
+/*		NSString *authPair = [NSString stringWithFormat:@"%@:%@", AppDelegate.username, AppDelegate.password];
+        NSString *authToken = [[authPair encodeBase64] retain];
+
+		[request addValue:[NSString stringWithFormat:@"Basic %@", authToken] forHTTPHeaderField:@"Authorization"];*/
 
 		[request setHTTPShouldHandleCookies:NO];
-		[request addValue:[NSString stringWithFormat:@"Basic %@", authToken] forHTTPHeaderField:@"Authorization"];
 		NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
 #pragma unused(connection)
 		[request release];
