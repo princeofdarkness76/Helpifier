@@ -9,6 +9,13 @@
 #import <Foundation/Foundation.h>
 
 
+@interface NSData (Base64)
+
+- (NSString *) encodeBase64;
+
+@end
+
+
 @interface NSString (Base64)
 
 - (NSString *) encodeBase64;

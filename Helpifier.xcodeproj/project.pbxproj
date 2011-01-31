@@ -11,6 +11,16 @@
 		4007F0B912C9CCAD00D8AB1C /* SelfDeselectingTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4007F0B812C9CCAD00D8AB1C /* SelfDeselectingTextField.m */; };
 		401DCB7C12931D71009BE9C3 /* RequestTemplate.html in Resources */ = {isa = PBXBuildFile; fileRef = 401DCB7A12931D71009BE9C3 /* RequestTemplate.html */; };
 		401DCB7D12931D71009BE9C3 /* warning.png in Resources */ = {isa = PBXBuildFile; fileRef = 401DCB7B12931D71009BE9C3 /* warning.png */; };
+		402E463012F47EB800837D6D /* InboxRequestControls.xib in Resources */ = {isa = PBXBuildFile; fileRef = 402E462F12F47EB800837D6D /* InboxRequestControls.xib */; };
+		402E463312F47F6A00837D6D /* InboxRequestControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 402E463212F47F6A00837D6D /* InboxRequestControlsViewController.m */; };
+		402E464512F486D400837D6D /* EditingRequestControls.xib in Resources */ = {isa = PBXBuildFile; fileRef = 402E464412F486D400837D6D /* EditingRequestControls.xib */; };
+		402E464D12F486FF00837D6D /* EditingRequestControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 402E464C12F486FF00837D6D /* EditingRequestControlsViewController.m */; };
+		402E465012F488CE00837D6D /* AttachmentsArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 402E464F12F488CE00837D6D /* AttachmentsArrayController.m */; };
+		402E465312F4890100837D6D /* Attachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 402E465212F4890100837D6D /* Attachment.m */; };
+		402E475E12F4D84A00837D6D /* RequestUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 402E475D12F4D84A00837D6D /* RequestUpdate.m */; };
+		402E486012F715F300837D6D /* Staff.m in Sources */ = {isa = PBXBuildFile; fileRef = 402E485F12F715F300837D6D /* Staff.m */; };
+		402E490212F743EF00837D6D /* CategoryCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 402E490112F743EF00837D6D /* CategoryCollection.m */; };
+		402E494512F75DA900837D6D /* StatusCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 402E494412F75DA900837D6D /* StatusCollection.m */; };
 		407C933212B5F5BF0085DBFA /* HistoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 407C933112B5F5BF0085DBFA /* HistoryItem.m */; };
 		407C957812B6AE1D0085DBFA /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 407C957712B6AE1D0085DBFA /* NSString+Base64.m */; };
 		407C959F12B6B1680085DBFA /* cargo.icns in Resources */ = {isa = PBXBuildFile; fileRef = 407C959E12B6B1680085DBFA /* cargo.icns */; };
@@ -43,6 +53,24 @@
 		4007F0B812C9CCAD00D8AB1C /* SelfDeselectingTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelfDeselectingTextField.m; sourceTree = "<group>"; };
 		401DCB7A12931D71009BE9C3 /* RequestTemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = RequestTemplate.html; sourceTree = "<group>"; };
 		401DCB7B12931D71009BE9C3 /* warning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warning.png; sourceTree = "<group>"; };
+		402E462F12F47EB800837D6D /* InboxRequestControls.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InboxRequestControls.xib; sourceTree = "<group>"; };
+		402E463112F47F6A00837D6D /* InboxRequestControlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InboxRequestControlsViewController.h; sourceTree = "<group>"; };
+		402E463212F47F6A00837D6D /* InboxRequestControlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InboxRequestControlsViewController.m; sourceTree = "<group>"; };
+		402E464412F486D400837D6D /* EditingRequestControls.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditingRequestControls.xib; sourceTree = "<group>"; };
+		402E464B12F486FF00837D6D /* EditingRequestControlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditingRequestControlsViewController.h; sourceTree = "<group>"; };
+		402E464C12F486FF00837D6D /* EditingRequestControlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditingRequestControlsViewController.m; sourceTree = "<group>"; };
+		402E464E12F488CE00837D6D /* AttachmentsArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttachmentsArrayController.h; sourceTree = "<group>"; };
+		402E464F12F488CE00837D6D /* AttachmentsArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttachmentsArrayController.m; sourceTree = "<group>"; };
+		402E465112F4890100837D6D /* Attachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attachment.h; sourceTree = "<group>"; };
+		402E465212F4890100837D6D /* Attachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Attachment.m; sourceTree = "<group>"; };
+		402E475C12F4D84A00837D6D /* RequestUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestUpdate.h; sourceTree = "<group>"; };
+		402E475D12F4D84A00837D6D /* RequestUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestUpdate.m; sourceTree = "<group>"; };
+		402E485E12F715F300837D6D /* Staff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Staff.h; sourceTree = "<group>"; };
+		402E485F12F715F300837D6D /* Staff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Staff.m; sourceTree = "<group>"; };
+		402E490012F743EF00837D6D /* CategoryCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCollection.h; sourceTree = "<group>"; };
+		402E490112F743EF00837D6D /* CategoryCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCollection.m; sourceTree = "<group>"; };
+		402E494312F75DA900837D6D /* StatusCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusCollection.h; sourceTree = "<group>"; };
+		402E494412F75DA900837D6D /* StatusCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusCollection.m; sourceTree = "<group>"; };
 		407C933012B5F5BF0085DBFA /* HistoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryItem.h; sourceTree = "<group>"; };
 		407C933112B5F5BF0085DBFA /* HistoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryItem.m; sourceTree = "<group>"; };
 		407C957612B6AE1D0085DBFA /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
@@ -154,6 +182,8 @@
 				401DCB7A12931D71009BE9C3 /* RequestTemplate.html */,
 				401DCB7B12931D71009BE9C3 /* warning.png */,
 				40E5FB10129093B60059DF46 /* MainMenu.xib */,
+				402E462F12F47EB800837D6D /* InboxRequestControls.xib */,
+				402E464412F486D400837D6D /* EditingRequestControls.xib */,
 				8D1107310486CEB800E47090 /* Helpifier-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 			);
@@ -193,6 +223,14 @@
 				40E5FAB5129089F10059DF46 /* Request.m */,
 				407C933012B5F5BF0085DBFA /* HistoryItem.h */,
 				407C933112B5F5BF0085DBFA /* HistoryItem.m */,
+				402E475C12F4D84A00837D6D /* RequestUpdate.h */,
+				402E475D12F4D84A00837D6D /* RequestUpdate.m */,
+				402E485E12F715F300837D6D /* Staff.h */,
+				402E485F12F715F300837D6D /* Staff.m */,
+				402E490012F743EF00837D6D /* CategoryCollection.h */,
+				402E490112F743EF00837D6D /* CategoryCollection.m */,
+				402E494312F75DA900837D6D /* StatusCollection.h */,
+				402E494412F75DA900837D6D /* StatusCollection.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -218,6 +256,14 @@
 				40E5FAD912908BCA0059DF46 /* RequestController.m */,
 				40E5FB22129094B90059DF46 /* RequestViewController.h */,
 				40E5FB23129094B90059DF46 /* RequestViewController.m */,
+				402E463112F47F6A00837D6D /* InboxRequestControlsViewController.h */,
+				402E463212F47F6A00837D6D /* InboxRequestControlsViewController.m */,
+				402E464B12F486FF00837D6D /* EditingRequestControlsViewController.h */,
+				402E464C12F486FF00837D6D /* EditingRequestControlsViewController.m */,
+				402E464E12F488CE00837D6D /* AttachmentsArrayController.h */,
+				402E464F12F488CE00837D6D /* AttachmentsArrayController.m */,
+				402E465112F4890100837D6D /* Attachment.h */,
+				402E465212F4890100837D6D /* Attachment.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -277,6 +323,8 @@
 				401DCB7C12931D71009BE9C3 /* RequestTemplate.html in Resources */,
 				401DCB7D12931D71009BE9C3 /* warning.png in Resources */,
 				407C959F12B6B1680085DBFA /* cargo.icns in Resources */,
+				402E463012F47EB800837D6D /* InboxRequestControls.xib in Resources */,
+				402E464512F486D400837D6D /* EditingRequestControls.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +348,14 @@
 				407C933212B5F5BF0085DBFA /* HistoryItem.m in Sources */,
 				407C957812B6AE1D0085DBFA /* NSString+Base64.m in Sources */,
 				4007F0B912C9CCAD00D8AB1C /* SelfDeselectingTextField.m in Sources */,
+				402E463312F47F6A00837D6D /* InboxRequestControlsViewController.m in Sources */,
+				402E464D12F486FF00837D6D /* EditingRequestControlsViewController.m in Sources */,
+				402E465012F488CE00837D6D /* AttachmentsArrayController.m in Sources */,
+				402E465312F4890100837D6D /* Attachment.m in Sources */,
+				402E475E12F4D84A00837D6D /* RequestUpdate.m in Sources */,
+				402E486012F715F300837D6D /* Staff.m in Sources */,
+				402E490212F743EF00837D6D /* CategoryCollection.m in Sources */,
+				402E494512F75DA900837D6D /* StatusCollection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

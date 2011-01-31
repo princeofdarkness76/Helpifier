@@ -7,9 +7,19 @@
  *
  */
 
+
+// Base
 #import "DataObjectDelegateProtocol.h"
 #import "DataObject.h"
+
+// Request hierarchy
 #import "FilterCollection.h"
 #import "Filter.h"
 #import "Request.h"
 #import "HistoryItem.h"
+#import "RequestUpdate.h"
+
+// Workspace-level objects
+#import "Staff.h"
+#import "CategoryCollection.h"
+#import "StatusCollection.h"

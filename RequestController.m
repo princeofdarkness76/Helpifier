@@ -240,7 +240,11 @@ finished_searching_for_request_id:
     }
     
     if (sender != self)
+    {
         _isRefreshingByUserCommand = YES;
+        [_refreshTimer invalidate];
+        _refreshTimer = [NSTimer scheduledTimerWithTimeInterval:kRefreshInterval target:self selector:@selector(performRefreshFromTimer) userInfo:nil repeats:YES];
+    }
     
     [self setIsBusyRefreshing:YES];
     self.isLoadingOtherRequest = NO;

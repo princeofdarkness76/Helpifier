@@ -19,6 +19,8 @@
 		_data = [[NSMutableData data] retain];
 		_url = [url retain];
 		_delegate = [newDelegate retain];
+        _httpMethod = [@"GET" retain];
+        _postData = nil;
 		
 		NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@&username=%@&password=%@", _url, AppDelegate.username, AppDelegate.password]] cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:kTimeoutInterval];
 
@@ -35,8 +37,41 @@
 	return self;
 }
 
+- (id) initWithURL: (NSString *) url postData: (NSData *) postData delegate: (DataObject *) newDelegate
+{
+	if (self = [super init])
+	{
+		_data = [[NSMutableData data] retain];
+		_url = [url retain];
+		_delegate = [newDelegate retain];
+        _httpMethod = [@"POST" retain];
+        _postData = [postData retain];
+		
+		NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@&username=%@&password=%@", _url, AppDelegate.username, AppDelegate.password]] cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:kTimeoutInterval];
+        
+        /*		NSString *authPair = [NSString stringWithFormat:@"%@:%@", AppDelegate.username, AppDelegate.password];
+         NSString *authToken = [[authPair encodeBase64] retain];
+         
+         [request addValue:[NSString stringWithFormat:@"Basic %@", authToken] forHTTPHeaderField:@"Authorization"];*/
+        
+		[request setHTTPShouldHandleCookies:NO];
+        [request setHTTPMethod:@"POST"];
+        [request setHTTPBody:_postData];
+		NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
+#pragma unused(connection)
+		[request release];
+	}
+	return self;
+}
+
 - (void) dealloc
 {
+    [_postData release];
+    _postData = nil;
+    
+    [_httpMethod release];
+    _httpMethod = nil;
+    
 	[_data release];
 	_data = nil;
 	

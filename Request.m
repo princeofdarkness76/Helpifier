@@ -10,6 +10,7 @@
 #import "RequestController.h"
 #import "RequestViewController.h"
 #import "HelpifierAppDelegate.h"
+#import "InboxRequestControlsViewController.h"
 
 @implementation Request
 
@@ -105,14 +106,14 @@ didStartElement: (NSString *) elementName
    namespaceURI: (NSString *) namespaceURI
   qualifiedName: (NSString *) qualifiedName
 {
-    if ([elementName isEqualToString:@"request_history"])
+    if ([elementName isEqualToString:@"request_history"] && [self.delegate isKindOfClass:[RequestController class]])
     {
         RequestController *del = (RequestController *)self.delegate;
         if (del.isLoadingOtherRequest)
         {
             del.selection = nil;
             del.requestViewController.selectedRequest = self;
-            [del.requestViewController.takeItButton setEnabled:NO];
+            [del.requestViewController.inboxControls.takeItButton setEnabled:NO];
         }
     }
     else if ([elementName isEqualToString:@"item"])
