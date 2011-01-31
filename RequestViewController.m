@@ -53,6 +53,7 @@
     
     [_controlsContainerView addSubview:_editingControls.controlsView];
     
+    [_editingControls setOptionsFromExistingRequest:_selectedRequest];
     [_editingControls updateOptions];
     [_editingControls setupTableView];
 }
@@ -136,7 +137,6 @@
         }
         else
         {
-            NSLog(@"person: %@", _selectedRequest.properties);
             [self showEditingControls];
         }
     }

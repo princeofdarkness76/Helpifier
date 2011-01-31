@@ -12,6 +12,7 @@
 
 @class RequestViewController;
 @class AttachmentsArrayController;
+@class Request;
 
 
 @interface EditingRequestControlsViewController : NSObject <DataObjectDelegate>
@@ -53,6 +54,7 @@
 - (IBAction) updateAndClose: (id) sender;
 - (IBAction) viewOnWebSite: (id) sender;
 
+- (void) setOptionsFromExistingRequest: (Request *) request;
 - (IBAction) changeOptions: (id) sender;
 - (void) updateOptions;
 - (void) resetOptions;

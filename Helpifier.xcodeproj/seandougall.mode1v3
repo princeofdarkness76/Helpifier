@@ -282,7 +282,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>15</integer>
+									<integer>11</integer>
 									<integer>7</integer>
 									<integer>1</integer>
 									<integer>0</integer>
@@ -326,7 +326,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>RequestViewController.h</string>
+								<string>EditingRequestControlsViewController.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -334,11 +334,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>RequestViewController.h</string>
+										<string>EditingRequestControlsViewController.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>402E4A9412F775D000837D6D</string>
+										<string>402E4AB312F777FA00837D6D</string>
 										<key>history</key>
 										<array>
 											<string>407C95C412B6BB760085DBFA</string>
@@ -369,7 +369,6 @@
 											<string>402E494812F75FCE00837D6D</string>
 											<string>402E494912F75FCE00837D6D</string>
 											<string>402E498B12F7630400837D6D</string>
-											<string>402E49BD12F7690600837D6D</string>
 											<string>402E49BE12F7690600837D6D</string>
 											<string>402E49C012F7690600837D6D</string>
 											<string>402E49CF12F769EE00837D6D</string>
@@ -383,8 +382,10 @@
 											<string>402E4A6212F7738D00837D6D</string>
 											<string>402E4A6B12F774D300837D6D</string>
 											<string>402E4A6C12F774D300837D6D</string>
-											<string>402E4A8712F775B700837D6D</string>
-											<string>402E4A6D12F774D300837D6D</string>
+											<string>402E4A9B12F777A300837D6D</string>
+											<string>402E4AB012F777FA00837D6D</string>
+											<string>402E4AB112F777FA00837D6D</string>
+											<string>402E4AB212F777FA00837D6D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -582,14 +583,15 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>402E4AB412F777FA00837D6D</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>402E492812F75B7600837D6D</string>
 		<string>402E484A12F711DB00837D6D</string>
 		<string>402E484B12F711DB00837D6D</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>40BA5026124FA8F60046960E</string>
 		<string>/Users/seandougall/Work/Figure53/Repos/Helpifier/Helpifier.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 59 1920 999 0 0 1920 1058 </string>
@@ -608,12 +610,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>RequestUpdate.m</string>
+								<string>EditingRequestControlsViewController.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -630,8 +634,6 @@
 							<string>436pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -833,7 +835,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CDD528C0622207200134675</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>StatusCollection.m</string>
+										<string>RequestViewController.m</string>
 										<key>StatusBarVisibility</key>
 										<true/>
 									</dict>
@@ -918,6 +920,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -963,7 +967,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

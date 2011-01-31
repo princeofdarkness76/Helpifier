@@ -83,6 +83,15 @@
 #pragma mark -
 #pragma mark Options popup management
 
+- (void) setOptionsFromExistingRequest: (Request *) request
+{
+    NSString *oldCategory = _category;
+    _category = [[request.properties objectForKey:@"xCategory"] copy];
+    [oldCategory release];
+    
+    [_tags removeAllObjects];
+}
+
 - (IBAction) changeOptions: (id) sender
 {
     NSString *title = [sender title];
