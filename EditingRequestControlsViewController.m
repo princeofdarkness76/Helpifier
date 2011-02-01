@@ -55,6 +55,8 @@
                                                                   cc:[_ccField stringValue]
                                                                  bcc:[_bccField stringValue]
                                                               status:@"Active"
+                                                            category:_category
+                                                                tags:_tags
                                                                 open:YES
                                                             delegate:self];
     [update autorelease];
@@ -69,6 +71,8 @@
                                                                   cc:[_ccField stringValue]
                                                                  bcc:[_bccField stringValue]
                                                               status:[sender title]
+                                                            category:_category
+                                                                tags:_tags
                                                                 open:NO
                                                             delegate:self];
     [update autorelease];
@@ -90,6 +94,7 @@
     [oldCategory release];
     
     [_tags removeAllObjects];
+    [_tags addObjectsFromArray:[request.properties objectForKey:@"reportingTags"]];
 }
 
 - (IBAction) changeOptions: (id) sender

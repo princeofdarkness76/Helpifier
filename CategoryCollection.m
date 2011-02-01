@@ -53,6 +53,17 @@ static CategoryCollection *_sharedCollection = nil;
     return nil;
 }
 
+- (NSMutableDictionary *) tagWithTitle: (NSString *) tagTitle inCategoryWithTitle: (NSString *) categoryTitle
+{
+    NSArray *tags = [[self categoryWithTitle:categoryTitle] objectForKey:@"reportingTags"];
+    for (NSDictionary *tag in tags)
+    {
+        if ([[tag objectForKey:@"sReportingTag"] isEqual:tagTitle])
+            return tag;
+    }
+    return nil;
+}
+
 
 - (void) parser: (NSXMLParser *) parser 
 didStartElement: (NSString *) elementName 

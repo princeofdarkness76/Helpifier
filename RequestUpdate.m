@@ -10,6 +10,7 @@
 #import "Attachment.h"
 #import "DataRequest.h"
 #import "StatusCollection.h"
+#import "CategoryCollection.h"
 #import "HelpifierAppDelegate.h"
 #import "Staff.h"
 
@@ -22,6 +23,8 @@
                       cc: (NSString *) ccAddresses
                      bcc: (NSString *) bccAddresses
                   status: (NSString *) status
+                category: (NSString *) category
+                    tags: (NSArray *) tags
                     open: (BOOL) leaveOpen
                 delegate: (id) delegate
 {
@@ -40,6 +43,15 @@
         
         [queryString appendFormat:@"&xStatus=%@", [[[StatusCollection collection] statusWithTitle:status] objectForKey:@"xStatus"]];
         [queryString appendFormat:@"&fOpen=%d", leaveOpen ? 1 : 0];
+        
+        if ([category length] > 0)
+            [queryString appendFormat:@"&xCategory=%@", [[[CategoryCollection collection] categoryWithTitle:category] objectForKey:@"xCategory"]];
+        
+        NSMutableArray *tagIDs = [NSMutableArray array];
+        for (NSString *tagTitle in tags)
+            [tagIDs addObject:[[[CategoryCollection collection] tagWithTitle:tagTitle inCategoryWithTitle:category] objectForKey:@"xReportingTag"]];
+        if ([tagIDs count] > 0)
+            [queryString appendFormat:@"&reportingTags=%@", [tagIDs componentsJoinedByString:@", "]];
         
         int attNum = 0;
         for (Attachment *attachment in attachments)

@@ -20,6 +20,7 @@
 
 + (CategoryCollection *) collection;
 - (NSMutableDictionary *) categoryWithTitle: (NSString *) title;
+- (NSMutableDictionary *) tagWithTitle: (NSString *) tagTitle inCategoryWithTitle: (NSString *) categoryTitle;
 
 @property (retain) NSMutableDictionary *properties;
 @property (retain) NSMutableArray *categories;

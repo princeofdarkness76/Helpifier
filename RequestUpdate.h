@@ -24,6 +24,8 @@
                       cc: (NSString *) ccAddresses
                      bcc: (NSString *) bccAddresses
                   status: (NSString *) status
+                category: (NSString *) category
+                    tags: (NSArray *) tags
                     open: (BOOL) leaveOpen
                 delegate: (id) delegate;
 

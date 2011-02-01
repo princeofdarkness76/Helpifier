@@ -95,6 +95,10 @@ didStartElement: (NSString *) elementName
     {
         self.thisHistoryItemProperties = [NSMutableDictionary dictionary];
     }
+    else if ([elementName isEqualToString:@"reportingTags"])
+    {
+        [self.properties setObject:[NSMutableArray array] forKey:@"reportingTags"];
+    }
     else
     {
         self.thisElementString = [NSMutableString string];
@@ -134,6 +138,10 @@ didStartElement: (NSString *) elementName
              [elementName isEqualToString:@"sEmail"])
     {
         [self.properties setObject:[self.thisElementString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forKey:elementName];
+    }
+    else if ([elementName isEqualToString:@"sReportingTag"])
+    {
+        [[self.properties objectForKey:@"reportingTags"] addObject:[self.thisElementString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
     }
     else
     {
