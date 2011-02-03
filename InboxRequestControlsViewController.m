@@ -32,4 +32,9 @@
     [_viewController viewRequest:sender];
 }
 
+- (BOOL) nibLoaded
+{
+    return (_controlsView != nil);
+}
+
 @end

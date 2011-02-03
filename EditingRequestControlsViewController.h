@@ -39,6 +39,7 @@
 @property (assign) IBOutlet NSView *controlsView;
 @property (assign) IBOutlet AttachmentsArrayController *attachments;
 @property (assign) RequestViewController *viewController;
+@property (readonly) BOOL nibLoaded;
 
 @property (assign) IBOutlet NSTextView *noteTextView;
 @property (assign) IBOutlet NSTableView *attachmentsTable;

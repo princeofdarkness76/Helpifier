@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="1"/>
+			<integer value="2"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -113,7 +113,6 @@
 									<int key="NSfFlags">1044</int>
 								</object>
 							</object>
-							<int key="NSSelectedIndex">1</int>
 							<bool key="NSPullDown">YES</bool>
 							<int key="NSPreferredEdge">1</int>
 							<bool key="NSUsesItemFromMenu">YES</bool>
@@ -184,6 +183,8 @@
 													<int key="NSMnemonicLoc">2147483647</int>
 													<reference key="NSOnImage" ref="234436742"/>
 													<reference key="NSMixedImage" ref="996318962"/>
+													<string key="NSAction">_popUpItemAction:</string>
+													<reference key="NSTarget" ref="647369874"/>
 												</object>
 											</object>
 										</object>
@@ -207,6 +208,8 @@
 													<int key="NSMnemonicLoc">2147483647</int>
 													<reference key="NSOnImage" ref="234436742"/>
 													<reference key="NSMixedImage" ref="996318962"/>
+													<string key="NSAction">_popUpItemAction:</string>
+													<reference key="NSTarget" ref="647369874"/>
 												</object>
 											</object>
 										</object>
@@ -230,6 +233,8 @@
 													<int key="NSMnemonicLoc">2147483647</int>
 													<reference key="NSOnImage" ref="234436742"/>
 													<reference key="NSMixedImage" ref="996318962"/>
+													<string key="NSAction">_popUpItemAction:</string>
+													<reference key="NSTarget" ref="647369874"/>
 												</object>
 											</object>
 										</object>
@@ -688,7 +693,7 @@
 												<string>public.url</string>
 											</object>
 										</object>
-										<string key="NSFrameSize">{256, 11}</string>
+										<string key="NSFrame">{{0, -3}, {256, 14}}</string>
 										<reference key="NSSuperview" ref="497209468"/>
 										<object class="NSTextContainer" key="NSTextContainer" id="612950895">
 											<object class="NSLayoutManager" key="NSLayoutManager">
@@ -865,7 +870,7 @@
 									<object class="NSTextView" id="15884617">
 										<reference key="NSNextResponder" ref="892986123"/>
 										<int key="NSvFlags">2322</int>
-										<string key="NSFrameSize">{180, 31}</string>
+										<string key="NSFrame">{{0, 17}, {180, 14}}</string>
 										<reference key="NSSuperview" ref="892986123"/>
 										<object class="NSTextContainer" key="NSTextContainer" id="166317973">
 											<object class="NSLayoutManager" key="NSLayoutManager">
@@ -1713,7 +1718,7 @@
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{558, 380}, {454, 309}}</string>
+					<string>{{558, 200}, {454, 309}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{628, 654}</string>
 					<string>{{357, 416}, {480, 272}}</string>

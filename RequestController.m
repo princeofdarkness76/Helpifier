@@ -220,7 +220,7 @@ finished_searching_for_request_id:
 {
     for (Filter *filter in [_filters.filters allValues])
     {
-        for (Request *request in [filter sortedRequests])
+        for (Request *request in [filter.requests allValues])
         {
             if ([[request.properties objectForKey:@"xRequest"] isEqual:inID])
                 return request;

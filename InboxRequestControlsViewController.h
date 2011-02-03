@@ -23,6 +23,7 @@
 @property (assign) IBOutlet NSView *controlsView;
 @property (assign) IBOutlet NSButton *takeItButton;
 @property (assign) IBOutlet NSButton *viewItButton;
+@property (readonly) BOOL nibLoaded;
 
 - (IBAction) takeItInHelpifier: (id) sender;
 - (IBAction) takeItOnWebSite: (id) sender;

@@ -26,7 +26,8 @@
 
 - (void) showInboxControls
 {
-    [NSBundle loadNibNamed:@"InboxRequestControls" owner:_inboxControls];
+    if (!_inboxControls.nibLoaded)
+        [NSBundle loadNibNamed:@"InboxRequestControls" owner:_inboxControls];
     
     for (NSView *subview in [_controlsContainerView subviews])
         [subview removeFromSuperview];
@@ -41,7 +42,8 @@
 
 - (void) showEditingControls
 {
-    [NSBundle loadNibNamed:@"EditingRequestControls" owner:_editingControls];
+    if (!_editingControls.nibLoaded)
+        [NSBundle loadNibNamed:@"EditingRequestControls" owner:_editingControls];
     
     for (NSView *subview in [_controlsContainerView subviews])
         [subview removeFromSuperview];

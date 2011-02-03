@@ -30,6 +30,11 @@
 }
 
 
+- (BOOL) nibLoaded
+{
+    return (_controlsView != nil);
+}
+
 @synthesize controlsView = _controlsView;
 @synthesize attachments = _attachments;
 @synthesize attachmentsTable = _attachmentsTable;

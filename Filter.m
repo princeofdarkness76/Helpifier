@@ -22,7 +22,7 @@
                                 [NSSortDescriptor sortDescriptorWithKey:@"urgent" ascending:NO],
                                 [NSSortDescriptor sortDescriptorWithKey:@"lastReplyDate" ascending:NO],
                                 nil]];
-    return [[reqs copy] autorelease];
+    return reqs;
 }
 
 - (NSString *) description
