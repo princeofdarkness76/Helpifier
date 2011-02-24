@@ -4,7 +4,7 @@ Helpifier is a native OS X Client for use with UserScape's [HelpSpot help desk s
 
 ## Requirements
 
-Helpifier require Mac OS 10.6.
+Helpifier requires Mac OS 10.6.
 
 ## Usage
 
