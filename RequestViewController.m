@@ -247,13 +247,16 @@
 constrainMaxCoordinate: (CGFloat) proposedMax
           ofSubviewAt: (NSInteger) dividerIndex
 {
+	// If no selection (as when we first launch) constrain to the editing interface 
     if (_selectedRequest == nil)
-        return [splitView frame].size.height - 50;
+        return [splitView frame].size.height - 200;
     
+	// Constrain just for the "take it" buttons
     NSString *personAssigned = [_selectedRequest.properties objectForKey:@"xPersonAssignedTo"];
     if (personAssigned == nil || [personAssigned isEqual:@""] || [personAssigned isEqual:@"INBOX"])
         return [splitView frame].size.height - 50;
     
+	// Constrain for the editing interface
     return [splitView frame].size.height - 200;
 }
 
