@@ -10,13 +10,13 @@ Building Helpifier requires XCode.  (There's not currently a pre-built version a
 
 ## Usage
 
-Helpifier is a tool we've developed for internal use at Figure 53. You'll probably find some rough spots, but we've found it pretty useful.
+Helpifier is a tool we've developed for internal use at [Figure 53](http://figure53.com). Because this is an internal tool, you may bump into some rough spots.  However, we've found it to be quite helpful in keeping our response times fast.
 
 When you first launch Helpifier, you will need to enter your HelpSpot settings.
 
 <ol>
 <li>Go to: "Helpifier" --> "Preferences..."</li>
-<li>Enter the URLs for your HelpSpot information.</li>
+<li>Enter the URLs for your HelpSpot installation.</li>
 <li>Enter your HelpSpot username and password.</li>
 </ol>
 
