@@ -262,6 +262,27 @@ finished_searching_for_request_id:
 }
 
 #pragma mark -
+#pragma mark split view delegate
+
+- (BOOL) splitView:(NSSplitView *)splitView shouldAdjustSizeOfSubview:(NSView *)subview
+{
+	if ([subview isEqual:[[splitView subviews] objectAtIndex:0]])
+		return NO;
+	
+	return YES;
+}
+
+- (CGFloat) splitView:(NSSplitView *)splitView constrainMinCoordinate:(CGFloat)proposedMin ofSubviewAt:(NSInteger)dividerIndex
+{
+	return 200;
+}
+
+- (CGFloat) splitView:(NSSplitView *)splitView constrainMaxCoordinate:(CGFloat)proposedMax ofSubviewAt:(NSInteger)dividerIndex
+{
+	return [splitView maxPossiblePositionOfDividerAtIndex:dividerIndex] - 450;
+}
+
+#pragma mark -
 #pragma mark outline view data source
 
 - (id)outlineView:(NSOutlineView *)outlineView child:(NSInteger)index ofItem:(id)item

@@ -11,7 +11,7 @@
 
 @class RequestViewController;
 
-@interface RequestController : NSObject <DataObjectDelegate>
+@interface RequestController : NSObject <DataObjectDelegate, NSSplitViewDelegate>
 {
     FilterCollection        *_filters;
     id                       _refreshMutex;
@@ -23,6 +23,7 @@
     BOOL                     _hasLoadedOutlineView;
     NSInteger                _selectedRequestID;
     
+	IBOutlet NSSplitView	*_requestSplitView;
     NSOutlineView           *_requestsOutlineView;
     NSButton                *_refreshButton;
     NSProgressIndicator     *_refreshProgressIndicator;
