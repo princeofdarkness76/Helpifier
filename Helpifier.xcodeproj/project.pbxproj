@@ -23,7 +23,6 @@
 		402E494512F75DA900837D6D /* StatusCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 402E494412F75DA900837D6D /* StatusCollection.m */; };
 		407C933212B5F5BF0085DBFA /* HistoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 407C933112B5F5BF0085DBFA /* HistoryItem.m */; };
 		407C957812B6AE1D0085DBFA /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 407C957712B6AE1D0085DBFA /* NSString+Base64.m */; };
-		407C959F12B6B1680085DBFA /* cargo.icns in Resources */ = {isa = PBXBuildFile; fileRef = 407C959E12B6B1680085DBFA /* cargo.icns */; };
 		40E5F902128FD7800059DF46 /* DataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E5F901128FD7800059DF46 /* DataRequest.m */; };
 		40E5F97B128FDB610059DF46 /* NSData+NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E5F97A128FDB610059DF46 /* NSData+NSString.m */; };
 		40E5F9B7129076610059DF46 /* FilterCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E5F9B6129076610059DF46 /* FilterCollection.m */; };
@@ -34,6 +33,7 @@
 		40E5FB12129093B60059DF46 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E5FB10129093B60059DF46 /* MainMenu.xib */; };
 		40E5FB24129094B90059DF46 /* RequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E5FB23129094B90059DF46 /* RequestViewController.m */; };
 		40E5FBC01290F6960059DF46 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40E5FBBF1290F6960059DF46 /* WebKit.framework */; };
+		830B165C1316CED200D199E6 /* Helpifier.icns in Resources */ = {isa = PBXBuildFile; fileRef = 830B165B1316CED200D199E6 /* Helpifier.icns */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -75,7 +75,6 @@
 		407C933112B5F5BF0085DBFA /* HistoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryItem.m; sourceTree = "<group>"; };
 		407C957612B6AE1D0085DBFA /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
 		407C957712B6AE1D0085DBFA /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
-		407C959E12B6B1680085DBFA /* cargo.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = cargo.icns; sourceTree = "<group>"; };
 		40E5F900128FD7800059DF46 /* DataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRequest.h; sourceTree = "<group>"; };
 		40E5F901128FD7800059DF46 /* DataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataRequest.m; sourceTree = "<group>"; };
 		40E5F903128FD8540059DF46 /* DataRequestDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRequestDelegateProtocol.h; sourceTree = "<group>"; };
@@ -97,6 +96,7 @@
 		40E5FB22129094B90059DF46 /* RequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestViewController.h; sourceTree = "<group>"; };
 		40E5FB23129094B90059DF46 /* RequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestViewController.m; sourceTree = "<group>"; };
 		40E5FBBF1290F6960059DF46 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
+		830B165B1316CED200D199E6 /* Helpifier.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Helpifier.icns; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Helpifier-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Helpifier-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Helpifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Helpifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -178,7 +178,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				407C959E12B6B1680085DBFA /* cargo.icns */,
+				830B165B1316CED200D199E6 /* Helpifier.icns */,
 				401DCB7A12931D71009BE9C3 /* RequestTemplate.html */,
 				401DCB7B12931D71009BE9C3 /* warning.png */,
 				40E5FB10129093B60059DF46 /* MainMenu.xib */,
@@ -321,9 +321,9 @@
 				40E5FB12129093B60059DF46 /* MainMenu.xib in Resources */,
 				401DCB7C12931D71009BE9C3 /* RequestTemplate.html in Resources */,
 				401DCB7D12931D71009BE9C3 /* warning.png in Resources */,
-				407C959F12B6B1680085DBFA /* cargo.icns in Resources */,
 				402E463012F47EB800837D6D /* InboxRequestControls.xib in Resources */,
 				402E464512F486D400837D6D /* EditingRequestControls.xib in Resources */,
+				830B165C1316CED200D199E6 /* Helpifier.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
