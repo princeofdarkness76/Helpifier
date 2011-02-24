@@ -9,6 +9,7 @@
 #import "EditingRequestControlsViewController.h"
 #import "RequestUpdate.h"
 #import "Request.h"
+#import "RequestController.h"
 #import "RequestViewController.h"
 #import "DataHeaders.h"
 #import "HelpifierAppDelegate.h"

@@ -45,6 +45,7 @@
 @property (assign) InboxRequestControlsViewController *inboxControls;
 @property (assign) EditingRequestControlsViewController *editingControls;
 
+- (void) startTakingIt;
 - (IBAction) takeIt: (id) sender;
 - (IBAction) viewRequest: (id) sender;
 - (IBAction) selectOtherRequestTextField: (id) sender;

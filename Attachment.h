@@ -18,7 +18,7 @@
 @property (readonly) NSString *name;
 @property (readonly) NSString *size;
 @property (readonly) NSString *mimeType;
-@property (readonly) NSData *body;
+@property (readonly) NSString *body;
 
 + (Attachment *) attachmentWithFileAtPath: (NSString *) path;
 - (id) initWithFileAtPath: (NSString *) path;

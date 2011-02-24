@@ -17,7 +17,7 @@
 	int i;
 	int len = [self length];
 	int paddingBytes = 0;
-    char *bytes = [self bytes];
+    const char *bytes = [self bytes];
 	
 	for (i = 0; i < len; i+=3)
 	{

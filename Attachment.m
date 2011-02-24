@@ -41,6 +41,8 @@
     
     [_fileData release];
     _fileData = nil;
+	
+	[super dealloc];
 }
 
 - (NSString *) name
@@ -68,7 +70,7 @@
 {
     NSError *err = nil;
     
-    NSString *uti = [[NSWorkspace sharedWorkspace] typeOfFile:_localPath error:err];
+    NSString *uti = [[NSWorkspace sharedWorkspace] typeOfFile:_localPath error:&err];
     if (uti == nil || err != nil) return @"application/octet-stream";
     
     NSString *mimeType = (NSString *)UTTypeCopyPreferredTagWithClass((CFStringRef)uti, kUTTagClassMIMEType);

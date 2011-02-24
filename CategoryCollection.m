@@ -56,7 +56,7 @@ static CategoryCollection *_sharedCollection = nil;
 - (NSMutableDictionary *) tagWithTitle: (NSString *) tagTitle inCategoryWithTitle: (NSString *) categoryTitle
 {
     NSArray *tags = [[self categoryWithTitle:categoryTitle] objectForKey:@"reportingTags"];
-    for (NSDictionary *tag in tags)
+    for (NSMutableDictionary *tag in tags)
     {
         if ([[tag objectForKey:@"sReportingTag"] isEqual:tagTitle])
             return tag;
