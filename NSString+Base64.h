@@ -1,6 +1,6 @@
 //
 //  NSString+Base64.h
-//  Chroma
+//  Helpifier
 //
 //  Created by Sean Dougall on 5/24/10.
 //  Copyright 2010 Figure 53. All rights reserved.

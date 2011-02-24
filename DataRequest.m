@@ -1,6 +1,6 @@
 //
 //  DataRequest.m
-//  ChromaData
+//  Helpifier
 //
 //  Created by Sean Dougall on 5/11/10.
 //  Copyright 2010 Figure 53. All rights reserved.
