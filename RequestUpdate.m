@@ -53,7 +53,8 @@
         
         NSMutableString *queryString = [NSMutableString string];
         [queryString appendFormat:@"xRequest=%@", requestID];
-        [queryString appendFormat:@"&tNote=%@", [note stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
+        if (note != nil && [note length] > 0)
+            [queryString appendFormat:@"&tNote=%@", [note stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
         [queryString appendFormat:@"&fNoteType=%d", isPrivate ? 0 : 1];
         if ([ccAddresses length] > 0)
             [queryString appendFormat:@"&email_cc=%@", [ccAddresses stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
