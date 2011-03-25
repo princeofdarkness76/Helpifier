@@ -22,5 +22,5 @@ When you first launch Helpifier, you will need to enter your HelpSpot settings.
 
 ## Credits
 
-The Helpifier icon is something we whipped up using Sensible World's [Symbolicons](http://symbolicons.com/).  Thanks Jory!
+The Helpifier application icon was provided by the fine folks at UserScape, and created by [Fixel](http://www.wearefixel.com/).
 
