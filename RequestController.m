@@ -194,7 +194,8 @@ finished_searching_for_request_id:
         {
             // Do all this when the last request is finished loading
             [self setIsBusyRefreshing:NO];
-            [self reloadOutlineView];
+            if (!_isLoadingOtherRequest)
+                [self reloadOutlineView];
 
             NSMutableDictionary *unread = [NSMutableDictionary dictionary];
             for (Filter *filter in [_filters.filters allValues])
