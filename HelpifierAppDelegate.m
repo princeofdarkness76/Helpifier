@@ -150,7 +150,8 @@
                 else
                     noteDescription = @"Update";
                 
-                [GrowlApplicationBridge notifyWithTitle:[item fullName] description:noteDescription notificationName:@"HelpifierGrowlNotification" iconData:nil priority:0 isSticky:NO clickContext:[item.properties objectForKey:@"xRequest"]];
+                if (![NSApp isActive])
+                    [GrowlApplicationBridge notifyWithTitle:[item fullName] description:noteDescription notificationName:@"HelpifierGrowlNotification" iconData:nil priority:0 isSticky:NO clickContext:[item.properties objectForKey:@"xRequest"]];
             }
         }
     }
