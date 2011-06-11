@@ -242,7 +242,7 @@ finished_searching_for_request_id:
     {
         for (Request *request in [filter.requests allValues])
         {
-            if ([[request.properties objectForKey:@"xRequest"] isEqual:inID])
+            if ([[NSString stringWithFormat:@"%@", [request.properties objectForKey:@"xRequest"]] isEqual:[NSString stringWithFormat:@"%@", inID]])
                 return request;
         }
     }

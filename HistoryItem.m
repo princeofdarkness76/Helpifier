@@ -58,4 +58,10 @@
     return [self.properties objectForKey:@"tLog"];
 }
 
+- (NSString *) bodyPlainText
+{
+    NSAttributedString *result = [[[NSAttributedString alloc] initWithHTML:[self.body dataUsingEncoding:NSASCIIStringEncoding] documentAttributes:nil] autorelease];
+    return [result string];
+}
+
 @end

@@ -36,6 +36,7 @@
 
 @property (retain) NSMutableDictionary *properties;
 @property (readonly) NSString *body;
+@property (readonly) NSString *bodyPlainText;
 @property (readonly) BOOL public;
 @property (readonly) NSString *fullName;
 @property (readonly) NSDate *date;

@@ -40,8 +40,14 @@
 - (void) applicationDidFinishLaunching: (NSNotification *) aNotification 
 {
     _notifiedUnreadRequests = [[NSMutableDictionary dictionary] retain];
-    [[[NSUserDefaultsController sharedUserDefaultsController] defaults] setBool:YES forKey:@"showFilter_inbox"];
-    [[[NSUserDefaultsController sharedUserDefaultsController] defaults] setBool:YES forKey:@"showFilter_myq"];
+    
+    NSUserDefaults *defaults = [[NSUserDefaultsController sharedUserDefaultsController] defaults];
+    [defaults setBool:YES forKey:@"showFilter_inbox"];
+    [defaults setBool:YES forKey:@"showFilter_myq"];
+    if ([defaults valueForKey:@"triggerGrowlNotifications"] == nil)
+        [defaults setBool:YES forKey:@"triggerGrowlNotifications"];
+    
+    [GrowlApplicationBridge setGrowlDelegate:self];
 }
 
 - (void) dealloc
@@ -96,12 +102,33 @@
 - (void) setUnreadRequests: (NSDictionary *) newRequests notify: (BOOL) shouldNotify
 {
     BOOL needToNotify = NO;
+    NSMutableArray *updatesToNotifyAbout = [NSMutableArray array];
+    
     for (id reqID in [newRequests allKeys])
     {
         if ([_notifiedUnreadRequests objectForKey:reqID] == nil 
             || [[_notifiedUnreadRequests objectForKey:reqID] compare:[newRequests objectForKey:reqID]] == NSOrderedAscending)
         {
+            // Loop through this request's history, looking for items newer than the timestamp cached in _notifiedUnreadRequests.
+            // If we've never notified about this request (e.g. when first launching), only take the last item.
+            NSArray *allItems = [[[_requestController requestForID:reqID] historyItems] sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO]]];
+            if ([_notifiedUnreadRequests objectForKey:reqID] == nil)
+            {
+                [updatesToNotifyAbout addObject:[allItems objectAtIndex:0]];
+            }
+            else
+            {
+                for (HistoryItem *item in allItems)
+                {
+                    if ([[item date] compare:[_notifiedUnreadRequests objectForKey:reqID]] == NSOrderedDescending)
+                    {
+                        [updatesToNotifyAbout addObject:item];
+                    }
+                }
+            }
+            
             [_notifiedUnreadRequests setObject:[newRequests objectForKey:reqID] forKey:reqID];
+            
             needToNotify = YES;
         }
     }
@@ -109,8 +136,25 @@
     if (needToNotify && shouldNotify)
     {
         _attentionRequest = [NSApp requestUserAttention:NSCriticalRequest];
+        
         if ([[[NSUserDefaultsController sharedUserDefaultsController] defaults] valueForKey:@"notificationSound"])
             [[NSSound soundNamed:[[[NSUserDefaultsController sharedUserDefaultsController] defaults] valueForKey:@"notificationSound"]] play];
+        
+        if ([[[NSUserDefaultsController sharedUserDefaultsController] defaults] boolForKey:@"triggerGrowlNotifications"])
+        {
+            for (HistoryItem *item in updatesToNotifyAbout)
+            {
+                NSString *noteDescription = nil;
+                if ([[item log] length])
+                    noteDescription = [item log];
+                else if ([[item bodyPlainText] length])
+                    noteDescription = [item bodyPlainText];
+                else
+                    noteDescription = @"Update";
+                
+                [GrowlApplicationBridge notifyWithTitle:[item fullName] description:noteDescription notificationName:@"HelpifierGrowlNotification" iconData:nil priority:0 isSticky:NO clickContext:[item.properties objectForKey:@"xRequest"]];
+            }
+        }
     }
 
     if (!needToNotify && _attentionRequest > 0)
@@ -142,6 +186,21 @@
 {
     [[[NSUserDefaultsController sharedUserDefaultsController] defaults] setValue:[sender title] forKey:@"notificationSound"];
     [[NSSound soundNamed:[sender title]] play];
+}
+
+#pragma mark -
+#pragma mark Growl Delegate
+
+- (NSDictionary *) registrationDictionaryForGrowl
+{
+    NSArray *notifications = [NSArray arrayWithObject:@"HelpifierGrowlNotification"];
+    return [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:1], GROWL_TICKET_VERSION, notifications, GROWL_NOTIFICATIONS_ALL, notifications, GROWL_NOTIFICATIONS_DEFAULT, nil];
+}
+
+- (void) growlNotificationWasClicked:(id)clickContext
+{
+    [_requestController setSelection:[_requestController requestForID:clickContext]];
+    [NSApp activateIgnoringOtherApps:YES];
 }
 
 @end

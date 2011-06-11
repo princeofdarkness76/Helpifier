@@ -27,18 +27,19 @@
 
 #import <Cocoa/Cocoa.h>
 #import "DataObjectDelegateProtocol.h"
+#import <Growl-WithInstaller/Growl.h>
 
 #define AppDelegate ((HelpifierAppDelegate *)[NSApp delegate])
 
 @class RequestController;
 
-@interface HelpifierAppDelegate : NSObject <NSApplicationDelegate> 
+@interface HelpifierAppDelegate : NSObject <NSApplicationDelegate, GrowlApplicationBridgeDelegate> 
 {
     NSWindow            *_window;
     RequestController   *_requestController;
     NSWindow            *_prefsWindow;
     
-    NSMutableDictionary *_notifiedUnreadRequests;
+    NSMutableDictionary *_notifiedUnreadRequests;       ///< Key = request ID; value = last updated date/time.
     NSInteger            _attentionRequest;
 }
 
