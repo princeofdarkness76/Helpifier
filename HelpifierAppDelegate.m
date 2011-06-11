@@ -118,12 +118,10 @@
             }
             else
             {
-                for (HistoryItem *item in allItems)
+                HistoryItem *item = [allItems objectAtIndex:0];
+                if ([[item date] compare:[_notifiedUnreadRequests objectForKey:reqID]] == NSOrderedDescending)
                 {
-                    if ([[item date] compare:[_notifiedUnreadRequests objectForKey:reqID]] == NSOrderedDescending)
-                    {
-                        [updatesToNotifyAbout addObject:item];
-                    }
+                    [updatesToNotifyAbout addObject:item];
                 }
             }
             
