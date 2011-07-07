@@ -89,6 +89,15 @@
             }
         }
     }
+
+    for (NSNumber *requestID in [[_subscriptions requests] allKeys])
+    {
+        if ([requestID integerValue] == _selectedRequestID)
+        {
+            selectedRequestStillExists = YES;
+            goto finished_searching_for_request_id;
+        }
+    }
     
 finished_searching_for_request_id:
     if (!selectedRequestStillExists)
@@ -262,6 +271,12 @@ finished_searching_for_request_id:
 
 - (Request *) requestForID: (id) inID
 {
+    for (Request *request in [_subscriptions.requests allValues])
+    {
+        if ([[NSString stringWithFormat:@"%@", [request.properties objectForKey:@"xRequest"]] isEqual:[NSString stringWithFormat:@"%@", inID]])
+            return request;
+    }
+    
     for (Filter *filter in [_filters.filters allValues])
     {
         for (Request *request in [filter.requests allValues])
@@ -270,6 +285,7 @@ finished_searching_for_request_id:
                 return request;
         }
     }
+    
     return nil;
 }
 
