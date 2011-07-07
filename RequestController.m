@@ -354,7 +354,10 @@ finished_searching_for_request_id:
         {
             if (index == [self.enabledFilterNames count])
             {
-                return @"SUBSCRIPTIONS";
+                if ([[[Staff staff] people] count] == 0)
+                    return nil;
+                else
+                    return @"SUBSCRIPTIONS";
             }
             else if (index >= 0 && index < [self.enabledFilterNames count])
             {
@@ -399,7 +402,12 @@ finished_searching_for_request_id:
     @synchronized (_refreshMutex)
     {
         if (item == nil)
-            return 3;
+        {
+            if ([[_subscriptions requests] count] > 0)
+                return 3;
+            else
+                return 2;
+        }
         
         if ([item isEqual:@"SUBSCRIPTIONS"])
             return [[_subscriptions requests] count];
