@@ -1,8 +1,8 @@
 //
-//  Filter.m
+//  SubscriptionFilter.m
 //  Helpifier
 //
-//  Created by Sean Dougall on 11/14/10.
+//  Created by Sean Dougall on 7/6/10.
 //
 //	Copyright (c) 2010-2011 Figure 53 LLC, http://figure53.com
 //
@@ -25,29 +25,15 @@
 //	THE SOFTWARE.
 //
 
-#import "Filter.h"
+#import "SubscriptionFilter.h"
 #import "DataHeaders.h"
 #import "HelpifierAppDelegate.h"
 
-@implementation Filter
-
-@synthesize properties = _properties;
-@synthesize requests = _requests;
-@synthesize thisRequestProperties = _thisRequestProperties;
-
-- (NSArray *) sortedRequests
-{
-    NSMutableArray *reqs = [NSMutableArray arrayWithArray:[self.requests allValues]];
-    [reqs sortUsingDescriptors:[NSArray arrayWithObjects:
-                                [NSSortDescriptor sortDescriptorWithKey:@"urgent" ascending:NO],
-                                [NSSortDescriptor sortDescriptorWithKey:@"lastReplyDate" ascending:NO],
-                                nil]];
-    return reqs;
-}
+@implementation SubscriptionFilter
 
 - (NSString *) description
 {
-    return [NSString stringWithFormat:@"Filter %@", [self.properties objectForKey:@"xFilter"]];
+    return [NSString stringWithFormat:@"Subscription pseudo-filter"];
 }
 
 - (void) parser: (NSXMLParser *) parser 
@@ -56,7 +42,7 @@ didStartElement: (NSString *) elementName
   qualifiedName: (NSString *) qualifiedName 
      attributes: (NSDictionary *) attributeDict
 {
-   if ([elementName isEqualToString:@"filter"])
+   if ([elementName isEqualToString:@"subscriptions"])
     {
         self.requests = [NSMutableDictionary dictionary];
     }
@@ -75,7 +61,7 @@ didStartElement: (NSString *) elementName
    namespaceURI: (NSString *) namespaceURI
   qualifiedName: (NSString *) qualifiedName
 {
-    if ([elementName isEqualToString:@"filter"])
+    if ([elementName isEqualToString:@"subscriptions"])
     {
     }
     else if ([elementName isEqualToString:@"request"])

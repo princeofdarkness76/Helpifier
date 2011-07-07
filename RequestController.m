@@ -42,6 +42,7 @@
 - (void) reloadOutlineView;
 - (void) setIsBusyRefreshing: (BOOL) busy;
 - (void) performRefreshFromTimer;
+- (void) staffDidChange: (NSNotification *) note;
 
 @end
 
@@ -52,6 +53,8 @@
 {
     self.filters = [[[FilterCollection alloc] initWithPath:[NSString stringWithFormat:@"%@index.php?method=private.user.getFilters", AppDelegate.apiURL]] autorelease];
     self.filters.delegate = self;
+    self.subscriptions = nil;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(staffDidChange:) name:@"StaffDidChangeNotification" object:nil];
     [self refreshRequests:self];
 }
 
@@ -120,6 +123,13 @@ finished_searching_for_request_id:
     }
 }
 
+- (void) staffDidChange: (NSNotification *) note
+{
+    self.subscriptions = [[[SubscriptionFilter alloc] initWithPath:[NSString stringWithFormat:@"%@index.php?method=private.request.subscriptions&xPerson=%@", AppDelegate.apiURL, [[[Staff staff] personWithEmail:AppDelegate.username] objectForKey:@"xPerson"]]] autorelease];
+    self.subscriptions.delegate = self;
+    [self.subscriptions beginFetch];
+}
+
 @end
 
 
@@ -129,6 +139,7 @@ finished_searching_for_request_id:
 @implementation RequestController
 
 @synthesize filters = _filters;
+@synthesize subscriptions = _subscriptions;
 @synthesize enabledFilterNames = _enabledFilterNames;
 @synthesize offlineError = _offlineError;
 @synthesize requestsOutlineView = _requestsOutlineView;
@@ -158,7 +169,10 @@ finished_searching_for_request_id:
     _requestsWithPendingFetches = nil;
     
     self.filters = nil;
+    self.subscriptions = nil;
     self.offlineError = nil;
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     
     [super dealloc];
 }
@@ -173,6 +187,16 @@ finished_searching_for_request_id:
         {
             ((Filter *)[self.filters.filters objectForKey:name]).delegate = self;
             [[self.filters.filters objectForKey:name] beginFetch];
+        }
+    }
+    else if ([obj isKindOfClass:[SubscriptionFilter class]])
+    {
+        for (Request *request in [(SubscriptionFilter *)obj sortedRequests])
+        {
+            [_requestsWithPendingFetches addObject:[NSNumber numberWithInteger:request.requestID]];
+            [request.properties setObject:@"SUBSCRIPTIONS" forKey:@"filterID"];
+            request.delegate = self;
+            [request beginFetch];
         }
     }
     else if ([obj isKindOfClass:[Filter class]])    // Filter finished; start fetching individual requests.
@@ -270,6 +294,7 @@ finished_searching_for_request_id:
     self.isLoadingOtherRequest = NO;
     
     [self.filters beginFetch];
+    [self.subscriptions beginFetch];
 }
 
 - (IBAction) selectOtherRequest: (id) sender
@@ -311,16 +336,35 @@ finished_searching_for_request_id:
     {
         if (item == nil)
         {
-            if (index >= 0 && index < [self.enabledFilterNames count])
+            if (index == [self.enabledFilterNames count])
+            {
+                return @"SUBSCRIPTIONS";
+            }
+            else if (index >= 0 && index < [self.enabledFilterNames count])
+            {
                 return [self.enabledFilterNames objectAtIndex:index];
+            }
+            
             return nil;
         }
         else
         {
-            NSArray *requests = [[_filters filterForID:item] sortedRequests];
-            if (index >= 0 && index < [requests count])
-                return [requests objectAtIndex:index];
-            return nil;
+            if ([item isEqual:@"SUBSCRIPTIONS"])
+            {
+                NSArray *requests = [_subscriptions sortedRequests];
+                if (index >= 0 && index < [requests count])
+                    return [requests objectAtIndex:index];
+                else
+                    return nil;
+            }
+            else
+            {
+                NSArray *requests = [[_filters filterForID:item] sortedRequests];
+                if (index >= 0 && index < [requests count])
+                    return [requests objectAtIndex:index];
+                else
+                    return nil;
+            }
         }
     }
 }
@@ -339,10 +383,16 @@ finished_searching_for_request_id:
     @synchronized (_refreshMutex)
     {
         if (item == nil)
-            return 2;
+            return 3;
+        
+        if ([item isEqual:@"SUBSCRIPTIONS"])
+            return [[_subscriptions requests] count];
+        
         Filter *filter = [_filters filterForID:item];
-        return [[filter requests] count];
+        if (filter)
+            return [[filter requests] count];
     }
+    
     return 0;
 }
 
@@ -353,7 +403,12 @@ finished_searching_for_request_id:
         if ([item isKindOfClass:[NSString class]])
         {
             if ([[tableColumn identifier] isEqual:@"requestShortSummary"])
-                return [[[_filters filterForID:item].properties objectForKey:@"sFilterName"] uppercaseString];
+            {
+                Filter *filter = [_filters filterForID:item];
+                if (filter)
+                    return [[filter.properties objectForKey:@"sFilterName"] uppercaseString];
+                return [item uppercaseString];
+            }
             else
                 return nil;
         }

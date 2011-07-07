@@ -26,7 +26,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "DataHeaders.h"
+#import "DataObject.h"
 
 @interface Filter : DataObject
 {

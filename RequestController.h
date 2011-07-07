@@ -33,6 +33,7 @@
 @interface RequestController : NSObject <DataObjectDelegate, NSSplitViewDelegate>
 {
     FilterCollection        *_filters;
+    SubscriptionFilter      *_subscriptions;
     id                       _refreshMutex;
     NSTimer                 *_refreshTimer;
     NSMutableArray          *_enabledFilterNames;
@@ -52,6 +53,7 @@
 }
 
 @property (retain) FilterCollection *filters;
+@property (retain) SubscriptionFilter *subscriptions;
 @property (retain) NSMutableArray *enabledFilterNames;
 @property (retain) NSString *offlineError;
 @property (assign) Request *selection;

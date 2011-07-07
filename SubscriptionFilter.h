@@ -1,8 +1,8 @@
 //
-//  DataHeaders.h
+//  SubscriptionFilter.h
 //  Helpifier
 //
-//  Created by Sean Dougall on 11/14/10.
+//  Created by Sean Dougall on 7/6/10.
 //
 //	Copyright (c) 2010-2011 Figure 53 LLC, http://figure53.com
 //
@@ -25,20 +25,12 @@
 //	THE SOFTWARE.
 //
 
-
-// Base
-#import "DataObjectDelegateProtocol.h"
-#import "DataObject.h"
-
-// Request hierarchy
-#import "FilterCollection.h"
+#import <Cocoa/Cocoa.h>
 #import "Filter.h"
-#import "SubscriptionFilter.h"
-#import "Request.h"
-#import "HistoryItem.h"
-#import "RequestUpdate.h"
 
-// Workspace-level objects
-#import "Staff.h"
-#import "CategoryCollection.h"
-#import "StatusCollection.h"
+@interface SubscriptionFilter : Filter
+{
+}
+
+
+@end

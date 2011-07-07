@@ -35,6 +35,7 @@
 		40E5FBC01290F6960059DF46 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40E5FBBF1290F6960059DF46 /* WebKit.framework */; };
 		40ECF2C613A30640009886F3 /* Growl-WithInstaller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40ECF2C513A30640009886F3 /* Growl-WithInstaller.framework */; };
 		40ECF2D213A3068F009886F3 /* Growl-WithInstaller.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 40ECF2C513A30640009886F3 /* Growl-WithInstaller.framework */; };
+		40F123BE13C52A2C00BDC0C1 /* SubscriptionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F123BD13C52A2C00BDC0C1 /* SubscriptionFilter.m */; };
 		830B165C1316CED200D199E6 /* Helpifier.icns in Resources */ = {isa = PBXBuildFile; fileRef = 830B165B1316CED200D199E6 /* Helpifier.icns */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -113,6 +114,8 @@
 		40E5FB23129094B90059DF46 /* RequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestViewController.m; sourceTree = "<group>"; };
 		40E5FBBF1290F6960059DF46 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		40ECF2C513A30640009886F3 /* Growl-WithInstaller.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Growl-WithInstaller.framework"; sourceTree = "<group>"; };
+		40F123BC13C52A2C00BDC0C1 /* SubscriptionFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionFilter.h; sourceTree = "<group>"; };
+		40F123BD13C52A2C00BDC0C1 /* SubscriptionFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscriptionFilter.m; sourceTree = "<group>"; };
 		830B165B1316CED200D199E6 /* Helpifier.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Helpifier.icns; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Helpifier-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Helpifier-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Helpifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Helpifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -238,6 +241,8 @@
 				40E5F9B6129076610059DF46 /* FilterCollection.m */,
 				40E5F9F912907C310059DF46 /* Filter.h */,
 				40E5F9FA12907C310059DF46 /* Filter.m */,
+				40F123BC13C52A2C00BDC0C1 /* SubscriptionFilter.h */,
+				40F123BD13C52A2C00BDC0C1 /* SubscriptionFilter.m */,
 				40E5FAB4129089F10059DF46 /* Request.h */,
 				40E5FAB5129089F10059DF46 /* Request.m */,
 				407C933012B5F5BF0085DBFA /* HistoryItem.h */,
@@ -376,6 +381,7 @@
 				402E486012F715F300837D6D /* Staff.m in Sources */,
 				402E490212F743EF00837D6D /* CategoryCollection.m in Sources */,
 				402E494512F75DA900837D6D /* StatusCollection.m in Sources */,
+				40F123BE13C52A2C00BDC0C1 /* SubscriptionFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
