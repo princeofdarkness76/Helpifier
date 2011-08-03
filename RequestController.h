@@ -69,4 +69,6 @@
 
 - (Request *) requestForID: (id) inID;
 
+- (void) pendingFetchesDidFinish;
+
 @end

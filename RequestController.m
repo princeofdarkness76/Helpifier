@@ -196,6 +196,8 @@ finished_searching_for_request_id:
         {
             ((Filter *)[self.filters.filters objectForKey:name]).delegate = self;
             [[self.filters.filters objectForKey:name] beginFetch];
+            if ([_requestsWithPendingFetches count] == 0)
+                [self pendingFetchesDidFinish];
         }
     }
     else if ([obj isKindOfClass:[SubscriptionFilter class]])
@@ -216,6 +218,8 @@ finished_searching_for_request_id:
             [request.properties setObject:[((Filter *)obj).properties objectForKey:@"xFilter"] forKey:@"filterID"];
             request.delegate = self;
             [request beginFetch];
+            if ([_requestsWithPendingFetches count] == 0)
+                [self pendingFetchesDidFinish];
         }
     }
     else if ([obj isKindOfClass:[Request class]])
@@ -224,27 +228,30 @@ finished_searching_for_request_id:
         
         [_requestsWithPendingFetches removeObject:[NSNumber numberWithInteger:request.requestID]];
         if ([_requestsWithPendingFetches count] == 0)
-        {
-            // Do all this when the last request is finished loading
-            [self setIsBusyRefreshing:NO];
-            if (!_isLoadingOtherRequest)
-                [self reloadOutlineView];
-
-            NSMutableDictionary *unread = [NSMutableDictionary dictionary];
-            for (Filter *filter in [_filters.filters allValues])
-            {
-                for (Request *request in [filter.requests allValues])
-                {
-                    if (request.isUnread || [[filter.properties objectForKey:@"xFilter"] isEqual:@"inbox"])
-                        [unread setObject:request.lastReplyDate forKey:[NSNumber numberWithInteger:request.requestID]];
-                }
-            }
-            [AppDelegate setUnreadRequests:unread notify:!_isRefreshingByUserCommand];
-            _isRefreshingByUserCommand = NO;
-        }
+            [self pendingFetchesDidFinish];
     }
     self.offlineError = nil;
 }
+
+- (void) pendingFetchesDidFinish
+{
+    // Do all this when the last request is finished loading
+    [self setIsBusyRefreshing:NO];
+    if (!_isLoadingOtherRequest)
+        [self reloadOutlineView];
+    
+    NSMutableDictionary *unread = [NSMutableDictionary dictionary];
+    for (Filter *filter in [_filters.filters allValues])
+    {
+        for (Request *request in [filter.requests allValues])
+        {
+            if (request.isUnread || [[filter.properties objectForKey:@"xFilter"] isEqual:@"inbox"])
+                [unread setObject:request.lastReplyDate forKey:[NSNumber numberWithInteger:request.requestID]];
+        }
+    }
+    [AppDelegate setUnreadRequests:unread notify:!_isRefreshingByUserCommand];
+    _isRefreshingByUserCommand = NO;
+}    
 
 - (void) dataObjectDidFailFetchWithError: (NSString *) err
 {
@@ -293,7 +300,7 @@ finished_searching_for_request_id:
 {
     if ([_requestsWithPendingFetches count] > 0)
     {
-        if (sender != self)     // Note: we shouldn't actually get here
+        if (sender != self)     // Note: we shouldn't actually get here. But sometimes we do; need to figure out why.
             NSRunAlertPanel(@"Fetch in progress.", @"A fetch is already in progress. Please try again in a moment.", @"OK", nil, nil);
         
         return;
