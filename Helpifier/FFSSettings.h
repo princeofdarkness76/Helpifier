@@ -12,7 +12,7 @@
 
 // HelpSpot
 @property (readonly) NSString *helpSpotUsername;
-@property (readonly) NSString *helpSpotPassword;
+@property (nonatomic) NSString *helpSpotPassword;
 @property (readonly) NSURL *helpSpotBaseURL;
 @property (readonly) NSURL *helpSpotBaseAPIURL;
 

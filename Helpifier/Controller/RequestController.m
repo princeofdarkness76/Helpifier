@@ -253,4 +253,12 @@
     [self _reloadHistoryView];
 }
 
+#pragma mark - WebView resource load delegate
+
+- (NSURLRequest *)webView:(WebView *)webView resource:(id)identifier willSendRequest:(NSURLRequest *)request redirectResponse:(NSURLResponse *)redirectResponse fromDataSource:(WebDataSource *)dataSource
+{
+    NSLog( @"resource %@ request %@ resp %@ datasource %@", identifier, request, redirectResponse, dataSource );
+    return nil;
+}
+
 @end

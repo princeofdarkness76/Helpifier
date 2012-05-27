@@ -18,33 +18,25 @@
 @interface HelpifierAppDelegate ()
 
 - (void)_loadingDidFinish:(NSNotification *)note;
-
 - (void)_requestNotFound:(NSNotification *)note;
-
 - (void)_statusTypesDidUpdate:(NSNotification *)note;
+- (void)_authenticationNeeded:(NSNotification *)note;
 
 - (void)_addRowsForNewRequestsInFilter:(FHSFilter *)filter;
-
 - (void)_removeRowsForRequestsInFilter:(FHSFilter *)filter;
 
 - (void)_pushRequest:(FHSRequest *)request;
-
 - (NSRect)_frameForRequestView;
-
 - (void)_finishedPushingRequest;
-
 - (void)_setBadgeLabelWithUnreadCount;
 
+- (void)_showConnectionPreferences;
+
 @property (strong) RequestController *requestController;
-
 @property (strong) RequestController *oldRequestController;
-
 @property (strong) PreferencesController *preferencesController;
-
 @property (strong) Notifier *notifier;
-
 @property (assign) BOOL hasUpdated;
-
 @property (assign) CGFloat sidebarWidthBeforeResizing;
 
 @end
@@ -120,7 +112,7 @@
     [_helpSpot addObserver:self forKeyPath:@"lastError" options:NSKeyValueObservingOptionNew context:nil];
     [_helpSpot start];
     
-    if ( [[FFSSettings sharedSettings] helpSpotBaseAPIURL] == nil )
+    if ( [[[FFSSettings sharedSettings] helpSpotPassword] length] == 0 )
         [self showPreferences:self];
     
     _notifier = [[Notifier alloc] init];
@@ -138,6 +130,14 @@
         _preferencesController = [[PreferencesController alloc] init];
     
     [_preferencesController showPreferences];
+}
+
+- (void)_showConnectionPreferences
+{
+    if ( _preferencesController == nil )
+        _preferencesController = [[PreferencesController alloc] init];
+    
+    [_preferencesController showConnectionPreferences:self];
 }
 
 - (IBAction)refreshNow:(id)sender
@@ -249,6 +249,11 @@
 - (void)_statusTypesDidUpdate:(NSNotification *)note
 {
     [_requestController updateCloseAsPopUpWithStatusTypes:[note.userInfo objectForKey:@"statusTypes"]];
+}
+
+- (void)_authenticationNeeded:(NSNotification *)note
+{
+    [self showPreferences:self];
 }
 
 - (void)_addRowsForNewRequestsInFilter:(FHSFilter *)filter

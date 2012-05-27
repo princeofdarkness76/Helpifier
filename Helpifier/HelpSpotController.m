@@ -97,6 +97,7 @@
     if (self.username.length == 0 || self.password.length == 0)
     {
         NSLog( @"Attempt to fetch without username/password." );
+        [[NSNotificationCenter defaultCenter] postNotificationName:FHSAuthenticationInformationNeededNotification object:nil userInfo:nil];
         return;
     }
     

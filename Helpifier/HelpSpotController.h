@@ -19,6 +19,7 @@
 #define FHSStandaloneRequestDidFinishLoadingNotification @"FHSStandaloneRequestDidFinishLoadingNotification"
 #define FHSRequestNotFoundNotification @"FHSRequestNotFoundNotification"
 #define FHSStatusTypeCollectionDidFinishLoadingNotification @"FHSStatusTypeCollectionDidFinishLoadingNotification"
+#define FHSAuthenticationInformationNeededNotification @"FHSAuthenticationInformationNeededNotification"
 
 @interface HelpSpotController : NSObject
 

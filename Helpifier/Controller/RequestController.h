@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <WebKit/WebKit.h>
+#import <WebKit/WebResourceLoadDelegate.h>
 #import "FHSModel.h"
 #import "RequestUpdateNoticeView.h"
 

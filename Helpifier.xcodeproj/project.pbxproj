@@ -45,6 +45,7 @@
 		40B7670B153DDAE200F18606 /* RequestCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7670A153DDAE200F18606 /* RequestCellView.m */; };
 		40B7670E153DECEA00F18606 /* RequestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7670D153DECEA00F18606 /* RequestController.m */; };
 		40B76711153E03A900F18606 /* Request.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40B7670F153E03A900F18606 /* Request.xib */; };
+		40C1EC3D157151EA00810668 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C1EC3C157151EA00810668 /* Security.framework */; };
 		40C3347C1541C063008DDA88 /* FHSStaff.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3347B1541C063008DDA88 /* FHSStaff.m */; };
 		40E9304E1562E8EA0026866B /* RequestNotFound.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E9304C1562E8EA0026866B /* RequestNotFound.xib */; };
 /* End PBXBuildFile section */
@@ -119,6 +120,7 @@
 		40B7670C153DECEA00F18606 /* RequestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestController.h; path = Controller/RequestController.h; sourceTree = "<group>"; };
 		40B7670D153DECEA00F18606 /* RequestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestController.m; path = Controller/RequestController.m; sourceTree = "<group>"; };
 		40B76710153E03A900F18606 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Request.xib; sourceTree = "<group>"; };
+		40C1EC3C157151EA00810668 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		40C3347A1541C063008DDA88 /* FHSStaff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHSStaff.h; sourceTree = "<group>"; };
 		40C3347B1541C063008DDA88 /* FHSStaff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHSStaff.m; sourceTree = "<group>"; };
 		40E9304D1562E8EA0026866B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RequestNotFound.xib; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40C1EC3D157151EA00810668 /* Security.framework in Frameworks */,
 				40B76705153D071D00F18606 /* WebKit.framework in Frameworks */,
 				408C50C81476DA9300244A5F /* Cocoa.framework in Frameworks */,
 			);
@@ -241,6 +244,7 @@
 		408C50C61476DA9300244A5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				40C1EC3C157151EA00810668 /* Security.framework */,
 				408C50C71476DA9300244A5F /* Cocoa.framework */,
 				40B76704153D071D00F18606 /* WebKit.framework */,
 				408C50C91476DA9300244A5F /* Other Frameworks */,
@@ -513,6 +517,7 @@
 				GCC_PREFIX_HEADER = "Helpifier/Helpifier-Prefix.pch";
 				INFOPLIST_FILE = "Helpifier/Helpifier-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -524,6 +529,7 @@
 				GCC_PREFIX_HEADER = "Helpifier/Helpifier-Prefix.pch";
 				INFOPLIST_FILE = "Helpifier/Helpifier-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
