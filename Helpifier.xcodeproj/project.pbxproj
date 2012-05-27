@@ -45,6 +45,8 @@
 		40B7670B153DDAE200F18606 /* RequestCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7670A153DDAE200F18606 /* RequestCellView.m */; };
 		40B7670E153DECEA00F18606 /* RequestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7670D153DECEA00F18606 /* RequestController.m */; };
 		40B76711153E03A900F18606 /* Request.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40B7670F153E03A900F18606 /* Request.xib */; };
+		40B9C9321572E17D0038C39D /* EMKeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B9C9301572E17D0038C39D /* EMKeychainItem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		40B9C9331572E17D0038C39D /* ReadMe.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 40B9C9311572E17D0038C39D /* ReadMe.rtf */; };
 		40C1EC3D157151EA00810668 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C1EC3C157151EA00810668 /* Security.framework */; };
 		40C3347C1541C063008DDA88 /* FHSStaff.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3347B1541C063008DDA88 /* FHSStaff.m */; };
 		40E9304E1562E8EA0026866B /* RequestNotFound.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E9304C1562E8EA0026866B /* RequestNotFound.xib */; };
@@ -120,6 +122,9 @@
 		40B7670C153DECEA00F18606 /* RequestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestController.h; path = Controller/RequestController.h; sourceTree = "<group>"; };
 		40B7670D153DECEA00F18606 /* RequestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestController.m; path = Controller/RequestController.m; sourceTree = "<group>"; };
 		40B76710153E03A900F18606 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Request.xib; sourceTree = "<group>"; };
+		40B9C92F1572E17D0038C39D /* EMKeychainItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMKeychainItem.h; sourceTree = "<group>"; };
+		40B9C9301572E17D0038C39D /* EMKeychainItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMKeychainItem.m; sourceTree = "<group>"; };
+		40B9C9311572E17D0038C39D /* ReadMe.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = ReadMe.rtf; sourceTree = "<group>"; };
 		40C1EC3C157151EA00810668 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		40C3347A1541C063008DDA88 /* FHSStaff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHSStaff.h; sourceTree = "<group>"; };
 		40C3347B1541C063008DDA88 /* FHSStaff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHSStaff.m; sourceTree = "<group>"; };
@@ -271,6 +276,7 @@
 				401825C2153C88F7009C7A6A /* HelpSpot */,
 				4002536E15389A4F000C24E9 /* Controller */,
 				4002537515389B19000C24E9 /* View */,
+				40B9C92C1572E15A0038C39D /* Third-Party */,
 				408C50DC1476DA9400244A5F /* Helpifier.xib */,
 				40E9304C1562E8EA0026866B /* RequestNotFound.xib */,
 				40B7670F153E03A900F18606 /* Request.xib */,
@@ -305,6 +311,24 @@
 				408D200B15450C280027F40A /* request-update-background-right.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		40B9C92C1572E15A0038C39D /* Third-Party */ = {
+			isa = PBXGroup;
+			children = (
+				40B9C92E1572E17D0038C39D /* EMKeychain */,
+			);
+			name = "Third-Party";
+			sourceTree = "<group>";
+		};
+		40B9C92E1572E17D0038C39D /* EMKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				40B9C92F1572E17D0038C39D /* EMKeychainItem.h */,
+				40B9C9301572E17D0038C39D /* EMKeychainItem.m */,
+				40B9C9311572E17D0038C39D /* ReadMe.rtf */,
+			);
+			path = EMKeychain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,6 +395,7 @@
 				408D200D15450C280027F40A /* request-update-background-left.png in Resources */,
 				408D200E15450C280027F40A /* request-update-background-right.png in Resources */,
 				40E9304E1562E8EA0026866B /* RequestNotFound.xib in Resources */,
+				40B9C9331572E17D0038C39D /* ReadMe.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +431,7 @@
 				409BAC6B1562C67700E78E2E /* OtherRequestTextField.m in Sources */,
 				40203B67156DD3C300D7AC26 /* FHSStatusTypeCollection.m in Sources */,
 				40203B6A156DE34A00D7AC26 /* NSDictionary+HTTPBodySerialization.m in Sources */,
+				40B9C9321572E17D0038C39D /* EMKeychainItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

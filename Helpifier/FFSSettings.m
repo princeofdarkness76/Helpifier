@@ -8,14 +8,13 @@
 
 #import "FFSSettings.h"
 #import <Security/Security.h>
+#import "EMKeychain/EMKeychainItem.h"
 
 static FFSSettings *_sharedSettings = nil;
 
 @interface FFSSettings ()
 
-@property (copy) NSString *cachedHelpSpotPassword;
-- (NSString *)_helpSpotPasswordFromKeychain;
-- (SecKeychainItemRef)_helpSpotPasswordKeychainItem;
+@property (nonatomic, strong) EMGenericKeychainItem *helpSpotPasswordItem;
 
 @end
 
@@ -23,7 +22,15 @@ static FFSSettings *_sharedSettings = nil;
 
 @implementation FFSSettings
 
-@synthesize cachedHelpSpotPassword = _cachedHelpSpotPassword;
+@synthesize helpSpotPasswordItem = _helpSpotPasswordItem;
+
+- (EMGenericKeychainItem *)helpSpotPasswordItem
+{
+    if ( !_helpSpotPasswordItem )
+        _helpSpotPasswordItem = [EMGenericKeychainItem genericKeychainItemForService:@"Helpifier" withUsername:[self helpSpotUsername]];
+    
+    return _helpSpotPasswordItem;
+}
 
 - (NSString *)helpSpotUsername
 {
@@ -32,14 +39,10 @@ static FFSSettings *_sharedSettings = nil;
 
 - (NSString *)helpSpotPassword
 {
-    if ( _cachedHelpSpotPassword )
-        return _cachedHelpSpotPassword;
-    
-    NSString *passwordFromKeychain = [self _helpSpotPasswordFromKeychain];
-    if ( passwordFromKeychain )
+    EMKeychainItem *passwordItem = self.helpSpotPasswordItem;
+    if ( passwordItem )
     {
-        self.cachedHelpSpotPassword = passwordFromKeychain;
-        return passwordFromKeychain;
+        return passwordItem.password;
     }
     
     // We used to store the password in the user defaults, so see if it's there. If it is, move it to the keychain.
@@ -56,19 +59,13 @@ static FFSSettings *_sharedSettings = nil;
 
 - (void)setHelpSpotPassword:(NSString *)helpSpotPassword
 {
-    self.cachedHelpSpotPassword = helpSpotPassword;
-    NSString *serviceName = @"Helpifier";
-    NSString *accountName = [self helpSpotUsername];
-    if ( [accountName length] == 0 ) return;
-    
-    OSStatus err = SecKeychainAddGenericPassword( NULL, [serviceName length], [serviceName UTF8String], [accountName length], [accountName UTF8String], [helpSpotPassword length], [helpSpotPassword UTF8String], NULL );
-    if ( err )
+    if ( self.helpSpotPasswordItem )
     {
-        SecKeychainItemRef item = [self _helpSpotPasswordKeychainItem];
-        if ( item )
-        {
-            NSLog( @"item already exists." );  // FIXME
-        }
+        self.helpSpotPasswordItem.password = helpSpotPassword;
+    }
+    else
+    {
+        self.helpSpotPasswordItem = [EMGenericKeychainItem addGenericKeychainItemForService:@"Helpifier" withUsername:[self helpSpotUsername] password:helpSpotPassword];
     }
 }
 
@@ -121,41 +118,6 @@ static FFSSettings *_sharedSettings = nil;
         return _sharedSettings;
     
     return [[FFSSettings alloc] init];
-}
-
-- (SecKeychainItemRef)_helpSpotPasswordKeychainItem
-{
-    NSString *serviceName = @"Helpifier";
-    NSString *accountName = [self helpSpotUsername];
-    if ( [accountName length] == 0 ) return nil;
-    
-    UInt32 passwordLength;
-    void *passwordData;
-    SecKeychainItemRef item;
-    OSStatus err = SecKeychainFindGenericPassword( NULL, [serviceName length], [serviceName UTF8String], [accountName length], [accountName UTF8String], &passwordLength, &passwordData, &item );
-    if ( err )
-    {
-        return NULL;
-    }
-    
-    return item;
-}
-
-- (NSString *)_helpSpotPasswordFromKeychain
-{
-    NSString *serviceName = @"Helpifier";
-    NSString *accountName = [self helpSpotUsername];
-    if ( [accountName length] == 0 ) return nil;
-    
-    UInt32 passwordLength;
-    void *passwordData;
-    OSStatus err = SecKeychainFindGenericPassword( NULL, [serviceName length], [serviceName UTF8String], [accountName length], [accountName UTF8String], &passwordLength, &passwordData, NULL );
-    if ( err == errSecItemNotFound )
-    {
-        return nil;
-    }
-    
-    return [[NSString alloc] initWithBytes:passwordData length:passwordLength encoding:NSUTF8StringEncoding];
 }
 
 @end

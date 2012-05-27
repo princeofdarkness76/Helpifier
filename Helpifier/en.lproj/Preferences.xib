@@ -1514,7 +1514,7 @@
 								<float key="scoringTypeFloat">24</float>
 								<int key="contentType">2</int>
 							</object>
-							<object class="IBNSLayoutConstraint" id="339951426">
+							<object class="IBNSLayoutConstraint" id="733455946">
 								<reference key="firstItem" ref="115240187"/>
 								<int key="firstAttribute">11</int>
 								<int key="relation">0</int>
@@ -2426,7 +2426,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">1288</int>
-						<reference key="object" ref="339951426"/>
+						<reference key="object" ref="733455946"/>
 						<reference key="parent" ref="194176364"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -2500,8 +2500,10 @@
 					<string>1262.IBPluginDependency</string>
 					<string>1266.IBPluginDependency</string>
 					<string>1268.IBPluginDependency</string>
+					<string>1268.designableToolbarItemIdentifier</string>
 					<string>1268.toolbarItem.selectable</string>
 					<string>1269.IBPluginDependency</string>
+					<string>1269.designableToolbarItemIdentifier</string>
 					<string>1269.toolbarItem.selectable</string>
 					<string>1287.IBPluginDependency</string>
 					<string>1288.IBPluginDependency</string>
@@ -2635,8 +2637,10 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>Connection</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>Notifications</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -2692,7 +2696,7 @@
 						<reference ref="486978004"/>
 						<reference ref="604909654"/>
 						<reference ref="749767723"/>
-						<reference ref="339951426"/>
+						<reference ref="733455946"/>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSMutableArray">

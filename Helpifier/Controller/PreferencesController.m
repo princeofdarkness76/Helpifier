@@ -67,11 +67,15 @@
 
 - (IBAction)showConnectionPreferences:(id)sender
 {
+    [_notificationToolbarItem.toolbar setSelectedItemIdentifier:@"Connection"];
+    [[NSUserDefaults standardUserDefaults] setValue:@"Connection" forKey:@"preferencesTab"];
     [self _showPreferencesWithView:self.connectionPreferencesView];
 }
 
 - (IBAction)showNotificationPreferences:(id)sender
 {
+    [_notificationToolbarItem.toolbar setSelectedItemIdentifier:@"Notifications"];
+    [[NSUserDefaults standardUserDefaults] setValue:@"Notifications" forKey:@"preferencesTab"];
     [self _showPreferencesWithView:self.notificationPreferencesView];
 }
 
