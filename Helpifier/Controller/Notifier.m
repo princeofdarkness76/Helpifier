@@ -36,6 +36,9 @@
         _notifyingRequestIDs = [NSMutableSet set];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector( _didReceiveUpdates: ) name:FHSHistoryDidUpdateNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector( _didRemoveRequest: ) name:FHSRequestDidDisappearNotification object:nil];
+        
+        if ( [[NSUserDefaults standardUserDefaults] objectForKey:@"notificationBounce"] == nil )
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"notificationBounce"];
     }
     return self;
 }
@@ -51,7 +54,7 @@
             [[NSSound soundNamed:soundName] play];
         
         // Bounce icon in dock if we're in the background.
-        if ( ![NSApp isActive] )
+        if ( ![NSApp isActive] && [[NSUserDefaults standardUserDefaults] boolForKey:@"notificationBounce"] )
         {
             _attentionRequest = [NSApp requestUserAttention:NSCriticalRequest];
             for ( FHSHistoryItem *update in updates )
