@@ -66,7 +66,7 @@
 		401825CE153C8905009C7A6A /* FHSRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHSRequest.m; sourceTree = "<group>"; };
 		401825D7153C8905009C7A6A /* HelpSpotController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpSpotController.h; sourceTree = "<group>"; };
 		401825D8153C8905009C7A6A /* HelpSpotController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpSpotController.m; sourceTree = "<group>"; };
-		401825E3153C8A64009C7A6A /* FHSFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHSFilter.h; sourceTree = "<group>"; };
+		401825E3153C8A64009C7A6A /* FHSFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FHSFilter.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		401825E4153C8A64009C7A6A /* FHSFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHSFilter.m; sourceTree = "<group>"; };
 		401825E5153C8A64009C7A6A /* FHSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHSObject.h; sourceTree = "<group>"; };
 		401825E6153C8A64009C7A6A /* FHSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHSObject.m; sourceTree = "<group>"; };
@@ -102,8 +102,8 @@
 		408C50D91476DA9300244A5F /* HelpifierAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelpifierAppDelegate.h; sourceTree = "<group>"; };
 		408C50DA1476DA9300244A5F /* HelpifierAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelpifierAppDelegate.m; sourceTree = "<group>"; };
 		408C50DD1476DA9400244A5F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Helpifier.xib; sourceTree = "<group>"; };
-		408D1FFB1544B3840027F40A /* AutoRedrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AutoRedrawingView.h; path = View/AutoRedrawingView.h; sourceTree = "<group>"; };
-		408D1FFC1544B3840027F40A /* AutoRedrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AutoRedrawingView.m; path = View/AutoRedrawingView.m; sourceTree = "<group>"; };
+		408D1FFB1544B3840027F40A /* AutoRedrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = AutoRedrawingView.h; path = View/AutoRedrawingView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		408D1FFC1544B3840027F40A /* AutoRedrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = AutoRedrawingView.m; path = View/AutoRedrawingView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		408D1FFF1544EAC10027F40A /* RequestUpdateNoticeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestUpdateNoticeView.h; path = View/RequestUpdateNoticeView.h; sourceTree = "<group>"; };
 		408D20021544EF5F0027F40A /* RequestUpdateNoticeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestUpdateNoticeView.m; path = View/RequestUpdateNoticeView.m; sourceTree = "<group>"; };
 		408D20041544FB8D0027F40A /* warning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = warning.png; path = Images/warning.png; sourceTree = "<group>"; };
