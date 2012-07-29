@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		400253A315389BEA000C24E9 /* RequestBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 400253A215389BEA000C24E9 /* RequestBackgroundView.m */; };
-		4015DBA6153F6D1E008E48B0 /* Helpifier.icns in Resources */ = {isa = PBXBuildFile; fileRef = 4015DBA4153F6D1E008E48B0 /* Helpifier.icns */; };
 		4015DBA7153F6D1E008E48B0 /* RequestTemplate.html in Resources */ = {isa = PBXBuildFile; fileRef = 4015DBA5153F6D1E008E48B0 /* RequestTemplate.html */; };
 		4015DBBA153FCB38008E48B0 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4015DBB9153FCB38008E48B0 /* PreferencesController.m */; };
 		4015DBBD1540722C008E48B0 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4015DBBB1540722C008E48B0 /* Preferences.xib */; };
@@ -50,12 +49,12 @@
 		40C1EC3D157151EA00810668 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C1EC3C157151EA00810668 /* Security.framework */; };
 		40C3347C1541C063008DDA88 /* FHSStaff.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C3347B1541C063008DDA88 /* FHSStaff.m */; };
 		40E9304E1562E8EA0026866B /* RequestNotFound.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E9304C1562E8EA0026866B /* RequestNotFound.xib */; };
+		40F6177815C5E6A8008A8425 /* Helpifier.icns in Resources */ = {isa = PBXBuildFile; fileRef = 40F6177715C5E6A8008A8425 /* Helpifier.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		400253A115389BEA000C24E9 /* RequestBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestBackgroundView.h; path = View/RequestBackgroundView.h; sourceTree = "<group>"; };
 		400253A215389BEA000C24E9 /* RequestBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestBackgroundView.m; path = View/RequestBackgroundView.m; sourceTree = "<group>"; };
-		4015DBA4153F6D1E008E48B0 /* Helpifier.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Helpifier.icns; sourceTree = "<group>"; };
 		4015DBA5153F6D1E008E48B0 /* RequestTemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = RequestTemplate.html; sourceTree = "<group>"; };
 		4015DBB8153FCB38008E48B0 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreferencesController.h; path = Controller/PreferencesController.h; sourceTree = "<group>"; };
 		4015DBB9153FCB38008E48B0 /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreferencesController.m; path = Controller/PreferencesController.m; sourceTree = "<group>"; };
@@ -129,6 +128,7 @@
 		40C3347A1541C063008DDA88 /* FHSStaff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHSStaff.h; sourceTree = "<group>"; };
 		40C3347B1541C063008DDA88 /* FHSStaff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHSStaff.m; sourceTree = "<group>"; };
 		40E9304D1562E8EA0026866B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RequestNotFound.xib; sourceTree = "<group>"; };
+		40F6177715C5E6A8008A8425 /* Helpifier.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Helpifier.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,8 +289,8 @@
 		408C50CE1476DA9300244A5F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				40F6177715C5E6A8008A8425 /* Helpifier.icns */,
 				408D200615450B6E0027F40A /* Images */,
-				4015DBA4153F6D1E008E48B0 /* Helpifier.icns */,
 				4015DBA5153F6D1E008E48B0 /* RequestTemplate.html */,
 				408C50CF1476DA9300244A5F /* Helpifier-Info.plist */,
 				408C50D01476DA9300244A5F /* InfoPlist.strings */,
@@ -338,6 +338,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 408C50E11476DA9400244A5F /* Build configuration list for PBXNativeTarget "Helpifier" */;
 			buildPhases = (
+				40F6177215C5CA3B008A8425 /* Increment build number */,
 				408C50BF1476DA9300244A5F /* Sources */,
 				408C50C01476DA9300244A5F /* Frameworks */,
 				408C50C11476DA9300244A5F /* Resources */,
@@ -387,7 +388,6 @@
 				408C50DE1476DA9400244A5F /* Helpifier.xib in Resources */,
 				40B76708153DDAA900F18606 /* unread.png in Resources */,
 				40B76711153E03A900F18606 /* Request.xib in Resources */,
-				4015DBA6153F6D1E008E48B0 /* Helpifier.icns in Resources */,
 				4015DBA7153F6D1E008E48B0 /* RequestTemplate.html in Resources */,
 				4015DBBD1540722C008E48B0 /* Preferences.xib in Resources */,
 				408D20051544FB8D0027F40A /* warning.png in Resources */,
@@ -396,10 +396,28 @@
 				408D200E15450C280027F40A /* request-update-background-right.png in Resources */,
 				40E9304E1562E8EA0026866B /* RequestNotFound.xib in Resources */,
 				40B9C9331572E17D0038C39D /* ReadMe.rtf in Resources */,
+				40F6177815C5E6A8008A8425 /* Helpifier.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		40F6177215C5CA3B008A8425 /* Increment build number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Increment build number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Auto Increment Version Script, adapted from http://stackoverflow.com/questions/7371345/xcode-projects-build-number\nbuildPlist=${INFOPLIST_FILE}\nCFBundleVersion=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" $buildPlist)\nCFBundleVersion=$(($CFBundleVersion + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $CFBundleVersion\" $buildPlist\nCFBuildDate=$(date +%Y%m%d%H%M%S)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $CFBundleVersion\" $buildPlist\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		408C50BF1476DA9300244A5F /* Sources */ = {
