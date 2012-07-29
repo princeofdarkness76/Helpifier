@@ -137,6 +137,9 @@
             [self.delegate object:self didFinishReceivingData:self.data];
         self.lastFetchDate = [NSDate date];
         
+        // If we got here from a POST request, we don't want to keep posting that data!
+        self.postData = nil;
+
         /*
          Now parse the XML data.
          HelpSpot sometimes sends stray data before the start of the XML data, which will make
