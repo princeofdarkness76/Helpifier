@@ -27,6 +27,7 @@
 
 #import "FHSHistoryItem.h"
 #import "FFSHTMLTagStripper.h"
+#import "HelpifierAppDelegate.h"
 
 @interface FHSHistoryItem ()
 
@@ -76,6 +77,11 @@
 }
 
 @synthesize public = _public;
+
+- (BOOL)isFromCurrentUser
+{
+    return [(HelpifierAppDelegate *)[NSApp delegate] isCurrentUser:self.person];
+}
 
 - (id)initWithXMLElement:(FFSXMLElement *)element
 {

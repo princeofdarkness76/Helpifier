@@ -57,6 +57,22 @@
     return NSNotFound;
 }
 
+- (NSString *)nameForEmail:(NSString *)email
+{
+    if ( !_people )
+        return @"";
+    
+    for ( NSDictionary *person in _people )
+    {
+        for ( NSString *thisEmail in [person objectForKey:@"emails"] )
+        {
+            if ( [email isEqualToString:thisEmail] )
+                return [person objectForKey:@"fullname"];
+        }
+    }
+    return @"";
+}
+
 - (void)finishedParsingXMLTree
 {
     NSMutableArray *newPeople = [NSMutableArray array];

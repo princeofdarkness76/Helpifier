@@ -229,6 +229,13 @@
 
 - (void)_showUpdateNotice
 {
+    // Don't notify of history items from current user.
+    if ( [(FHSHistoryItem *)[_request.historyItems objectAtIndex:0] isFromCurrentUser] )
+    {
+        [self _reloadHistoryView];
+        return;
+    }
+    
     NSRect bodyFrame = NSMakeRect( 0, 39, _containerView.frame.size.width, _containerView.frame.size.height - 113 );
     if ( !_requestUpdateNoticeView.superview )
     {

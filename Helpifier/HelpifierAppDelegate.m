@@ -179,6 +179,11 @@
     [_otherRequestPopover close];
 }
 
+- (BOOL)isCurrentUser:(NSString *)userToTest
+{
+    return [[_helpSpot.staff nameForEmail:[[FFSSettings sharedSettings] helpSpotUsername]] isEqualToString:userToTest];
+}
+
 - (void)_loadingDidFinish:(NSNotification *)note
 {
     // This notification can come from an individual request, in which case we just refresh that request, or from a filter, in which case we make changes to the whole list.

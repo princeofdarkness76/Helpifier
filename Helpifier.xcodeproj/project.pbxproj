@@ -25,6 +25,10 @@
 		4032FFAF1541BDC70013115C /* FHSSubscriptionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4032FFAE1541BDC70013115C /* FHSSubscriptionFilter.m */; };
 		4059636815449EBF00D6475D /* RequestListFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4059636715449EBF00D6475D /* RequestListFooterView.m */; };
 		4071060115461F01006FDF8F /* FHSFilterStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 4071060015461F01006FDF8F /* FHSFilterStream.m */; };
+		4084E92015C60FEF005FE985 /* Credits.md in Resources */ = {isa = PBXBuildFile; fileRef = 4084E91E15C60FEF005FE985 /* Credits.md */; };
+		4084E92715C61161005FE985 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4084E92615C61161005FE985 /* Sparkle.framework */; };
+		4084E92915C61195005FE985 /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4084E92615C61161005FE985 /* Sparkle.framework */; };
+		4084E92D15C6134D005FE985 /* Helpifier_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 4084E92C15C6134D005FE985 /* Helpifier_pub.pem */; };
 		408C50C81476DA9300244A5F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408C50C71476DA9300244A5F /* Cocoa.framework */; };
 		408C50D21476DA9300244A5F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 408C50D01476DA9300244A5F /* InfoPlist.strings */; };
 		408C50D41476DA9300244A5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 408C50D31476DA9300244A5F /* main.m */; };
@@ -51,6 +55,20 @@
 		40E9304E1562E8EA0026866B /* RequestNotFound.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E9304C1562E8EA0026866B /* RequestNotFound.xib */; };
 		40F6177815C5E6A8008A8425 /* Helpifier.icns in Resources */ = {isa = PBXBuildFile; fileRef = 40F6177715C5E6A8008A8425 /* Helpifier.icns */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4084E92815C61190005FE985 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4084E92915C61195005FE985 /* Sparkle.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		400253A115389BEA000C24E9 /* RequestBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestBackgroundView.h; path = View/RequestBackgroundView.h; sourceTree = "<group>"; };
@@ -89,6 +107,9 @@
 		4059636715449EBF00D6475D /* RequestListFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestListFooterView.m; path = View/RequestListFooterView.m; sourceTree = "<group>"; };
 		407105FF15461F01006FDF8F /* FHSFilterStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHSFilterStream.h; sourceTree = "<group>"; };
 		4071060015461F01006FDF8F /* FHSFilterStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHSFilterStream.m; sourceTree = "<group>"; };
+		4084E91F15C60FEF005FE985 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Credits.md; sourceTree = "<group>"; };
+		4084E92615C61161005FE985 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Helpifier/Sparkle.framework; sourceTree = "<group>"; };
+		4084E92C15C6134D005FE985 /* Helpifier_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Helpifier_pub.pem; sourceTree = "<group>"; };
 		408C50C31476DA9300244A5F /* Helpifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Helpifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		408C50C71476DA9300244A5F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		408C50CA1476DA9300244A5F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -136,6 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4084E92715C61161005FE985 /* Sparkle.framework in Frameworks */,
 				40C1EC3D157151EA00810668 /* Security.framework in Frameworks */,
 				40B76705153D071D00F18606 /* WebKit.framework in Frameworks */,
 				408C50C81476DA9300244A5F /* Cocoa.framework in Frameworks */,
@@ -249,6 +271,7 @@
 		408C50C61476DA9300244A5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4084E92615C61161005FE985 /* Sparkle.framework */,
 				40C1EC3C157151EA00810668 /* Security.framework */,
 				408C50C71476DA9300244A5F /* Cocoa.framework */,
 				40B76704153D071D00F18606 /* WebKit.framework */,
@@ -296,7 +319,9 @@
 				408C50D01476DA9300244A5F /* InfoPlist.strings */,
 				408C50D31476DA9300244A5F /* main.m */,
 				408C50D51476DA9300244A5F /* Helpifier-Prefix.pch */,
+				4084E91E15C60FEF005FE985 /* Credits.md */,
 				408C50D61476DA9300244A5F /* Credits.rtf */,
+				4084E92C15C6134D005FE985 /* Helpifier_pub.pem */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -342,6 +367,7 @@
 				408C50BF1476DA9300244A5F /* Sources */,
 				408C50C01476DA9300244A5F /* Frameworks */,
 				408C50C11476DA9300244A5F /* Resources */,
+				4084E92815C61190005FE985 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -397,6 +423,8 @@
 				40E9304E1562E8EA0026866B /* RequestNotFound.xib in Resources */,
 				40B9C9331572E17D0038C39D /* ReadMe.rtf in Resources */,
 				40F6177815C5E6A8008A8425 /* Helpifier.icns in Resources */,
+				4084E92015C60FEF005FE985 /* Credits.md in Resources */,
+				4084E92D15C6134D005FE985 /* Helpifier_pub.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +490,14 @@
 				4015DBBC1540722C008E48B0 /* en */,
 			);
 			name = Preferences.xib;
+			sourceTree = "<group>";
+		};
+		4084E91E15C60FEF005FE985 /* Credits.md */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4084E91F15C60FEF005FE985 /* en */,
+			);
+			name = Credits.md;
 			sourceTree = "<group>";
 		};
 		408C50D01476DA9300244A5F /* InfoPlist.strings */ = {
@@ -558,6 +594,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Helpifier\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Helpifier/Helpifier-Prefix.pch";
 				INFOPLIST_FILE = "Helpifier/Helpifier-Info.plist";
@@ -572,6 +612,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Helpifier\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Helpifier/Helpifier-Prefix.pch";
 				INFOPLIST_FILE = "Helpifier/Helpifier-Info.plist";

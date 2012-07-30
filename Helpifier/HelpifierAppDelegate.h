@@ -40,5 +40,6 @@
 - (IBAction)selectOtherRequest:(id)sender;
 - (void)goToOtherRequest:(NSInteger)requestNumber;
 - (void)dismissOtherRequest;
+- (BOOL)isCurrentUser:(NSString *)userToTest;
 
 @end

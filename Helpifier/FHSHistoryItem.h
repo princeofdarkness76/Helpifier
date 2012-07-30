@@ -41,6 +41,7 @@
 @property (nonatomic) BOOL public;
 @property (readonly) NSString *plainTextNote;
 @property (readonly) NSString *noteWithDetails;
+@property (readonly) BOOL isFromCurrentUser;
 
 - (id)initWithXMLElement:(FFSXMLElement *)element;
 

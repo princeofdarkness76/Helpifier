@@ -32,5 +32,6 @@
 @property (copy) NSArray *people;
 
 - (NSInteger)personWithEmail:(NSString *)email;
+- (NSString *)nameForEmail:(NSString *)email;
 
 @end
