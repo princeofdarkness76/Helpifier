@@ -33,6 +33,7 @@
 		4084E94815C72261005FE985 /* connection@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4084E94415C72260005FE985 /* connection@2x.png */; };
 		4084E94915C72261005FE985 /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = 4084E94515C72260005FE985 /* speaker.png */; };
 		4084E94A15C72261005FE985 /* speaker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4084E94615C72261005FE985 /* speaker@2x.png */; };
+		4084E94C15C722EB005FE985 /* unread@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4084E94B15C722EB005FE985 /* unread@2x.png */; };
 		408C50C81476DA9300244A5F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408C50C71476DA9300244A5F /* Cocoa.framework */; };
 		408C50D21476DA9300244A5F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 408C50D01476DA9300244A5F /* InfoPlist.strings */; };
 		408C50D41476DA9300244A5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 408C50D31476DA9300244A5F /* main.m */; };
@@ -118,6 +119,7 @@
 		4084E94415C72260005FE985 /* connection@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "connection@2x.png"; path = "Images/connection@2x.png"; sourceTree = "<group>"; };
 		4084E94515C72260005FE985 /* speaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = speaker.png; path = Images/speaker.png; sourceTree = "<group>"; };
 		4084E94615C72261005FE985 /* speaker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "speaker@2x.png"; path = "Images/speaker@2x.png"; sourceTree = "<group>"; };
+		4084E94B15C722EB005FE985 /* unread@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "unread@2x.png"; path = "Images/unread@2x.png"; sourceTree = "<group>"; };
 		408C50C31476DA9300244A5F /* Helpifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Helpifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		408C50C71476DA9300244A5F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		408C50CA1476DA9300244A5F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -264,6 +266,7 @@
 			children = (
 				4084E94415C72260005FE985 /* connection@2x.png */,
 				4084E94615C72261005FE985 /* speaker@2x.png */,
+				4084E94B15C722EB005FE985 /* unread@2x.png */,
 			);
 			name = 2x;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				4084E94815C72261005FE985 /* connection@2x.png in Resources */,
 				4084E94915C72261005FE985 /* speaker.png in Resources */,
 				4084E94A15C72261005FE985 /* speaker@2x.png in Resources */,
+				4084E94C15C722EB005FE985 /* unread@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
