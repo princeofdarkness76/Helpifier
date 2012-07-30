@@ -29,6 +29,8 @@
 #import "FHSModel.h"
 #import "HelpSpotController.h"
 
+#define HELPIFIER_DEBUG_REQUEST_DATA 1
+
 @interface FHSRequest ()
 
 @property (nonatomic, strong) NSMutableDictionary *thisItemProperties;
@@ -162,7 +164,7 @@
             }
         }
         self.historyItems = history;
-        if ( [[self.xmlTree.rootElement stringForKey:@"xCategory"] length] == 0 )
+        if ( [[self.xmlTree.rootElement stringForKey:@"xRequest"] length] == 0 )
         {
             self.notFound = YES;
             [[NSNotificationCenter defaultCenter] postNotificationName:FHSRequestNotFoundNotification
