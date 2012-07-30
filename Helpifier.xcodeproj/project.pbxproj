@@ -29,10 +29,10 @@
 		4084E92715C61161005FE985 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4084E92615C61161005FE985 /* Sparkle.framework */; };
 		4084E92915C61195005FE985 /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4084E92615C61161005FE985 /* Sparkle.framework */; };
 		4084E92D15C6134D005FE985 /* Helpifier_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 4084E92C15C6134D005FE985 /* Helpifier_pub.pem */; };
-		4084E93C15C720D1005FE985 /* connection.png in Resources */ = {isa = PBXBuildFile; fileRef = 4084E93A15C720D1005FE985 /* connection.png */; };
-		4084E93D15C720D1005FE985 /* connection@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4084E93B15C720D1005FE985 /* connection@2x.png */; };
-		4084E94115C721D1005FE985 /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = 4084E93F15C721D1005FE985 /* speaker.png */; };
-		4084E94215C721D1005FE985 /* speaker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4084E94015C721D1005FE985 /* speaker@2x.png */; };
+		4084E94715C72261005FE985 /* connection.png in Resources */ = {isa = PBXBuildFile; fileRef = 4084E94315C72260005FE985 /* connection.png */; };
+		4084E94815C72261005FE985 /* connection@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4084E94415C72260005FE985 /* connection@2x.png */; };
+		4084E94915C72261005FE985 /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = 4084E94515C72260005FE985 /* speaker.png */; };
+		4084E94A15C72261005FE985 /* speaker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4084E94615C72261005FE985 /* speaker@2x.png */; };
 		408C50C81476DA9300244A5F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408C50C71476DA9300244A5F /* Cocoa.framework */; };
 		408C50D21476DA9300244A5F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 408C50D01476DA9300244A5F /* InfoPlist.strings */; };
 		408C50D41476DA9300244A5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 408C50D31476DA9300244A5F /* main.m */; };
@@ -114,10 +114,10 @@
 		4084E91F15C60FEF005FE985 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Credits.md; sourceTree = "<group>"; };
 		4084E92615C61161005FE985 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Helpifier/Sparkle.framework; sourceTree = "<group>"; };
 		4084E92C15C6134D005FE985 /* Helpifier_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Helpifier_pub.pem; sourceTree = "<group>"; };
-		4084E93A15C720D1005FE985 /* connection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connection.png; sourceTree = "<group>"; };
-		4084E93B15C720D1005FE985 /* connection@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connection@2x.png"; sourceTree = "<group>"; };
-		4084E93F15C721D1005FE985 /* speaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker.png; sourceTree = "<group>"; };
-		4084E94015C721D1005FE985 /* speaker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speaker@2x.png"; sourceTree = "<group>"; };
+		4084E94315C72260005FE985 /* connection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = connection.png; path = Images/connection.png; sourceTree = "<group>"; };
+		4084E94415C72260005FE985 /* connection@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "connection@2x.png"; path = "Images/connection@2x.png"; sourceTree = "<group>"; };
+		4084E94515C72260005FE985 /* speaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = speaker.png; path = Images/speaker.png; sourceTree = "<group>"; };
+		4084E94615C72261005FE985 /* speaker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "speaker@2x.png"; path = "Images/speaker@2x.png"; sourceTree = "<group>"; };
 		408C50C31476DA9300244A5F /* Helpifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Helpifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		408C50C71476DA9300244A5F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		408C50CA1476DA9300244A5F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -262,8 +262,8 @@
 		4084E93E15C720E8005FE985 /* 2x */ = {
 			isa = PBXGroup;
 			children = (
-				4084E93B15C720D1005FE985 /* connection@2x.png */,
-				4084E94015C721D1005FE985 /* speaker@2x.png */,
+				4084E94415C72260005FE985 /* connection@2x.png */,
+				4084E94615C72261005FE985 /* speaker@2x.png */,
 			);
 			name = 2x;
 			sourceTree = "<group>";
@@ -347,8 +347,8 @@
 			isa = PBXGroup;
 			children = (
 				4084E93E15C720E8005FE985 /* 2x */,
-				4084E93A15C720D1005FE985 /* connection.png */,
-				4084E93F15C721D1005FE985 /* speaker.png */,
+				4084E94315C72260005FE985 /* connection.png */,
+				4084E94515C72260005FE985 /* speaker.png */,
 				40B76707153DDAA900F18606 /* unread.png */,
 				408D20041544FB8D0027F40A /* warning.png */,
 				408D200915450C280027F40A /* request-update-background-center.png */,
@@ -445,10 +445,10 @@
 				40F6177815C5E6A8008A8425 /* Helpifier.icns in Resources */,
 				4084E92015C60FEF005FE985 /* Credits.md in Resources */,
 				4084E92D15C6134D005FE985 /* Helpifier_pub.pem in Resources */,
-				4084E93C15C720D1005FE985 /* connection.png in Resources */,
-				4084E93D15C720D1005FE985 /* connection@2x.png in Resources */,
-				4084E94115C721D1005FE985 /* speaker.png in Resources */,
-				4084E94215C721D1005FE985 /* speaker@2x.png in Resources */,
+				4084E94715C72261005FE985 /* connection.png in Resources */,
+				4084E94815C72261005FE985 /* connection@2x.png in Resources */,
+				4084E94915C72261005FE985 /* speaker.png in Resources */,
+				4084E94A15C72261005FE985 /* speaker@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
