@@ -38,7 +38,8 @@
     {
         if ( [[status stringForKey:@"sStatus"] isEqualToString:@"Active"] )
             continue;
-        [newStatuses setObject:[status stringForKey:@"sStatus"] forKey:[NSNumber numberWithInteger:[status integerForKey:@"xStatus"]]];
+        if ( [status stringForKey:@"sStatus"] )
+            [newStatuses setObject:[status stringForKey:@"sStatus"] forKey:[NSNumber numberWithInteger:[status integerForKey:@"xStatus"]]];
     }
     self.statuses = newStatuses;
 }
