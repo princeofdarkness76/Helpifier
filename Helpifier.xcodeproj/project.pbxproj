@@ -386,7 +386,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 408C50E11476DA9400244A5F /* Build configuration list for PBXNativeTarget "Helpifier" */;
 			buildPhases = (
-				40F6177215C5CA3B008A8425 /* Increment build number */,
+				40F6177215C5CA3B008A8425 /* Increment build number (Release only) */,
 				408C50BF1476DA9300244A5F /* Sources */,
 				408C50C01476DA9300244A5F /* Frameworks */,
 				408C50C11476DA9300244A5F /* Resources */,
@@ -459,19 +459,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		40F6177215C5CA3B008A8425 /* Increment build number */ = {
+		40F6177215C5CA3B008A8425 /* Increment build number (Release only) */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Increment build number";
+			name = "Increment build number (Release only)";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Auto Increment Version Script, adapted from http://stackoverflow.com/questions/7371345/xcode-projects-build-number\nbuildPlist=${INFOPLIST_FILE}\nCFBundleVersion=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" $buildPlist)\nCFBundleVersion=$(($CFBundleVersion + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $CFBundleVersion\" $buildPlist\nCFBuildDate=$(date +%Y%m%d%H%M%S)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $CFBundleVersion\" $buildPlist\n";
+			shellScript = "# Auto Increment Version Script, adapted from http://stackoverflow.com/questions/7371345/xcode-projects-build-number\n\n# But only run this script on release builds.\n[ ${CONFIGURATION} = \"Release\" ] || exit 0\n\nbuildPlist=${INFOPLIST_FILE}\nCFBundleVersion=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" $buildPlist)\nCFBundleVersion=$(($CFBundleVersion + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $CFBundleVersion\" $buildPlist\nCFBuildDate=$(date +%Y%m%d%H%M%S)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $CFBundleVersion\" $buildPlist\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
