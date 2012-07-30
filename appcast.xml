@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>                                   
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">                                   
+	<channel>                                   
+		<title>Helpifier Changelog</title>                                   
+		<link>http://figure53.com/helpifier/downloads/appcast.xml</link>                                   
+		<description>Most recent changes with links to updates.</description>                                   
+		<language>en</language>                                   
+
+		<item>         
+			<title>Version 2.0 (149)</title>         
+			<sparkle:releaseNotesLink>http://figure53.com/helpifier/downloads/release-notes/149.html</sparkle:releaseNotesLink>         
+			<pubDate>Sun, 29 Jul 2012 19:48:28 -0700</pubDate>         
+			<enclosure url="http://figure53.com/helpifier/downloads/Helpifier-2.0-149.zip" sparkle:version="149" sparkle:shortVersionString="2.0 (149)" type="application/octet-stream" length="2082619" sparkle:dsaSignature="MC0CFQCzI7rl3REq6UWjGSTKC4nSsPz02AIUD4GF/SeCdeQ61648dRwexnJaTu0="/>         
+		</item>
+
+</channel>
+</rss>
